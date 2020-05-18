@@ -26,5 +26,5 @@ template: templates/no-nav.html
 Sorry, but the page you are looking for does not exist, has been removed, renamed, or is temporarily unavailable. 
 Try one of the navigation links above or use the search engine in the top right corner.
 
-For further inquiries, reach us at [dev@wso2.org](mailto:dev@wso2.org). Alternatively, you can also report an issue [here](https://github.com/wso2/docs-cloud/issues). 
+For further inquiries, reach us at [cloud@wso2.com](mailto:cloud@wso2.com). Alternatively, you can also report an issue [here](https://github.com/wso2/docs-cloud/issues). 
 
