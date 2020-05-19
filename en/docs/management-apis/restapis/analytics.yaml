@@ -1,0 +1,1075 @@
+swagger: "2.0"
+info:
+  title: WSO2 Cloud Analytics REST API
+  description: This specifies a RESTful API to expose API usage analytics in a regulated manner to users.
+  version: 1.0.0
+host: gateway.api.cloud.wso2.com
+basePath: /api/am/analytics
+schemes:
+  - https
+
+securityDefinitions:
+  Bearer:
+    type: apiKey
+    name: Authorization
+    in: header
+
+paths:
+  /usage:
+    get:
+      summary: Get all API usages
+      description: This is the default endpoint to get all API usage statistics over time. The default time period is 3 days in the UTC timezone.
+      x-wso2-request: |
+       curl -k -X GET "https://gateway.api.cloud.wso2.com/api/am/analytics/usage?from=2019-06-01%2012%3A00%3A00&to=2019-06-30%2010%3A00%3A00&timezone=IST&granularity=days" -H "Content-Type: application/json" -H "accept: application/json" -H "Authorization: Bearer f9f93d92-5c73-3650-bc15-ccdb9360d0a6"
+      x-wso2-response: |
+        "HTTP/1.1 200 OK"
+        [
+        {
+           "datetime": "2019-05-27 01:20:00",
+           "apiName": "PizzaShackAPI",
+           "apiVersion": "v1.0.0",
+           "requestCount": 2045
+         }
+         ]
+      security:
+        - Bearer: []
+      produces:
+        - application/json
+      parameters:
+        - name: from
+          in: query
+          description: The start date and time to retrieve API usage statistics. Supports YYYY-MM-dd or YYYY-MM-dd HH:mm:ss formats.
+          type: string
+        - name: to
+          in: query
+          description: The end date and time to retrieve API usage statistics. Supports YYYY-MM-dd or YYYY-MM-dd HH:mm:ss formats.
+          type: string
+        - name: timezone
+          in: query
+          description: The timezone in which the date and time values are retrieved. The default timezone is UTC.
+          type: string
+        - name: granularity
+          in: query
+          description: The interval at which API usage should be aggregated. Possible values are "hours","days", or "months".
+          type: string
+        - name: apiName
+          in: query
+          description: Name of the API for which usage should be retrieved.
+          type: string
+        - name: apiVersion
+          in: query
+          description: Version of the API for which usage should be retrieved.
+          type: string
+      responses:
+        200:
+          description: OK
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/APIUsage'
+        400:
+          description: Bad Request - the request format is invalid. For example, The datetime strings are malformatted, timezone is invalid, etc.
+          schema:
+            $ref: '#/definitions/BadRequestError'
+        401:
+          description: The request is unauthorized.
+          schema:
+            $ref: '#/definitions/UnauthorizedError'
+        500:
+          description: Internal server error response.
+          schema:
+            $ref: '#/definitions/InternalServerError'
+
+  /usage/resource-path:
+    get:
+      summary: Get API usage per resource path
+      description: Returns API usage over time per resource path. The default time period is 3 days in the UTC timezone.
+      x-wso2-request: |
+       curl -k -X GET "https://gateway.api.cloud.wso2.com/api/am/analytics/usage/resource-path?from=2019-06-01%2012%3A00%3A00&to=2019-06-30%2010%3A00%3A00&timezone=IST&granularity=days" -H "Content-Type: application/json" -H "accept: application/json" -H "Authorization: Bearer f9f93d92-5c73-3650-bc15-ccdb9360d0a6"
+      x-wso2-response: |
+        "HTTP/1.1 200 OK"
+        [
+        {
+           "datetime": "2019-05-27 01:20:00",
+           "apiName": "PizzaShackAPI",
+           "apiVersion": "v1.0.0",
+           "apiContext": "/t/pizzaOrg/v2.0/service-providers",
+           "resource-path": "/*",
+           "apiMethod": "GET",
+           "requestCount": 104
+         }
+         ]
+      security:
+        - Bearer: []
+      produces:
+        - application/json
+      parameters:
+        - name: from
+          in: query
+          description: The start date and time to retrieve API usage statistics. Supports YYYY-MM-dd or YYYY-MM-dd HH:mm:ss formats.
+          type: string
+        - name: to
+          in: query
+          description: The end date and time to retrieve API usage statistics. Supports YYYY-MM-dd or YYYY-MM-dd HH:mm:ss formats.
+          type: string
+        - name: timezone
+          in: query
+          description: The timezone in which the date and time values are retrieved. The default timezone is UTC.
+          type: string
+        - name: granularity
+          in: query
+          description: The interval at which API usage should be aggregated. Possible values are "hours","days", or "months".
+          type: string
+        - name: apiName
+          in: query
+          description: Name of the API for which usage should be retrieved.
+          type: string
+        - name: apiVersion
+          in: query
+          description: Version of the API for which usage should be retrieved.
+          type: string
+        - name: resourcePath
+          in: query
+          description: Resource path of the API for which usage should be retrieved.
+          type: string
+        - name: apiMethod
+          in: query
+          description: API method for which usage should be retrieved.
+          type: string
+      responses:
+        200:
+          description: OK
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/APIUsagePerResourcePath'
+        400:
+          description: Bad Request - the request format is invalid. For example, The datetime strings are malformatted, timezone is invalid, etc.
+          schema:
+            $ref: '#/definitions/BadRequestError'
+        401:
+          description: The request is unauthorized.
+          schema:
+            $ref: '#/definitions/UnauthorizedError'
+        500:
+          description: Internal server error response.
+          schema:
+            $ref: '#/definitions/InternalServerError'
+
+  /usage/user:
+    get:
+      summary: Get API usage per user
+      description: Returns API usage over time per user. Default time period is 3 days in the UTC timezone.
+      x-wso2-request: |
+       curl -k -X GET "https://gateway.api.cloud.wso2.com/api/am/analytics/usage/user?from=2019-06-01%2012%3A00%3A00&to=2019-06-30%2010%3A00%3A00&timezone=IST&granularity=days" -H "Content-Type: application/json" -H "accept: application/json" -H "Authorization: Bearer f9f93d92-5c73-3650-bc15-ccdb9360d0a6"
+      x-wso2-response: |
+        "HTTP/1.1 200 OK"
+        [
+        {
+           "datetime": "2019-05-27 01:20:00",
+           "apiName": "PizzaShackAPI",
+           "apiVersion": "v1.0.0",
+           "username": “testuser@wso2.com@testorg",
+           "requestCount": 104
+         }
+         ]   
+      security:
+        - Bearer: []
+      produces:
+        - application/json
+      parameters:
+        - name: from
+          in: query
+          description: The start date and time to retrieve API usage statistics. Supports YYYY-MM-dd or YYYY-MM-dd HH:mm:ss formats.
+          type: string
+        - name: to
+          in: query
+          description: The end date and time to retrieve API usage statistics. Supports YYYY-MM-dd or YYYY-MM-dd HH:mm:ss formats.
+          type: string
+        - name: timezone
+          in: query
+          description: The timezone in which the date and time values are retrieved. The default timezone is UTC.
+          type: string
+        - name: granularity
+          in: query
+          description: The interval at which API usage should be aggregated. Possible values are "hours","days", or "months".
+          type: string
+        - name: apiName
+          in: query
+          description: Name of the API for which usage should be retrieved.
+          type: string
+        - name: apiVersion
+          in: query
+          description: Version of the API for which usage should be retrieved.
+          type: string
+        - name: username
+          in: query
+          description: User name of the user for whom API usage should be retrieved.
+          type: string
+      responses:
+        200:
+          description: OK
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/APIUsagePerUser'
+        400:
+          description: Bad Request - the request format is invalid. For example, The datetime strings are malformatted, timezone is invalid, etc.
+          schema:
+            $ref: '#/definitions/BadRequestError'
+        401:
+          description: The request is unauthorized.
+          schema:
+            $ref: '#/definitions/UnauthorizedError'
+        500:
+          description: Internal server error response.
+          schema:
+            $ref: '#/definitions/InternalServerError'
+
+  /usage/application:
+    get:
+      summary: Get API usage per application
+      description: Returns API usage over time per application. The default time period is 3 days in the UTC timezone.
+      x-wso2-request: |
+       curl -k -X GET "https://gateway.api.cloud.wso2.com/api/am/analytics/usage/application?from=2019-06-01%2012%3A00%3A00&to=2019-06-30%2010%3A00%3A00&timezone=IST&granularity=days" -H "Content-Type: application/json" -H "accept: application/json" -H "Authorization: Bearer f9f93d92-5c73-3650-bc15-ccdb9360d0a6"
+      x-wso2-response: |
+        "HTTP/1.1 200 OK"
+        [
+        {
+           "datetime": "2019-05-27 01:20:00",
+           "apiName": "PizzaShackAPI",
+           "apiVersion": "v1.0.0",
+           "applicationName": "DefaultApplication",
+           "applicationId": "16931",
+           "applicationOwner": “testuser@wso2.com@testorg",
+           "requestCount": 104
+         }
+         ]   
+      security:
+        - Bearer: []
+      produces:
+        - application/json
+      parameters:
+        - name: from
+          in: query
+          description: The start date and time to retrieve API usage statistics. Supports YYYY-MM-dd or YYYY-MM-dd HH:mm:ss formats.
+          type: string
+        - name: to
+          in: query
+          description: The end date and time to retrieve API usage statistics. Supports YYYY-MM-dd or YYYY-MM-dd HH:mm:ss formats.
+          type: string
+        - name: timezone
+          in: query
+          description: The timezone in which the date and time values are retrieved. The default timezone is UTC.
+          type: string
+        - name: granularity
+          in: query
+          description: The interval at which API usage should be aggregated. Possible values are "hours","days", or "months".
+          type: string
+        - name: apiName
+          in: query
+          description: Name of the API for which usage should be retrieved.
+          type: string
+        - name: apiVersion
+          in: query
+          description: Version of the API for which usage should be retrieved.
+          type: string
+        - name: applicationId
+          in: query
+          description: ID of the application for which API usage should be retrieved.
+          type: string
+        - name: applicationOwner
+          in: query
+          description: User name of the owner of the application for which API usage should be retrieved.
+          type: string
+      responses:
+        200:
+          description: OK
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/APIUsagePerApplication'
+        400:
+          description: Bad Request - the request format is invalid. For example, The datetime strings are malformatted, timezone is invalid, etc.
+          schema:
+            $ref: '#/definitions/BadRequestError'
+        401:
+          description: The request is unauthorized.
+          schema:
+            $ref: '#/definitions/UnauthorizedError'
+        500:
+          description: Internal server error response.
+          schema:
+            $ref: '#/definitions/InternalServerError'
+
+  /usage/geolocation:
+    get:
+      summary: Get API usage per geolocation
+      description: Returns API usage over time per geolocation. The default time period is 3 days in the UTC timezone.
+      x-wso2-request: |
+       curl -k -X GET "https://gateway.api.cloud.wso2.com/api/am/analytics/usage/geolocation?from=2019-06-01%2012%3A00%3A00&to=2019-06-30%2010%3A00%3A00&timezone=IST&granularity=days" -H "Content-Type: application/json" -H "accept: application/json" -H "Authorization: Bearer f9f93d92-5c73-3650-bc15-ccdb9360d0a6"
+      x-wso2-response: |
+        "HTTP/1.1 200 OK"
+        [
+        {
+           "datetime": "2019-05-27 01:20:00",
+           "apiName": "PizzaShackAPI",
+           "apiVersion": "v1.0.0",
+           "country": "United States",
+           "city": "Virginia",
+           "requestCount": 104
+         }
+         ]   
+      security:
+        - Bearer: []
+      produces:
+        - application/json
+      parameters:
+        - name: from
+          in: query
+          description: The start date and time to retrieve API usage statistics. Supports YYYY-MM-dd or YYYY-MM-dd HH:mm:ss formats.
+          type: string
+        - name: to
+          in: query
+          description: The end date and time to retrieve API usage statistics. Supports YYYY-MM-dd or YYYY-MM-dd HH:mm:ss formats.
+          type: string
+        - name: timezone
+          in: query
+          description: The timezone in which the date and time values are retrieved. The default timezone is UTC.
+          type: string
+        - name: granularity
+          in: query
+          description: The interval at which API usage should be aggregated. Possible values are "hours","days", or "months".
+          type: string
+        - name: apiName
+          in: query
+          description: Name of the API for which usage should be retrieved.
+          type: string
+        - name: apiVersion
+          in: query
+          description: Version of the API for which usage should be retrieved.
+          type: string
+        - name: country
+          in: query
+          description: Name of the country for which usage should be retrieved.
+          type: string
+        - name: city
+          in: query
+          description: Name of the city of the relevant country for which usage should be retrieved.
+          type: string
+      responses:
+        200:
+          description: OK
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/APIUsagePerGeolocation'
+        400:
+          description: Bad Request - the request format is invalid. For example, The datetime strings are malformatted, timezone is invalid, etc.
+          schema:
+            $ref: '#/definitions/BadRequestError'
+        401:
+          description: The request is unauthorized.
+          schema:
+            $ref: '#/definitions/UnauthorizedError'
+        500:
+          description: Internal server error response.
+          schema:
+            $ref: '#/definitions/InternalServerError'
+
+  /usage/faults:
+    get:
+      summary: Get API usage per faulty invocation
+      description: Returns faulty invocations over time. The default time period is 3 days in the UTC timezone. A successful invocation is when an API receives the expected response. If a runtime exception that is related to the backend communication occurs, it is considered as a faulty invocation.
+      x-wso2-request: |
+       curl -k -X GET "https://gateway.api.cloud.wso2.com/api/am/analytics/usage/faults?from=2019-06-01%2012%3A00%3A00&to=2019-06-30%2010%3A00%3A00&timezone=IST&granularity=days" -H "Content-Type: application/json" -H "accept: application/json" -H "Authorization: Bearer f9f93d92-5c73-3650-bc15-ccdb9360d0a6"
+      x-wso2-response: |
+        "HTTP/1.1 200 OK"
+        [
+        {
+           "datetime": "2019-05-27 01:20:00",
+           "apiName": "PizzaShackAPI",
+           "apiVersion": "v1.0.0",
+           "faultCount": 104
+         }
+         ] 
+      security:
+        - Bearer: []
+      produces:
+        - application/json
+      parameters:
+        - name: from
+          in: query
+          description: The start date and time to retrieve API usage statistics. Supports YYYY-MM-dd or YYYY-MM-dd HH:mm:ss formats.
+          type: string
+        - name: to
+          in: query
+          description: The end date and time to retrieve API usage statistics. Supports YYYY-MM-dd or YYYY-MM-dd HH:mm:ss formats.
+          type: string
+        - name: timezone
+          in: query
+          description: The timezone in which the date and time values are retrieved. The default timezone is UTC.
+          type: string
+        - name: granularity
+          in: query
+          description: The interval at which API usage should be aggregated. Possible values are "hours","days", or "months".
+          type: string
+        - name: apiName
+          in: query
+          description: Name of the API for which usage should be retrieved.
+          type: string
+        - name: apiVersion
+          in: query
+          description: Version of the API for which usage should be retrieved.
+          type: string
+      responses:
+        200:
+          description: OK
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/APIUsagePerFaultyInvocations'
+        400:
+          description: Bad Request - the request format is invalid. For example, The datetime strings are malformatted, timezone is invalid, etc.
+          schema:
+            $ref: '#/definitions/BadRequestError'
+        401:
+          description: The request is unauthorized.
+          schema:
+            $ref: '#/definitions/UnauthorizedError'
+        500:
+          description: Internal server error response.
+          schema:
+            $ref: '#/definitions/InternalServerError'
+
+  /latency:
+    get:
+      summary: Get all API latency statistics
+      description: This is the default endpoint to get all API latency statistics over time. The default time period is 3 days in the UTC timezone.
+      x-wso2-request: |
+       curl -k -X GET "https://gateway.api.cloud.wso2.com/api/am/analytics/latency?from=2019-06-01%2012%3A00%3A00&to=2019-06-30%2010%3A00%3A00&timezone=IST&granularity=days" -H "Content-Type: application/json" -H "accept: application/json" -H "Authorization: Bearer f9f93d92-5c73-3650-bc15-ccdb9360d0a6"
+      x-wso2-response: |
+        "HTTP/1.1 200 OK"
+        [
+        {
+           "datetime": "2019-05-27 01:20:00",
+           "apiName": "PizzaShackAPI",
+           "apiVersion": "v1.0.0",
+           "avgResponseTime": 481,
+           "avgSecurityLatency": 24,
+           "avgThrottlingLatency": 1,
+           "avgRequestMedLatency": 0,
+           "avgResponseMedLatency": 0,
+           "avgBackendLatency": 0,
+           "avgOtherLatency": 0
+         }
+         ] 
+      security:
+        - Bearer: []
+      produces:
+        - application/json
+      parameters:
+        - name: from
+          in: query
+          description: The start date and time to retrieve latency statistics. Supports YYYY-MM-dd or YYYY-MM-dd HH:mm:ss formats.
+          type: string
+        - name: to
+          in: query
+          description: The end date and time to retrieve latency statistics. Supports YYYY-MM-dd or YYYY-MM-dd HH:mm:ss formats.
+          type: string
+        - name: timezone
+          in: query
+          description: The timezone in which the date and time values are retrieved. The default timezone is UTC.
+          type: string
+        - name: granularity
+          in: query
+          description: The interval at which latency statistics should be aggregated. Possible values are "hours","days", or "months".
+          type: string
+        - name: apiName
+          in: query
+          description: Name of the API for which latency statistics should be retrieved.
+          type: string
+        - name: apiVersion
+          in: query
+          description: Version of the API for which latency statistics should be retrieved.
+          type: string
+      responses:
+        200:
+          description: OK
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Latency'
+        400:
+          description: Bad Request - the request format is invalid. For example, The datetime strings are malformatted, timezone is invalid, etc.
+          schema:
+            $ref: '#/definitions/BadRequestError'
+        401:
+          description: The request is unauthorized.
+          schema:
+            $ref: '#/definitions/UnauthorizedError'
+        500:
+          description: Internal server error response.
+          schema:
+            $ref: '#/definitions/InternalServerError'
+
+  /latency/resource-path:
+    get:
+      summary: Get API latency statistics per resource path
+      description: Returns API latency statistics per resource path over time. The default time period is 3 days in the UTC timezone.
+      x-wso2-request: |
+       curl -k -X GET "https://gateway.api.cloud.wso2.com/api/am/analytics/latency/resource-path?from=2019-06-01%2012%3A00%3A00&to=2019-06-30%2010%3A00%3A00&timezone=IST&granularity=days" -H "Content-Type: application/json" -H "accept: application/json" -H "Authorization: Bearer f9f93d92-5c73-3650-bc15-ccdb9360d0a6"
+      x-wso2-response: |
+        "HTTP/1.1 200 OK"
+        [
+        {
+           "datetime": "2019-05-27 01:20:00",
+           "apiName": "PizzaShackAPI",
+           "apiVersion": "v1.0.0",
+           "resource-path": "/orders",
+           "apiMethod": "GET",
+           "avgResponseTime": 481,
+           "avgSecurityLatency": 24,
+           "avgThrottlingLatency": 1,
+           "avgRequestMedLatency": 0,
+           "avgResponseMedLatency": 0,
+           "avgBackendLatency": 0,
+           "avgOtherLatency": 0
+         }
+         ]    
+      security:
+        - Bearer: []
+      produces:
+        - application/json
+      parameters:
+        - name: from
+          in: query
+          description: The start date and time to retrieve latency statistics. Supports YYYY-MM-dd or YYYY-MM-dd HH:mm:ss formats.
+          type: string
+        - name: to
+          in: query
+          description: The end date and time to retrieve latency statistics. Supports YYYY-MM-dd or YYYY-MM-dd HH:mm:ss formats.
+          type: string
+        - name: timezone
+          in: query
+          description: The timezone in which the date and time values are retrieved. The default timezone is UTC.
+          type: string
+        - name: granularity
+          in: query
+          description: The interval at which latency statistics should be aggregated. Possible values are "hours","days", or "months".
+          type: string
+        - name: apiName
+          in: query
+          description: Name of the API for which latency statistics should be retrieved.
+          type: string
+        - name: apiVersion
+          in: query
+          description: Version of the API for which latency statistics should be retrieved.
+          type: string
+        - name: resourcePath
+          in: query
+          description: Resource path of the API for which latency statistics should be retrieved.
+          type: string
+        - name: apiMethod
+          in: query
+          description: API method for which latency statistics should be retrieved.
+          type: string
+      responses:
+        200:
+          description: OK
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/LatencyPerResourcePath'
+        400:
+          description: Bad Request - the request format is invalid. For example, The datetime strings are malformatted, timezone is invalid, etc.
+          schema:
+            $ref: '#/definitions/BadRequestError'
+        401:
+          description: The request is unauthorized.
+          schema:
+            $ref: '#/definitions/UnauthorizedError'
+        500:
+          description: Internal server error response.
+          schema:
+            $ref: '#/definitions/InternalServerError'
+
+  /throttled:
+    get:
+      summary: Get all throttled request statistics
+      description: This is the default endpoint to get all faulty request/response counts per API over time. The default time period is 3 days in the UTC timezone.
+      x-wso2-request: |
+       curl -k -X GET "https://gateway.api.cloud.wso2.com/api/am/analytics/throttled?from=2019-06-01%2012%3A00%3A00&to=2019-06-30%2010%3A00%3A00&timezone=IST&granularity=days" -H "Content-Type: application/json" -H "accept: application/json" -H "Authorization: Bearer f9f93d92-5c73-3650-bc15-ccdb9360d0a6"
+      x-wso2-response: |
+        "HTTP/1.1 200 OK"
+        [
+        {
+           "datetime": "2019-05-27 01:20:00",
+           "apiName": "PizzaShackAPI",
+           "apiVersion": "v1.0.0",
+           "throttledOutCount": 10
+         }
+         ] 
+      security:
+        - Bearer: []
+      produces:
+        - application/json
+      parameters:
+        - name: from
+          in: query
+          description: The start date and time to retrieve throttled request statistics. Supports YYYY-MM-dd or YYYY-MM-dd HH:mm:ss formats.
+          type: string
+        - name: to
+          in: query
+          description: The end date and time to retrieve throttled request statistics. Supports YYYY-MM-dd or YYYY-MM-dd HH:mm:ss formats.
+          type: string
+        - name: timezone
+          in: query
+          description: The timezone in which the date and time values are retrieved. The default timezone is UTC.
+          type: string
+        - name: granularity
+          in: query
+          description: The interval at which throttled request statistics should be aggregated. Possible values are "hours","days", or "months".
+          type: string
+        - name: apiName
+          in: query
+          description: Name of the API for which throttled request statistics should be retrieved.
+          type: string
+        - name: apiVersion
+          in: query
+          description: Version of the API for which throttled request statistics should be retrieved.
+          type: string
+      responses:
+        200:
+          description: OK
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Throttled'
+        400:
+          description: Bad Request - the request format is invalid. For example, The datetime strings are malformatted, timezone is invalid, etc.
+          schema:
+            $ref: '#/definitions/BadRequestError'
+        401:
+          description: The request is unauthorized.
+          schema:
+            $ref: '#/definitions/UnauthorizedError'
+        500:
+          description: Internal server error response.
+          schema:
+            $ref: '#/definitions/InternalServerError'
+
+  /throttled/application:
+    get:
+      summary: Get all throttled requests statistics per application
+      description: Returns faulty request/response counts per API over time. The default time period is 3 days in the UTC timezone.
+      x-wso2-request: |
+       curl -k -X GET "https://gateway.api.cloud.wso2.com/api/am/analytics/throttled/application?from=2019-06-01%2012%3A00%3A00&to=2019-06-30%2010%3A00%3A00&timezone=IST&granularity=days" -H "Content-Type: application/json" -H "accept: application/json" -H "Authorization: Bearer f9f93d92-5c73-3650-bc15-ccdb9360d0a6"
+      x-wso2-response: |
+        "HTTP/1.1 200 OK"
+        [
+        {
+           "datetime": "2019-05-27 01:20:00",
+           "apiName": "PizzaShackAPI",
+           "apiVersion": "v1.0.0",
+           "applicationName": "DefaultApplication",
+           "applicationId": "16931",
+           "throttledOutCount": 10
+         }
+         ] 
+      security:
+        - Bearer: []
+      produces:
+        - application/json
+      parameters:
+        - name: from
+          in: query
+          description: The start date and time to retrieve throttled request statistics. Supports YYYY-MM-dd or YYYY-MM-dd HH:mm:ss formats.
+          type: string
+        - name: to
+          in: query
+          description: The end date and time to retrieve throttled request statistics. Supports YYYY-MM-dd or YYYY-MM-dd HH:mm:ss formats.
+          type: string
+        - name: timezone
+          in: query
+          description: The timezone in which the date and time values are retrieved. The default timezone is UTC.
+          type: string
+        - name: granularity
+          in: query
+          description: The interval at which throttled request statistics should be aggregated. Possible values are "hours","days", or "months".
+          type: string
+        - name: apiName
+          in: query
+          description: Name of the API for which throttled request statistics should be retrieved.
+          type: string
+        - name: apiVersion
+          in: query
+          description: Version of the API for which throttled request statistics should be retrieved.
+          type: string
+        - name: applicationId
+          in: query
+          description: ID of the application for which throttled request statistics should be retrieved.
+          type: string
+      responses:
+        200:
+          description: OK
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/ThrottledPerApplication'
+        400:
+          description: Bad Request - the request format is invalid. For example, The datetime strings are malformatted, timezone is invalid, etc.
+          schema:
+            $ref: '#/definitions/BadRequestError'
+        401:
+          description: The request is unauthorized.
+          schema:
+            $ref: '#/definitions/UnauthorizedError'
+        500:
+          description: Internal server error response.
+          schema:
+            $ref: '#/definitions/InternalServerError'
+
+
+definitions:
+  APIUsage:
+    description: Usage statistics of an API at a given timestamp.
+    type: object
+    properties:
+      datetime:
+        type: string
+        description: Datetime string representing the beginning of the interval
+        example: "2019-05-27 01:20:00"
+      apiName:
+        type: string
+        description: API Name corresponding to this statistic
+        example: PizzaShackAPI
+      apiVersion:
+        type: string
+        description: Version of the corresponding API
+        example: v1.0.0
+      requestCount:
+        type: integer
+        description: Number of requests received to this API within the given interval
+        example: 2045
+
+  APIUsagePerResourcePath:
+    description: Usage statistics of an API at a given timestamp per resource path.
+    type: object
+    properties:
+      datetime:
+        type: string
+        description: Datetime string representing the beginning of the interval
+        example: "2019-05-27 01:20:00"
+      apiName:
+        type: string
+        description: API Name corresponding to this statistic
+        example: PizzaShackAPI
+      apiVersion:
+        type: string
+        description: Version of the corresponding API
+        example: v1.0.0
+      apiContext:
+        type: string
+        description: Context path of the corresponding API
+        example: "/t/pizzaOrg/v2.0/service-providers"
+      resource-path:
+        type: string
+        description: Resource path.
+        example: "/*"
+      apiMethod:
+        type: string
+        description: API method.
+        example: "GET"
+      requestCount:
+        type: integer
+        description: Number of requests received to this API within the given interval
+        example: 104
+
+  APIUsagePerUser:
+    description: Usage statistics of an API at a given timestamp per user.
+    type: object
+    properties:
+      datetime:
+        type: string
+        description: Datetime string representing the beginning of the interval
+        example: "2019-05-27 01:20:00"
+      apiName:
+        type: string
+        description: API Name corresponding to this statistic
+        example: PizzaShackAPI
+      apiVersion:
+        type: string
+        description: Version of the corresponding API
+        example: v1.0.0
+      username:
+        type: string
+        description: Context path of the corresponding API
+        example: "test@wso2.com@testorg"
+      requestCount:
+        type: integer
+        description: Number of requests received to this API within the given interval
+        example: 104
+
+  APIUsagePerApplication:
+    description: Usage statistics of an API at a given timestamp per application.
+    type: object
+    properties:
+      datetime:
+        type: string
+        description: Datetime string representing the beginning of the interval
+        example: "2019-05-27 01:20:00"
+      apiName:
+        type: string
+        description: API Name corresponding to this statistic
+        example: PizzaShackAPI
+      apiVersion:
+        type: string
+        description: Version of the corresponding API
+        example: v1.0.0
+      applicationName:
+        type: string
+        description: Name of the corresponding application
+        example: "DefaultApplication"
+      applicationId:
+        type: string
+        description: ID of the corresponding application
+        example: "16931"
+      applicationOwner:
+        type: string
+        description: User name of the application owner
+        example: "test@wso2.com@testorg"
+      requestCount:
+        type: integer
+        description: Number of requests received to this API within the given interval
+        example: 104
+
+  APIUsagePerGeolocation:
+    description: Usage statistics of an API at a given timestamp per geolocation.
+    type: object
+    properties:
+      datetime:
+        type: string
+        description: Datetime string representing the beginning of the interval
+        example: "2019-05-27 01:20:00"
+      apiName:
+        type: string
+        description: API Name corresponding to this statistic
+        example: PizzaShackAPI
+      apiVersion:
+        type: string
+        description: Version of the corresponding API
+        example: v1.0.0
+      country:
+        type: string
+        description: Country
+        example: "United States"
+      city:
+        type: string
+        description: City
+        example: "Virginia"
+      requestCount:
+        type: integer
+        description: Number of requests received to this API within the given interval
+        example: 104
+
+  APIUsagePerFaultyInvocations:
+    description: Usage statistics of an API at a given timestamp per geolocation.
+    type: object
+    properties:
+      datetime:
+        type: string
+        description: Datetime string representing the beginning of the interval
+        example: "2019-05-27 01:20:00"
+      apiName:
+        type: string
+        description: API Name corresponding to this statistic
+        example: PizzaShackAPI
+      apiVersion:
+        type: string
+        description: Version of the corresponding API
+        example: v1.0.0
+      faultCount:
+        type: integer
+        description: Number of faulty invocations received to this API within the given interval. If a runtime exception that is related to the backend communication occurs, it is considered as a faulty invocation
+        example: 104
+
+  Latency:
+    description: Latency statistics of an API at a given timestamp.
+    type: object
+    properties:
+      datetime:
+        type: string
+        description: Datetime string representing the beginning of the interval
+        example: "2019-05-27 01:20:00"
+      apiName:
+        type: string
+        description: API Name corresponding to this statistic
+        example: PizzaShackAPI
+      apiVersion:
+        type: string
+        description: Version of the corresponding API
+        example: v1.0.0
+      avgResponseTime:
+        type: integer
+        description: Average response time per request
+        example: 481
+      avgSecurityLatency:
+        type: integer
+        description: Average security latency per request
+        example: 24
+      avgThrottlingLatency:
+        type: integer
+        description: Average throttling latency per request
+        example: 1
+      avgRequestMedLatency:
+        type: integer
+        description: Average request mediation latency
+        example: 0
+      avgResponseMedLatency:
+        type: integer
+        description: Average response mediation latency
+        example: 0
+      avgBackendLatency:
+        type: integer
+        description: Average backend latency
+        example: 0
+      avgOtherLatency:
+        type: integer
+        description: Average other latency
+        example: 0
+
+  LatencyPerResourcePath:
+    description: Latency statistics of an API per resource path at a given timestamp
+    type: object
+    properties:
+      datetime:
+        type: string
+        description: Datetime string representing the beginning of the interval
+        example: "2019-05-27 01:20:00"
+      apiName:
+        type: string
+        description: API Name corresponding to this statistic
+        example: PizzaShackAPI
+      apiVersion:
+        type: string
+        description: Version of the corresponding API
+        example: v1.0.0
+      resource-path:
+        type: string
+        description: Resource path of the API
+        example: /orders
+      apiMethod:
+        type: string
+        description: API method of the corresponding resource path
+        example: "GET"
+      avgResponseTime:
+        type: integer
+        description: Average response time per request
+        example: 481
+      avgSecurityLatency:
+        type: integer
+        description: Average security latency per request
+        example: 24
+      avgThrottlingLatency:
+        type: integer
+        description: Average throttling latency per request
+        example: 1
+      avgRequestMedLatency:
+        type: integer
+        description: Average request mediation latency
+        example: 0
+      avgResponseMedLatency:
+        type: integer
+        description: Average response mediation latency
+        example: 0
+      avgBackendLatency:
+        type: integer
+        description: Average backend latency
+        example: 0
+      avgOtherLatency:
+        type: integer
+        description: Average other latency
+        example: 0
+
+  Throttled:
+    description: Throttled out statistics of an API at a given timestamp
+    type: object
+    properties:
+      datetime:
+        type: string
+        description: Datetime string representing the beginning of the interval
+        example: "2019-05-27 01:20:00"
+      apiName:
+        type: string
+        description: API Name corresponding to this statistic
+        example: PizzaShackAPI
+      apiVersion:
+        type: string
+        description: Version of the corresponding API
+        example: v1.0.0
+      throttledOutCount:
+        type: integer
+        description: Number of throttled out requests received to this API within the given interval
+        example: 10
+
+  ThrottledPerApplication:
+    description: Throttled out statistics of an API per application at a given timestamp
+    type: object
+    properties:
+      datetime:
+        type: string
+        description: Datetime string representing the beginning of the interval
+        example: "2019-05-27 01:20:00"
+      apiName:
+        type: string
+        description: API Name corresponding to this statistic
+        example: PizzaShackAPI
+      apiVersion:
+        type: string
+        description: Version of the corresponding API
+        example: v1.0.0
+      applicationName:
+        type: string
+        description: Name of the corresponding application
+        example: "DefaultApplication"
+      applicationId:
+        type: string
+        description: ID of the corresponding application
+        example: "16931"
+      throttledOutCount:
+        type: integer
+        description: Number of requests received to this API within the given interval
+        example: 10
+
+
+  BadRequestError:
+    description: The error response sent when a bad request error occurs.
+    type: object
+    properties:
+      messages:
+        type: array
+        items:
+          type: string
+        example: [ "Invalid timezone", "Invalid granularity. Granularity should be in days, hours, or months"]
+
+  InternalServerError:
+    description: The error response sent when an internal server error occurs.
+    type: object
+    properties:
+      message:
+        type: string
+        description: Internal server error message
+        example: Unable to run query
+
+  UnauthorizedError:
+    description: The error response sent when the request in unauthorized.
+    type: object
+    properties:
+      message:
+        type: string
+        description: Unauthorized error message
+        example: User not authenticated. Invalid user.
+
+
+
