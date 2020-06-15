@@ -16,7 +16,8 @@ Let's get started!
 
 Follow the instructions below to create and publish an API via the API Publisher Portal.
 
-1. Sign in to WSO2 API Cloud by providing your username and password. This opens the API Publisher portal.                                                
+1. Sign in to WSO2 API Cloud using your username and password. This opens the API Publisher portal.
+ ![](../assets/img/qsg/api_publisher_home.png)                                               
 
 2. Create an API.
 
@@ -33,6 +34,7 @@ Follow the instructions below to create and publish an API via the API Publisher
          `{"hello": "world"}`
     
 4. Click **CREATE API** and then click **Design a new REST API**.
+ ![](../assets/img/qsg/design_new_rest_api.png)
 
 5. Provide the following as the API details.
 
@@ -63,7 +65,7 @@ Follow the instructions below to create and publish an API via the API Publisher
      <td><code>http://www.mocky.io/v2/5185415ba171ea3a00704eed</code>
       <div class="admonition note">
       <p class="admonition-title">Note</p>
-      <p><b>Use the HTTP protocol</b> because to use HTTPS you need to import the <code>mocky.io</code> certificate into WSO2 API Manager</p>
+      <p><b>Use the HTTP protocol</b>. If you want to use HTTPS you would have to import the <code>mocky.io</code> certificate.</p>
       </div> 
      </td>
      </tr>
