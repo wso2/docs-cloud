@@ -719,7 +719,7 @@ tasks as below.
 <p>ADVANCED THROTTLING - Allows you to create and update advanced throttling polices.
 <p>APPLICATION TIERS - Allows you to create and update application level throttling tiers. </p>
 <p>SUBSCRIPTION TIERS - Allows you to create and update API subscription level throttling tiers.</p>
-<p>BLACK LIST - Blacklists requests by APIs, Applications, Users and IP Addresses.</p></td>
+<p>DENYLIST - Allows you to block requests by APIs, Applications, Users, and IP Addresses.</p></td>
 </tr>
 <tr class="even">
 <td>LOG ANALYZER</td>
