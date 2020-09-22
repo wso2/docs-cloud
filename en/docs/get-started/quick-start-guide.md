@@ -40,7 +40,7 @@ Follow the instructions below to create and publish an API via the API Publisher
 
 5. Provide the following as the API details:
 
-     1. In the **Design** tab specify the following and click **Next: Implement**:
+     1. On the **Design** tab specify the following and click **Next: Implement**:
 
          <table>
          <tr> 
@@ -65,7 +65,7 @@ Follow the instructions below to create and publish an API via the API Publisher
          </tr>
          </table>
 
-     2. In the **Implement** tab click **Managed API**, then specify the following and click **Next: Manage**:
+     2. On the **Implement** tab click **Managed API**, then specify the following and click **Next: Manage**:
    
          <table>
          <tr> 
@@ -86,7 +86,7 @@ Follow the instructions below to create and publish an API via the API Publisher
          </tr>
          </table>
 
-     3. In the **Manage** tab select `Gold` and `Bronze` as the **Subscription Tiers**.
+     3. On the **Manage** tab select `Gold` and `Bronze` as the **Subscription Tiers**.
 
         
 6. Click **Save & Publish**. 
