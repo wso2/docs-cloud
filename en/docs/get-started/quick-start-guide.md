@@ -1,11 +1,11 @@
 # Quick Start Guide
 
-This section provides step-by-step instructions to quickly create, publish, and invoke an API via WSO2 API Cloud's Publisher Portal and DevPortal.
+This section provides step-by-step instructions to quickly create, publish, and invoke an API via WSO2 API Cloud's Publisher Portal and API Store.
 
 ## Objectives
 
 1. Create and publish an API via the API Publisher portal.
-2. Subscribe to the API via the DevPortal.
+2. Subscribe to the API via the API Store.
 3. Generate keys.
 3. Invoke the API with the generated keys.
 
@@ -16,8 +16,7 @@ Let's get started!
 
 Follow the instructions below to create and publish an API via the API Publisher Portal.
 
-1. Sign in to WSO2 API Cloud using your username and password. This opens the API Publisher portal.
- ![](../assets/img/qsg/api_publisher_home.png)                                               
+1. Sign in to WSO2 API Cloud using your username and password. This opens the API Publisher portal.                                             
 
 2. Create an API.
 
@@ -33,79 +32,87 @@ Follow the instructions below to create and publish an API via the API Publisher
             
          `{"hello": "world"}`
     
-4. Click **CREATE API** and then click **Design a new REST API**.
- ![](../assets/img/qsg/design_new_rest_api.png)
+3. Click **ADD NEW API**.
+ ![](../assets/img/qsg/api-publisher.png)    
 
-5. Provide the following as the API details.
+4. Select **Design a New REST API** and then click **Start Creating**.
+ ![](../assets/img/qsg/design-a-new-rest-api.png)
 
-    <table>
-    <tr> 
-     <th>
-     Name
-     </th>
-     <td>
-     HelloWorld
-     </td>
-     </tr>
-     <tr> 
-     <th>Context
-     </th>
-     <td><code>/hello</code>
-     </td>
-     </tr>
-     <tr> 
-     <th>Version
-     </th>
-     <td>1.0.0
-     </td>
-     </tr>
-     <tr> 
-     <th>Endpoint
-     </th>
-     <td><code>http://www.mocky.io/v2/5185415ba171ea3a00704eed</code>
-      <div class="admonition note">
-      <p class="admonition-title">Note</p>
-      <p><b>Use the HTTP protocol</b>. If you want to use HTTPS you would have to import the <code>mocky.io</code> certificate.</p>
-      </div> 
-     </td>
-     </tr>
-     <tr> 
-     <th>Business Plan(s)
-     </th>
-     <td>Gold, Bronze
-     </td>
-     </tr>
-     </table>
+5. Provide the following as the API details:
+
+     1. In the **Design** tab specify the following and click **Next: Implement**:
+
+         <table>
+         <tr> 
+         <th>
+         Name
+         </th>
+         <td>
+         HelloWorld
+         </td>
+         </tr>
+         <tr> 
+         <th>Context
+         </th>
+         <td><code>/hello</code>
+         </td>
+         </tr>
+         <tr> 
+         <th>Version
+         </th>
+         <td>1.0.0
+         </td>
+         </tr>
+         </table>
+
+     2. In the **Implement** tab click **Managed API**, then specify the following and click **Next: Manage**:
+   
+         <table>
+         <tr> 
+         <th>Endpoint Type
+         </th>
+         <td>HTTP/REST Endpoint
+         </td>
+         </tr>
+         <tr> 
+         <th>Endpoint
+         </th>
+         <td><code>http://www.mocky.io/v2/5185415ba171ea3a00704eed</code>
+         <div class="admonition note">
+         <p class="admonition-title">Note</p>
+         <p><b>Use the HTTP protocol</b>. If you want to use HTTPS you would have to import the <code>mocky.io</code> certificate.</p>
+         </div> 
+         </td>
+         </tr>
+         </table>
+
+     3. In the **Manage** tab select `Gold` and `Bronze` as the **Subscription Tiers**.
 
         
-6. Click **Create & Publish**. 
+6. Click **Save & Publish**. 
 
-     This will publish the API on the DevPortal. You now have an OAuth2.0 secured REST API that is ready to be consumed.
+     This will publish the API to the API Store. You now have an OAuth2.0 secured REST API that is ready to be consumed.
 
 <a name="subscribe"></a>
 
 ### Step 2 - Subscribe to the API
 
-Follow the instructions below to subscribe to the API and generate the keys via the DevPortal.
+Follow the instructions below to subscribe to the API and generate the keys via the API Store.
 
-1. Navigate to the DevPortal. You will see the published `HelloWorld` API listed in the DevPortal.
+1. Go to the API Store. You will see the published `HelloWorld` API listed in the in the API Store.
 
-2. Click on the API thumbnail to view the overview of the API. 
+2. Click on the API thumbnail to take a look at the overview of the API. 
 
 3. Register an OAuth2.0 application.
 
-    1. Click **Subscribe** on the **Subscriptions** card.
+    1. Under **Applications** select **New Application**. This takes you to the **Add Application** page. 
     
-    2. Click **Subscription & Key Generation Wizard**. This wizard walks you through 5 steps that will register an OAuth2.0 application, which you can use to consume the `HelloWorld` API.  
-
-    3.  Create the OAuth2.0 application.
+    2. Specify the following values and click **Add** to register an OAuth2.0 application, which you can use to consume the `HelloWorld` API.
     
-         Enter the application name, and click **Next** without changing any of the other default values.   
-
          <table>
          <tr> 
          <th>
-         Application Name
+         Name
          </th>
          <td>
          Greetings
@@ -117,29 +124,24 @@ Follow the instructions below to subscribe to the API and generate the keys via 
          <td>50PerMin
          </td>
          </tr>
-         <tr> 
-         <th>Token Type
-         </th>
-         <td>JWT
-         </td>
-         </tr>
          </table>
+       This displays a message requesting whether you want to return to the API detail page. Click **Yes**. 
 
-     3. Subscribe the application to the API.  
+     3. On the API detail page, 
+         1. Under **Applications**, select the newly created `Greetings` application.
+         2. Under **Tiers**, select `Bronze`. 
+     
+     4. Click **Subscribe**.
         
-         This subscribes the `Greetings` application to the `HelloWorld` API on the selected business plan. Click **Next** without changing any of the default values.
+     This subscribes the `Greetings` application to the `HelloWorld` API on the selected business plan and displays a message that you have successfully subscribed. Click **View Subscriptions**.
 
-     4. Generate the credentials for the **Greetings** OAuth2.0 application. 
-     
-         The Grant Types define the various protocols allowed by the system, from which your application will be allowed to request tokens. Click **Next** without changing any of the default values.
 
-     5. Generate a test access token for the 'Greetings' application to access the 'HelloWorld' API. 
-     
-         This step allows you to specify the validity period for the token and the permissions (scopes). Click **Next** without changing any of the default values.
+4. Generate production keys for the **Greetings** OAuth2.0 application.
 
-     6. Click copy to copy the generated test access token to the clipboard.
+    - Click on the **Production Keys** tab and click **Generate keys** without changing any of the default values.
 
-     7.  Click **Finish**.
+5. Click copy to copy the generated test access token to the clipboard.
+
 
  **Voila!!!** You can now test the 'HelloWorld' API with the OAuth2.0 token that you just generated. 
 
@@ -147,23 +149,13 @@ Follow the instructions below to subscribe to the API and generate the keys via 
 
 ### Step 3 - Invoke the API
 
-Follow the instructions below to use the generated keys to invoke the API you created.
+Follow the instructions below to invoke the API you created:
 
-1. Click **Try Out**. 
+1. Go to the API Store and click on the `HelloWorld` API.
 
-     You will see the resources of the API are listed. 
+2. When the API opens, click the **API Console** tab. You will see the resources of the API are listed. 
 
-2. Paste the access token that you previously copied in the **Access Token** field.  
-
-3. __If this is the first time you are using the API test console__ from your browser,  open a new tab and navigate to the [https://localhost:8243/](https://localhost:8243/) URL. 
-
-     This will prompt your browser to accept the certificate used by the API Gateway. This is required because by default the API Gateway uses a self-signed certificate that is not trusted by web browsers. 
-    
-    !!! note
-
-        This certificate used by the API Gateway is replaced when deploying the system in production.
-
-4. Click `GET` resource of the API to expand the resource. 
+2. Click `GET` resource of the API to expand the resource. 
 
 5. Click **Try It Out**, which is the button on the right. Then click **Execute**.  
 
