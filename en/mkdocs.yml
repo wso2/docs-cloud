@@ -50,6 +50,11 @@ nav:
      - 'Overview': get-started/overview.md
      - 'Key Concepts': get-started/key-concepts.md
      - 'Quick Start Guide': get-started/quick-start-guide.md
+     - 'Tutorials':
+        - 'Create and Publish an API': get-started/tutorials/create-and-publish-an-api.md
+        - 'Subscribe to and Invoke an API ': get-started/tutorials/subscribe-to-and-invoke-an-api.md
+        - 'Expose your On-Premises Backend Services to WSO2 API Cloud': get-started/tutorials/expose-your-backend-services-to-api-cloud.md
+        - 'Enforce Throttling and Resource Access Policies': get-started/tutorials/enforce-throttling-and-resource-access-policies.md
   - 'Learn':
      - 'Design APIs': 
         - 'Design a New REST API': learn/design-apis/design-new-rest-api.md
