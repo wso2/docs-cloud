@@ -25,32 +25,32 @@ To register and get started with WSO2 API Cloud, go to [http://wso2.com/cloud/ap
       		</div>
 		</div>
       <!-- card -->
-      <div class="card" onclick="location.href='learn/design-apis/design-new-rest-api';">
+      <div class="card" onclick="location.href='learn/design-apis/design-a-new-rest-api';">
             <div class="line"></div>
             <div class="card-icon"><i class="material-icons md-36">create</i></div>
-             <div class="card-content">
-                  <p class="title">Design APIs</p>
-                  <p class="hint">Design and develop APIs with ease.</p>
+            <div class="card-content">
+                <p class="title">Design APIs</p>
+                <p class="hint">Design and develop APIs with ease.</p>
              </div>
       </div>
       <!-- end card -->
       <!-- card -->
       <div class="card" onclick="location.href='learn/publish-apis/publish-an-api';">
             <div class="line"></div>
-            <div class="card-icon"><i class="material-icons md-36">store</i></div>
+            <div class="card-icon"><i class="material-icons md-36">input</i></div>
 <div class="card-content">
             <div><p class="title">Publish APIs</p></div>
-            <p class="hint"> Make your APIs accessible and discoverable</p>
+            <p class="hint"> Make your APIs accessible and discoverable.</p>
       </div>
 </div>
       <!-- end card -->
       <!-- card -->
-      <div class="card" onclick="location.href='learn/manage-apis/manage-api-lifecycle';">
+      <div class="card" onclick="location.href='learn/manage-apis/api-lifecycle-management-overview';">
             <div class="line"></div> 
             <div class="card-icon"><i class="material-icons md-36">settings_applications</i></div>
 <div class="card-content">
             <p class="title">Manage APIs</p>
-            <p class="hint">Manage APIs across their lifecycle</p>
+            <p class="hint">Manage APIs across their lifecycle.</p>
       </div>
  </div>
       <!-- end card -->
@@ -62,38 +62,40 @@ To register and get started with WSO2 API Cloud, go to [http://wso2.com/cloud/ap
       <!-- end card -->
       <!-- card -->
    <!-- card -->
-      <div class="card" onclick="location.href='learn/secure-apis/secure-apis-using-oauth2-access-tokens';">
+      <div class="card" onclick="location.href='learn/secure-apis/api-security-overview';">
 	    <div class="line"></div>
             <div class="card-icon"><i class="material-icons md-36">security</i></div>
             <div class="card-content">
-		    <p class="title">Secure APIs</p>
-		    <p class="hint">Authenticate and authorize API requests.</p>
+		<p class="title">Secure APIs</p>
+		<p class="hint">Authenticate and authorize API requests.</p>
             </div>
       </div>
-      <div class="card" onclick="location.href='learn/apply-throttling-and-rate-limiting/set-throttling-limits';">
+      <div class="card" onclick="location.href='learn/control-api-traffic/throttling-and-rate-limiting-overview';">
 	    <div class="line"></div>
             <div class="card-icon"><i class="material-icons md-36">traffic</i></div>
             <div class="card-content">
-		    <p class="title">Apply Rate Limiting</p>
-		    <p class="hint">Ensure stability of your APIs by applying throttling and rate limiting policies.</p>
+		<p class="title">Control API Traffic</p>
+		<p class="hint">Ensure stability of your APIs by applying throttling and rate limiting policies.</p>
             </div>
       </div>
         <!-- end card -->
       <!-- card -->
-      <div class="card" onclick="location.href='learn/monetize-apis/enable-monetization';">
-	   <div class="line"></div>
-            <div class="card-icon"><i class="material-icons md-36">dynamic_feed</i></div>
-            <div class="card-content">
-                <p class="title">Monetize APIs</p>
-                <p class="hint"> Build an effective API monetization strategy.</p>
-            </div>
-      </div>
-      <div class="card" onclick="location.href='learn/analyze-apis/view-api-statistics';">
+      <div class="card" onclick="location.href='learn/consume-apis/discover-apis';">
+            <div class="line"></div>
+            <div class="card-icon"><i class="material-icons md-36">store</i></div>
+<div class="card-content">
+            <div><p class="title">Consume APIs</p></div>
+            <p class="hint"> Find, explore, evaluate, and subscribe to APIs.</p>
+      </div> 
+</div>
+      <!-- end card -->
+      <!-- card -->
+      <div class="card" onclick="location.href='learn/analyze-apis/api-analytics-overview';">
 	    <div class="line"></div>
             <div class="card-icon"><i class="material-icons md-36">show_chart</i></div>
             <div class="card-content">
-		    <p class="title">Analyze APIs</p>
-		    <p class="hint">View and analyze statistics related to APIs deployed in WSO2 API Cloud.</p>
+		<p class="title">Analyze APIs</p>
+		<p class="hint">View and analyze statistics related to APIs deployed in WSO2 API Cloud.</p> 
             </div>
       </div>
       <!-- end card -->
