@@ -30,14 +30,14 @@ The structure of the ZIP file is described below:
 <tr class="odd">
 <td><p>Meta Information</p></td>
 <td><ul>
-<li><p><code>                api.json:               </code> contains all the basic information required for an API to be imported to another environment</p></li>
-<li><p><code>                swagger.json:               </code> contains the API swagger definition</p></li>
+<li><p>`api.json:` contains all the basic information required for an API to be imported to another environment</p></li>
+<li><p>`swagger.json:` contains the API swagger definition</p></li>
 </ul></td>
 </tr>
 <tr class="even">
 <td><p>Documents</p></td>
 <td><ul>
-<li><p><code>                docs.json:               </code> contains the summary of all the documents available for the API</p></li>
+<li><p>`docs.json:` contains the summary of all the documents available for the API</p></li>
 <li><p>Add the uploaded files for API documentation also</p></li>
 </ul></td>
 </tr>
@@ -96,27 +96,28 @@ following:
 
 #### Run the CLI tool
 
-1.  Click [here](https://github.com/wso2/docs-cloud/tree/master/en/docs/assets/attachments/administer) to view the available CLI tool archives and download the appropriate archive depending on your operating system (i.e., Mac, Windows, or Linux).
-2.  Once the download completes, extract the downloaded CLI tool to a preferred location and `cd` into it.
-3.  Navigate to the working directory where the executable of the CLI
-    tool resides.
+1. Go to [https://github.com/wso2/product-apim-tooling/releases/tag/v2.0.4](https://github.com/wso2/product-apim-tooling/releases/tag/v2.0.4). 
 
-4.  Execute the following command to start the CLI tool.
+2. Under the **Assets** section, click on a required installer depending on your operating system (i.e., MacOS, Linux, Windows). This downloads the appropriate CLI tool.   
+
+3. Once the download completes, extract the downloaded CLI tool to a preferred location and `cd` into it.
+
+3. Navigate to the working directory where the executable of the CLI tool resides.
+
+4. Execute the following command to start the CLI tool.
 
     ``` java
     ./apimcli
     ```
 
-5.  Add the location of the extracted folder to your system's
-    `$PATH` variable to be able to access the
-    executable from anywhere.
+5. Add the location of the extracted folder to your system's `$PATH` variable to be able to access the executable from anywhere.
 
     !!! note
     
         For further instructions execute the following command.
     
         ``` java
-            apimcli --help
+        apimcli --help
         ```
     
 
@@ -125,12 +126,12 @@ following:
 The following are some global flags that you can use with the CLI tool.
 
 ``` java
-      --verbose
-           Enable verbose logs (Provides more information on execution)
-      --insecure, -k
-          Allow connections to SSL sites without certs
-      --help, -h
-          Display information and example usage of a command
+--verbose
+    Enable verbose logs (Provides more information on execution)
+--insecure, -k
+    Allow connections to SSL sites without certs
+--help, -h
+    Display information and example usage of a command
 ```
 
   
@@ -155,17 +156,17 @@ apimcli add-env
 2.  Run the following CLI command in the specified format depending on your operating system:
 
     -   Command format on Linux should be as follows:
- ``` java
+        ``` java
    
         apimcli add-env -n <environment-name> \
-                                --registration <registration-endpoint> \
-                                --apim <API-Manager-endpoint> \
-                                --token <token-endpoint> \
-                                --import-export <endpoint-for-environment> \
-                                --admin <admin-REST-API-endpoint> \
-                                --api_list <API-listing-REST-API-endpoint> \
-                                --app_list <application-listing-REST-API-endpoint>
- ```
+                        --registration <registration-endpoint> \
+                        --apim <API-Manager-endpoint> \
+                        --token <token-endpoint> \
+                        --import-export <endpoint-for-environment> \
+                        --admin <admin-REST-API-endpoint> \
+                        --api_list <API-listing-REST-API-endpoint> \
+                        --app_list <application-listing-REST-API-endpoint>
+        ```
 
          
            **The flags you can set are as follows:**
@@ -314,7 +315,7 @@ apimcli add-env
          </tbody>
          </table> 
 
-
+------------------------------------------------------------------------
 
 ### Migrate APIs to a target tenant
 
