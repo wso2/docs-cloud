@@ -56,13 +56,10 @@ nav:
         - 'Expose your On-Premises Backend Services to WSO2 API Cloud': get-started/tutorials/expose-your-backend-services-to-api-cloud.md
         - 'Enforce Throttling and Resource Access Policies': get-started/tutorials/enforce-throttling-and-resource-access-policies.md
   - 'Learn':
-     - 'Design APIs': 
-        - 'Design a New REST API': learn/design-apis/design-new-rest-api.md
-        - 'Design an API Using Existing Swagger Definition': learn/design-apis/design-api-using-existing-swagger.md
-        - 'Design a GraphQL API': learn/design-apis/design-a-graphql-api.md
-        - 'Design a Websocket API': learn/design-apis/design-websocket-api.md
-        - 'Generate a REST API from a SOAP Backend': learn/design-apis/generate-rest-api-from-soap-backend.md
-        - 'Expose a SOAP Service as a REST API': learn/design-apis/expose-soap-service-as-rest-api.md
+     - 'Design APIs':
+        - 'Design a New REST API': learn/design-apis/design-a-new-rest-api.md
+        - 'Design a New WebSocket API': learn/design-apis/design-a-websocket-api.md
+        - 'Design an API Using Existing Swagger Definition': learn/design-apis/design-an-api-using-existing-swagger.md
      - 'Secure APIs':
         - 'Secure APIs using OAuth2 Access Tokens': learn/secure-apis/secure-apis-using-oauth2-access-tokens.md
      - 'Publish APIs':
@@ -73,12 +70,31 @@ nav:
         - 'Create a New API Version': learn/manage-apis/create-a-new-api-version.md
         - 'Deprecate an Old API Version': learn/manage-apis/deprecate-an-old-api-version.md
      - 'Consume APIs':
-        - 'Subscribe to and Invoke an API': learn/consume-apis/subscribe-to-an-invoke-an-api.md
-        - 'Invoke an API Using CURL': learn/consume-apis/invoke-an-api-using-curl.md
+        - 'Discover APIs': learn/consume-apis/discover-apis.md
+        - 'Manage Applications':
+           - 'Create Applications': learn/consume-apis/create-applications.md
+           - 'Generate Application Keys': learn/consume-apis/work-with-api-keys.md
+           - 'Work with Access Tokens':
+              - 'Overview of Access Tokens': learn/consume-apis/overview-of-access-tokens.md
+              - 'Access Tokens Per Device': learn/consume-apis/access-tokens-per-device.md
+           - 'Share Applications': learn/consume-api/manage-application/sharing-applications/sharing-applications.md
+           - 'Add Custom Attributes to Applications': learn/consume-api/manage-application/advanced-topics/add-custom-attributes-to-applications.md
+           - 'Change the Owner of an Application': learn/consume-api/manage-application/advanced-topics/changing-the-owner-of-an-application.md
+        - 'Manage Subscriptions':
+           - 'Subscribe to an API': learn/consume-api/manage-subscription/subscribe-to-an-api.md
+           - 'Invoke an APIs':
+              - 'Invoke an API Using the Integrated API Console': learn/consume-api/invoke-apis/invoke-apis-using-tools/invoke-an-api-using-the-integrated-api-console.md
+              - 'Invoke an API Using a SOAP Client': learn/consume-api/invoke-apis/invoke-apis-using-tools/invoke-an-api-using-a-soap-client.md
+           - 'Use the Community Features': learn/consume-api/collaboration/use-the-community-features.md
+           - 'Generate SDKs':
+              - 'Generate SDKs in Developer Portal': learn/consume-api/generating-sdks/generate-sdks-in-dev-portal.md
+              - 'Write a Client Application Using the SDK': learn/consume-api/generating-sdks/write-a-client-application-using-the-sdk.md
      - 'Control API Traffic':
-        - 'Apply Rate Limits': learn/control-api-traffic/apply-rate-limits.md
-     - 'Monetize APIs':
-        - 'Monetization Overview': learn/monetize-apis/monetization-overview.md
+        - 'Throttling and Rate Limiting Overview': learn/control-api-traffic/throttling-and-rate-limiting-overview.md
+        - 'Apply Throttling Policies':
+           - 'Advanced Throttling Policies': learn/control-api-traffic/advanced-throttling-policies.md
+           - 'Application Throttling Policies': learn/control-api-traffic/application-throttling-policies.md
+           - 'Blacklist Policies': learn/control-api-traffic/blacklist-policies.md
      - 'Analyze APIs':
         - 'API Analytics Overview': learn/analyze-apis/api-analytics-overview.md
   - 'Administer':
@@ -86,15 +102,19 @@ nav:
      - 'Change Organization Name': administer/change-organization-name.md
      - 'Add Members to Your Organization': administer/add-members-to-your-organization.md
      - 'Register and Invite Members': administer/register-and-invite-members.md
+     - 'View and Download Logs': administer/view-and-download-logs.md
+     - 'Migrate APIs and Applications Between Environments': administer/migrate-using-cli-tool.md
   - 'Customize':
      - 'Customize Your Portal':
-        - 'Customize the Devportal': customize/customize-the-devportal.md
-        - 'Customize the Sign In Page': customize/customize-the-sign-in-page.md
-        - 'Customize the Analytics Dashboard': customize/customize-the-analytics-dashboard.md
+        - 'Customize the API Store Theme': customize/customize-the-api-store-theme.md
+        - 'Customize Cloud Domains':
+           - 'Configure Custom Cloud Domains': customize/customize-cloud-domains.md
+           - 'Generate SSL Certificates and DNS Records': customize/generate-ssl-certs-and-dns-records.md
+           - 'Customize the API Store Domain': customize/customize-api-store-domain.md
+           - 'Customize the API Publisher Domain': customize/customize-api-publisher-domain.md
+           - 'Customize the Admin Portal Domain': customize/customize-admin-portal-domain.md
+           - 'Customize Gateway Domain': customize/customize-gateway-domain.md
         - 'Customize Invitation Emails': customize/customize-invitation-emails.md
-        - 'Customize Cloud Domains': customize/customize-cloud-domains.md
-     - 'Apply Customizations': customize/apply-customizations.md
-     - 'Design an External DevPortal': customize/design-an-external-devportal.md
   - 'Hybrid API Management':
      - 'Overview': hybrid-api-management/overview.md
      - 'Deploy the Microgateway': hybrid-api-management/deploy-the-microgateway.md 
