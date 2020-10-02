@@ -1,15 +1,11 @@
 # Common Cloud APIs
 
-The following Cloud APIs are available:
-
-\[ [Login](#CommonCloudAPIs-Login) \] \[
-[addUserToTenant](#CommonCloudAPIs-addUserToTenant) \] \[
-[deleteUserFromTenant](#CommonCloudAPIs-deleteUserFromTenant) \]
+This section provides details of the common Cloud APIs that are available:
 
 !!! note
     
-    **Note** : Before you add or delete users from your tenant, you must
-    first log in to your tenant space in the Cloud as admin.
+    Before you add or delete users from your tenant, you must
+    first sign in as admin to your tenant space in the Cloud.
     
 
 ### Login

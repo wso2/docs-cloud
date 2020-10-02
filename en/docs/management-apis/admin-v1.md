@@ -3,12 +3,11 @@ template: templates/swagger.html
 ---
 
 
-Do the following to try out WSO2 API Cloud's Analytics REST APIs using sample input parameters:     
+Do the following to try out WSO2 API Cloud's Admin REST APIs using sample input parameters:     
 
-1.  Expand the relevant API operation and click the **Try It Out** button.  
-2.  Fill in relevant sample values for the input parameters and click **Execute**. You will receive a sample curl command with the sample values you filled in.
+1.  Expand the relevant API operation and click **Try It Out**.  
+2.  Fill in relevant sample values as the input parameters and click **Execute**. You will receive a sample curl command with the sample values you filled in.
 3.  Add  a  header to the curl command and run the curl command on the terminal.
-
 
 
 
@@ -18,7 +17,7 @@ Do the following to try out WSO2 API Cloud's Analytics REST APIs using sample in
 window.onload = function() {
   // Begin Swagger UI call region
   const ui = SwaggerUIBundle({
-    url: "../../management-apis/restapis/analytics.yaml",
+    url: "../../management-apis/restapis/admin-v1.yaml",
     dom_id: '#swagger-ui',
     deepLinking: true,
     validatorUrl: null,
