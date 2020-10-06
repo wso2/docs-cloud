@@ -122,8 +122,29 @@ nav:
      - 'Deploy the Microgateway on a Kubernetes Cluster': hybrid-api-management/deploy-microgateway-on-kubernetes-cluster.md
      - 'Deploy Grouped APIs Using a Microgateway': hybrid-api-management/deploy-grouped-apis-using-a-microgateway.md
   - 'Management APIs':
-     - 'Publisher APIs': management-apis/publisher-v1.md
-     - 'Analytics APIs': management-apis/analytics.md
+     - 'Overview of Management APIs': management-apis/overview.md
+     - 'Common Cloud APIs': management-apis/common-cloud-apis.md
+     - 'RESTful APIs':
+        - 'Publisher APIs':
+           - 'Get Started with Publisher APIs': management-apis/publisher-get-started.md
+           - 'Try Out Publisher APIs': management-apis/publisher-v1.md
+        - 'Store APIs':
+           - 'Get Started with Store APIs': management-apis/devportal-get-started.md
+           - 'Try Out Store APIs': management-apis/devportal-v1.md
+        - 'Admin APIs':
+           - 'Get Started with Admin APIs': management-apis/admin-get-started.md
+           - 'Try Out Admin APIs': management-apis/admin-v1.md
+        - 'Analytics APIs':
+           - 'Get Started with Analytics APIs': management-apis/analytics-get-started.md
+           - 'Try Out Analytics APIs': management-apis/analytics.md
+     - 'Subscriber Management APIs': management-apis/subscriber-management-apis.md
+     - 'Token API': 
+        - 'Overview of Token API': management-apis/token-api.md
+        - 'Authorization Code Grant': management-apis/grant-types/authorization-code-grant.md
+        - 'Client Credentials Grant': management-apis/grant-types/client-credentials-grant.md
+        - 'Password Grant': management-apis/grant-types/password-grant.md
+        - 'Refresh Token Grant': management-apis/grant-types/refresh-token-grant.md
+        - 'SAML Extension Grant': management-apis/grant-types/saml-extension-grant.md
   - 'FAQ Library':
      - 'API Creation and Design': faq-library/api-creation-and-design.md
      - 'API Subscription Tiers': faq-library/api-subscription-tiers.md
