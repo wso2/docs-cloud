@@ -156,7 +156,8 @@ nav:
      - 'Microgateway': faq-library/microgateway.md
      - 'API Cloud Gateway': faq-library/api-cloud-gateway.md   
   - 'Get Support':
-     - 'Work with the Support Team ': get-support/work-with-the-support-team.md
+     - 'Work with the Support Team': get-support/work-with-the-support-team.md
+     - 'Open a Support Ticket': get-support/open-a-support-ticket.md
   - '': page-not-found.md 
   
 
