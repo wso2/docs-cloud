@@ -7,7 +7,7 @@ Following are the methods in which you get in touch with the WSO2 Cloud support 
 <html>
          <div class="admonition info">
          <p class="admonition-title">Note</p>
-         <p>Before contacting the support team, we recommend that you go through the [FAQ library](../faq-library/api-creation-and-design) to determine whether there is already a solution to the problem you have.</p>
+         <p>Before contacting the support team, we recommend that you go through the [FAQ library](../../faq-library/api-creation-and-design) to determine whether there is already a solution to the problem you have.</p>
          </div>
          </html>
 
