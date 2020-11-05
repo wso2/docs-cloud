@@ -1,12 +1,8 @@
 # Discover APIs
 
-The API Store of WSO2 API Cloud provides several useful features to build and nurture an active community of users for your APIs, which is required to advertise APIs as well as to learn user requirements and market trends.
+The API Store of WSO2 API Cloud allows API publishers to publicize their APIs and also to easily discover APIs published by others. 
 
-Let's take a look at the community features available via the API Store:
-
-#### Use the search facility
-
-You can search for APIs in the API Publisher or Store by any of the following criteria:
+An API Consumer can search for and explore APIs in the API Store using any of the following search criteria:
 
 <table>
 <thead>

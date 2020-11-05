@@ -1,2 +1,2 @@
-# Apply Rate Limits
+# Throttling and Rate Limiting Overview
 
