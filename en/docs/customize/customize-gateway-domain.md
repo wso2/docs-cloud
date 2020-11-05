@@ -190,7 +190,6 @@ that you have created:
     URL** from the drop-down menu.
     ![](../assets/img/customize/custom-url.png)  
     This displays the **Manage Custom Domains** page.  
-    ![](attachments/126554792/126555146.png){width="700" height="563"}
     ![](../assets/img/customize/manage-gateway-custom-domains.png)  
     Here, under the **API Gateway** section, you will see all the
     Gateway custom domains that you have created.

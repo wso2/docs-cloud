@@ -22,7 +22,7 @@ certificates and DNS records, see [Generate SSL Certificates and DNS Records](..
 When you have the required SSL certificates and DNS records, you can
 take a look at the following topics for instructions on how to configure custom API Store, Publisher, Admin portal, and Gateway domains:
 
-- [Customizing the API Store Domain](../customize-api-store-domain)
-- [Customizing the API Publisher Domain](../customize-api-publisher-domain)
-- [Customizing the Admin Portal Domain](../customize-admin-portal-domain)
-- [Customizing the API Gateway Domain](../customize-gateway-domain)
+- [Customize the API Store Domain](../customize-api-store-domain)
+- [Customize the API Publisher Domain](../customize-api-publisher-domain)
+- [Customize the Admin Portal Domain](../customize-admin-portal-domain)
+- [Customize the API Gateway Domain](../customize-gateway-domain)

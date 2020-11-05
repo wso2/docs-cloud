@@ -16,18 +16,19 @@ the Token API to generate a token.
 
 #### Invoke the Token API to generate tokens
 
-1.  Combine the consumer key and consumer secret keys in the following format and encode the combined string using base64.
-    **[consumer-key:consumer-secret](http://consumer-keyconsumer-secret)**
-    Encoding to base64 can
-    be done via http://base64encode.org.  
-    Here's an example consumer key and secret combination:
+1.  Combine the consumer key and consumer secret keys in the following format and encode the combined string using base64:
+
+    `consumer-key:consumer-secret`
+      
+    Here's an example of an encoded consumer key and secret combination:
+
     `wU62DjlyDBnq87GlBwplfqvmAbAa:ksdSdoefDDP7wpaElfqvmjDue`
+
 2.  Access the Token API using a REST client such as cURL with the
     following parameters.  
 
     -   Token API URL -
-        [https://gateway.api.cloud.wso2.com/token](https://api.cloud.wso2.com:8243/token)
-        .
+        `https://gateway.api.cloud.wso2.com/token`.
     -   payload -
         `grant_type=password&username=<username>&password=<password>&scope=<scope>`. Replace the `username` and `password` values as appropriate. If
         your email is `john@johns.org` and the organization key is
@@ -64,4 +65,4 @@ the Token API to generate a token.
     minutes by default. When a user access token expires, you need to regenerate the token.
 
 Instead of using the Token API, you can also generate access tokens from the
-Devportal UI.
+API Store UI.

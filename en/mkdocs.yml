@@ -49,61 +49,93 @@ nav:
   - 'Get Started':
      - 'Overview': get-started/overview.md
      - 'Key Concepts': get-started/key-concepts.md
+     - 'Create a WSO2 Cloud Account': get-started/create-a-wso2-cloud-account.md 
      - 'Quick Start Guide': get-started/quick-start-guide.md
-     - 'Tutorials':
-        - 'Create and Publish an API': get-started/tutorials/create-and-publish-an-api.md
-        - 'Subscribe to and Invoke an API ': get-started/tutorials/subscribe-to-and-invoke-an-api.md
-        - 'Expose your On-Premises Backend Services to WSO2 API Cloud': get-started/tutorials/expose-your-backend-services-to-api-cloud.md
-        - 'Enforce Throttling and Resource Access Policies': get-started/tutorials/enforce-throttling-and-resource-access-policies.md
   - 'Learn':
-     - 'Design APIs':
-        - 'Design a New REST API': learn/design-apis/design-a-new-rest-api.md
-        - 'Design a New WebSocket API': learn/design-apis/design-a-websocket-api.md
-        - 'Design an API Using Existing Swagger Definition': learn/design-apis/design-an-api-using-existing-swagger.md
-     - 'Secure APIs':
-        - 'Secure APIs using OAuth2 Access Tokens': learn/secure-apis/secure-apis-using-oauth2-access-tokens.md
-     - 'Publish APIs':
+     - 'Learn WSO2 API Cloud': learn/learn-wso2-api-cloud.md
+     - 'Design & Publish APIs':
+        - 'Overview of API Design and Publishing': learn/design-apis/overview-of-api-design-and-publishing.md
+        - 'Design an API':
+           - 'Design a New REST API': learn/design-apis/design-a-new-rest-api.md
+           - 'Design an API Using Existing Swagger Definition': learn/design-apis/design-an-api-using-existing-swagger.md
+           - 'Generate a REST API from a SOAP Backend': learn/design-apis/generate-rest-api-from-soap-backend.md
+           - 'Expose a SOAP Service as a REST API': learn/design-apis/expose-soap-service-as-rest-api.md
         - 'Publish an API': learn/publish-apis/publish-an-api.md
      - 'Manage APIs':
-        - 'API Lifecycle Management Overview': learn/manage-apis/api-lifecycle-management-overview.md
+        - 'Overview of API Lifecycle Management': learn/manage-apis/api-lifecycle-management-overview.md
         - 'Manage API Lifecycle': learn/manage-apis/manage-api-lifecycle.md
         - 'Create a New API Version': learn/manage-apis/create-a-new-api-version.md
         - 'Deprecate an Old API Version': learn/manage-apis/deprecate-an-old-api-version.md
+     - 'Backend Integration':
+        - 'Overview of Backend Integration': learn/backend-integration/overview-of-backend-integration.md 
+        - 'Expose your On-Premises Backend Services to WSO2 API Cloud': learn/backend-integration/expose-your-on-premises-backend-services-to-api-cloud.md
+        - 'Use OAuth2 Protected Backends': learn/backend-integration/use-oauth2-protected-backends.md
+        - 'Pass a Custom Authorization Token to the Backend': learn/backend-integration/pass-a-custom-authorization-token-to-the-backend.md
+        - 'Secure Your Backend Services': learn/backend-integration/secure-your-backend-services.md 
+     - 'Message Mediation for APIs':
+        - 'Overview of Message Mediation': learn/message-mediation/overview-of-message-mediation.md
+        - 'Add a Mediation Sequences to Your API': learn/message-mediation/add-a-sample-mediation-sequence.md
+        - 'Add a Custom Sequence to Your API': learn/message-mediation/add-a-custom-sequence-to-your-api.md
+     - 'Secure APIs':
+        - 'Overview of API Security': learn/secure-apis/api-security-overview.md     
      - 'Consume APIs':
+        - 'Overview of Consuming APIs': learn/consume-apis/overview-of-consuming-apis.md
         - 'Discover APIs': learn/consume-apis/discover-apis.md
         - 'Manage Applications':
-           - 'Create Applications': learn/consume-apis/create-applications.md
-           - 'Generate Application Keys': learn/consume-apis/work-with-api-keys.md
-           - 'Work with Access Tokens':
-              - 'Overview of Access Tokens': learn/consume-apis/overview-of-access-tokens.md
-              - 'Access Tokens Per Device': learn/consume-apis/access-tokens-per-device.md
-           - 'Share Applications': learn/consume-api/manage-application/sharing-applications/sharing-applications.md
-           - 'Add Custom Attributes to Applications': learn/consume-api/manage-application/advanced-topics/add-custom-attributes-to-applications.md
-           - 'Change the Owner of an Application': learn/consume-api/manage-application/advanced-topics/changing-the-owner-of-an-application.md
-        - 'Manage Subscriptions':
-           - 'Subscribe to an API': learn/consume-api/manage-subscription/subscribe-to-an-api.md
-           - 'Invoke an APIs':
-              - 'Invoke an API Using the Integrated API Console': learn/consume-api/invoke-apis/invoke-apis-using-tools/invoke-an-api-using-the-integrated-api-console.md
-              - 'Invoke an API Using a SOAP Client': learn/consume-api/invoke-apis/invoke-apis-using-tools/invoke-an-api-using-a-soap-client.md
-           - 'Use the Community Features': learn/consume-api/collaboration/use-the-community-features.md
-           - 'Generate SDKs':
-              - 'Generate SDKs in Developer Portal': learn/consume-api/generating-sdks/generate-sdks-in-dev-portal.md
-              - 'Write a Client Application Using the SDK': learn/consume-api/generating-sdks/write-a-client-application-using-the-sdk.md
+           - 'Create an Applications': learn/consume-apis/create-applications.md
+           - 'Generate Application Keys': learn/consume-apis/generate-application-keys.md
+           - 'Share an Application With Your Team': learn/consume-apis/share-an-application-with-your-team.md
+        - 'Subscribe to an API': learn/consume-apis/subscribe-to-an-api.md
+        - 'Invoke an API':
+           - 'Invoke an API Using the Integrated API Console': learn/consume-apis/invoke-an-api.md
+           - 'Invoke an API Using CURL': learn/consume-apis/invoke-an-api-using-curl.md
+        - 'Generate SDKs':
+           - 'Download SDKs for a Published API': learn/consume-apis/download-sdks-for-a-published-api.md
+           - 'Write a Client Application Using an SDK': learn/consume-apis/write-a-client-app-using-an-sdk.md
      - 'Control API Traffic':
-        - 'Throttling and Rate Limiting Overview': learn/control-api-traffic/throttling-and-rate-limiting-overview.md
+        - 'Overview of Throttling and Rate Limiting': learn/control-api-traffic/throttling-and-rate-limiting-overview.md
         - 'Apply Throttling Policies':
            - 'Advanced Throttling Policies': learn/control-api-traffic/advanced-throttling-policies.md
            - 'Application Throttling Policies': learn/control-api-traffic/application-throttling-policies.md
-           - 'Blacklist Policies': learn/control-api-traffic/blacklist-policies.md
+           - 'Deny Requests': learn/control-api-traffic/denylist-policies.md
      - 'Analyze APIs':
-        - 'API Analytics Overview': learn/analyze-apis/api-analytics-overview.md
-  - 'Administer':
-     - 'Add New Organization': administer/add-new-organization.md
-     - 'Change Organization Name': administer/change-organization-name.md
-     - 'Add Members to Your Organization': administer/add-members-to-your-organization.md
-     - 'Register and Invite Members': administer/register-and-invite-members.md
-     - 'View and Download Logs': administer/view-and-download-logs.md
-     - 'Migrate APIs and Applications Between Environments': administer/migrate-using-cli-tool.md
+        - 'Overview of API Analytics': learn/analyze-apis/analytics-overview.md
+        - 'View API Statistics': learn/analyze-apis/view-statistics.md
+        - 'Work with Alerts': 
+           - 'Overview of Working with Alerts': learn/analyze-apis/overview-of-working-with-alerts.md
+           - 'Alert Types': learn/analyze-apis/alert-types.md
+           - 'Configure Alerts': learn/analyze-apis/configure-alerts.md
+           - 'Subscribe to Alerts': learn/analyze-apis/subscribe-to-alerts.md
+           - 'View Alerts': learn/analyze-apis/view-alerts.md
+     - 'Integrate with Heroku':
+        - 'Overview of Integrating with Heroku': learn/integrate-with-heroku/overview-of-integrating-with-heroku.md
+        - 'Deploy WSO2 API Cloud as an Add-on for Heroku': learn/integrate-with-heroku/deploy-as-an-add-on.md
+        - 'Directly Deploy WSO2 API Gateway on Heroku': learn/integrate-with-heroku/directly-deploy-wso2-gateway-on-heroku.md
+     - 'Cloud Administration':
+        - 'Overview of Cloud Administration': learn/cloud-administration/overview-of-cloud-administration.md
+        - 'Manage Organizations': 
+           - 'Overview of Managing Organizations': learn/cloud-administration/overview-of-managing-organizations.md
+           - 'Add a New Organization': learn/cloud-administration/add-new-organization.md
+           - 'Change the Organization Name': learn/cloud-administration/change-organization-name.md
+        - 'Manage Users':
+           - 'Overview of Managing Users': learn/cloud-administration/overview-of-managing-users.md
+           - 'Add Members to Your Organization': learn/cloud-administration/add-members-to-your-organization.md
+           - 'Create Custom Roles': learn/cloud-administration/create-custom-roles.md
+           - 'Enable Self Signup to the API Store': learn/cloud-administration/enable-self-sign-up-to-the-api-store.md
+           - 'Block Subscription to an API': learn/cloud-administration/block-subscription-to-an-api.md
+           - 'Authenticate Users External to WSO2 Cloud': 
+              - 'Overview of Authenticating Users External to WSO2 Cloud': learn/cloud-administration/overview-of-authenticating-users-external-to-wso2-cloud.md
+              - 'Configure an External Identity Provider for API Cloud Authentication': learn/cloud-administration/configure-an-external-identity-provider-for-api-cloud-authentication.md
+              - 'Configure an On-Premises User Store for API Cloud Authentication': learn/cloud-administration/configure-an-on-premises-user-store-for-api-cloud-authentication.md
+              - 'Authenticate External Users for API Invocations': learn/cloud-administration/authenticate-external-users-for-api-invocations.md 
+        - 'View and Download Logs': learn/cloud-administration/view-and-download-logs.md
+        - 'Migrate APIs and Applications Between Environments': learn/cloud-administration/migrate-using-cli-tool.md
+     - 'Tutorials':
+        - 'Step-by-Step Tutorials': learn/tutorials/step-by-step-tutorials.md
+        - 'Create and Publish an API': learn/tutorials/create-and-publish-an-api.md
+        - 'Subscribe to and Invoke an API': learn/tutorials/subscribe-to-and-invoke-an-api.md
+        - 'Expose Your On-Premises Backend Services to WSO2 API Cloud': learn/tutorials/expose-your-backend-services-to-api-cloud.md
+        - 'Enforce Throttling and Resource Access Policies': learn/tutorials/enforce-throttling-and-resource-access-policies.md 
   - 'Customize':
      - 'Customize Your Portal':
         - 'Customize the API Store Theme': customize/customize-the-api-store-theme.md
@@ -116,15 +148,15 @@ nav:
            - 'Customize Gateway Domain': customize/customize-gateway-domain.md
         - 'Customize Invitation Emails': customize/customize-invitation-emails.md
   - 'Hybrid API Management':
-     - 'Overview': hybrid-api-management/overview.md
+     - 'Overview of Hybrid API Management': hybrid-api-management/overview.md
      - 'Deploy the Microgateway': hybrid-api-management/deploy-the-microgateway.md 
      - 'Deploy the Microgateway as a Docker Container': hybrid-api-management/deploy-microgateway-as-docker-container.md
      - 'Deploy the Microgateway on a Kubernetes Cluster': hybrid-api-management/deploy-microgateway-on-kubernetes-cluster.md
      - 'Deploy Grouped APIs Using a Microgateway': hybrid-api-management/deploy-grouped-apis-using-a-microgateway.md
-  - 'Management APIs':
-     - 'Overview of Management APIs': management-apis/overview.md
+  - 'API Cloud Management APIs':
+     - 'Overview of API Cloud Management APIs': management-apis/overview.md
      - 'Common Cloud APIs': management-apis/common-cloud-apis.md
-     - 'RESTful APIs':
+     - 'API Cloud Portal APIs':
         - 'Publisher APIs':
            - 'Get Started with Publisher APIs': management-apis/publisher-get-started.md
            - 'Try Out Publisher APIs': management-apis/publisher-v1.md
@@ -145,6 +177,8 @@ nav:
         - 'Password Grant': management-apis/grant-types/password-grant.md
         - 'Refresh Token Grant': management-apis/grant-types/refresh-token-grant.md
         - 'SAML Extension Grant': management-apis/grant-types/saml-extension-grant.md
+  - 'Continuous Integration and Deployment': 
+     - 'Continuous Integration and Deployment': continuous-integration-and-deployment/continuous-integration-and-deployment-for-wso2-api-cloud.md
   - 'FAQ Library':
      - 'API Creation and Design': faq-library/api-creation-and-design.md
      - 'API Subscription Tiers': faq-library/api-subscription-tiers.md
@@ -157,7 +191,6 @@ nav:
      - 'API Cloud Gateway': faq-library/api-cloud-gateway.md   
   - 'Get Support':
      - 'Work with the Support Team': get-support/work-with-the-support-team.md
-     - 'Open a Support Ticket': get-support/open-a-support-ticket.md
   - '': page-not-found.md 
   
 
