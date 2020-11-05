@@ -1,31 +1,30 @@
 # Invoke an API using cURL
 
-The API Store has an integrated API Console using which you can read API
+The API Store has an integrated API Console via which you can read API
 documentation and **invoke APIs** . Alternatively, you can use a tool
 like cURL to invoke APIs.
 
-**In this tutorial** , you invoke an API using cURL, the open source
-command-line tool and library for transferring data. The examples here
-use the `PhoneVerification` API, which is created
-in section Create and Publish an API .
-    
+Follow the instructions below to invoke an API using cURL, which is an open source
+command-line tool and library for transferring data. 
+
+Before you begin,
+
+- Subscribe to an API if you have not done so already. For detailed instructions on subscribing to an API, see [Subscribe to an API](../subscribe-to-an-api).
+  
 
 Let's get started .
 
-1.  Log in to the API Store using the URL
-    **`http://<hostname>/Store?tenant=<tenant_name>`**
-    and click the API that you want to subscribe to.
+1.  Sign in to the API Store with your credentials.
 
-2.  Click the **APPLICATIONS** menu and click **ADD APPLICATION** to
-    create a new application.  
+2.  Click **Applications**. This lists all the applications you have created. 
 
-3.  Give a name and a tier for the application and click **Add**.  
-    
-4.  Go back to the API's subscription options and select the application
-    you just created, the Bronze tier, and click **Subscribe**.
+3.  Click view to open details of the application that you used to subscribe to the API. 
 
-5.  When prompted, choose to view subscriptions. Then, go to the
-    **Production Keys** tab and click **Generate keys**.
+4.  Click the **Production Keys** tab and then click **Generate keys**.  
+
+    By default the Client Credentials grant type will be used to
+    generate access token. Make sure the Client Credentials grant type
+    is selected when generating keys from the UI.
 
     !!! tip
     
@@ -50,26 +49,23 @@ Let's get started .
             so, the application needs to be provisioned to get a new token
             in case the current hard-coded token is invalidated by the
             system.
-    
-          
-    
 
-    Let's invoke the API that you just subscribed to.
+    After the keys are generated, you can invoke the API using curl.
 
-6.  Install [cURL](http://curl.haxx.se/download.html) if it is not there
+5.  Install [cURL](http://curl.haxx.se/download.html) if it is not there
     in your environment. Note that cURL comes by default in some
     operating systems. You can also use any other REST client.
 
-7.  Open the command line and execute the following cURL command:
+6.  Open the command line and execute the following cURL command:
 
     ``` java
     curl -k -H "Authorization: Bearer <access token>" -v '<API URL>'
     ```
 
-    Be sure to replace the placeholders as follows:
+    Be sure to replace the placeholders as specified below:
 
-    -   **\<access token\>** : Give the token generated in step 5
-    -   **\<API URL\>** : Click the **APIs** menu, click the API you
+    -   `<access token>` : Specify the token generated in step 5
+    -   `<API URL>` : Click the **APIs** menu, click the API you
         want to invoke and then copy the production URL in the API's
         **Overview** tab.    
         Then, append the payload to the production URL. E.g.,
@@ -78,15 +74,15 @@ Let's get started .
     Here's an example:
 
     ``` java
-        curl -k -H "Authorization: Bearer 1fa22cef-c791-3105-9ac4-58511c199aa0" 'https://gateway.api.cloud.wso2.com:443/t/companyn3/phoneverify/1.0.0/CheckPhoneNumber?PhoneNumber=18006785432&LicenseKey=0'
+    curl -k -H "Authorization: Bearer 1fa22cef-c791-3105-9ac4-58511c199aa0" 'https://gateway.api.cloud.wso2.com:443/t/companyn3/phoneverify/1.0.0/CheckPhoneNumber?PhoneNumber=18006785432&LicenseKey=0'
     ```
 
-8.  Note the result that appears on the command line.
+7.  Note the result that appears on the command line.
 
-9.  Similarly, invoke the POST method using the following cURL command:
+8.  Similarly, invoke the POST method using the following cURL command:
 
     ``` java
-        curl -k -H "Authorization: Bearer 1fa22cef-c791-3105-9ac4-58511c199aa0" --data "PhoneNumber=18006785432&LicenseKey=0" https://gateway.api.cloud.wso2.com:443/t/companyn3/phoneverify/1.0.0/CheckPhoneNumber
+    curl -k -H "Authorization: Bearer 1fa22cef-c791-3105-9ac4-58511c199aa0" --data "PhoneNumber=18006785432&LicenseKey=0" https://gateway.api.cloud.wso2.com:443/t/companyn3/phoneverify/1.0.0/CheckPhoneNumber
     ```
 
-In this tutorial, you subscribed to an API and invoked it using cURL.
+Now you have successfully invoked the API using cURL.

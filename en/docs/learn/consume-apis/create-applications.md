@@ -33,12 +33,12 @@ Let's take a look at the steps you need to follow to create a new application:
     
 5.  Click **APPLICATIONS** to navigate to the Applications listing page. You will see the new application you created listed there. 
 
-<html>
+     <html>
          <div class="admonition info">
          <p class="admonition-title">Note</p>
          <p>The application owner can edit or delete the application.</p>
          </div>
-         </html>
+      </html>
 
 
 
