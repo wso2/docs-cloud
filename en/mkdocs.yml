@@ -135,7 +135,9 @@ nav:
         - 'Create and Publish an API': learn/tutorials/create-and-publish-an-api.md
         - 'Subscribe to and Invoke an API': learn/tutorials/subscribe-to-and-invoke-an-api.md
         - 'Expose Your On-Premises Backend Services to WSO2 API Cloud': learn/tutorials/expose-your-backend-services-to-api-cloud.md
-        - 'Enforce Throttling and Resource Access Policies': learn/tutorials/enforce-throttling-and-resource-access-policies.md 
+        - 'Enforce Throttling and Resource Access Policies': learn/tutorials/enforce-throttling-and-resource-access-policies.md
+        - 'Convert a JSON Message to SOAP and SOAP to JSON': learn/tutorials/convert-a-json-message-to-soap-and-soap-to-json.md
+        - 'Change the Default Mediation Flow of API Requests': learn/tutorials/change-default-mediation-flow-of-api-requests.md 
   - 'Customize':
      - 'Customize Your Portal':
         - 'Customize the API Store Theme': customize/customize-the-api-store-theme.md
