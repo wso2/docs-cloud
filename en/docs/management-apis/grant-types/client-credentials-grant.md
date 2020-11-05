@@ -8,8 +8,8 @@ clients must be allowed to use this grant type.
 
 In this grant type, the client requests an access token using only the
 client credentials to authenticate a request for an access token. This
-**does not have support for the [refresh token
-grant](../refresh-token-grant)**.
+does not have support for the [refresh token
+grant](../refresh-token-grant).
 
 Here are the cURL commands to use the client credentials grant:
 

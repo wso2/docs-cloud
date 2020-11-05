@@ -1,13 +1,20 @@
 # Quick Start Guide
 
-This section provides step-by-step instructions to quickly create, publish, and invoke an API via WSO2 API Cloud's Publisher Portal and API Store.
+WSO2 API Cloud provides an intuitive UI guided experience to design and publish an API.
+
+This quick start guide provides step-by-step instructions so that you can quickly design, publish, and invoke an API via WSO2 API Cloud's Publisher Portal and API Store.
+
+## Prerequisites
+
+If you have not yet created an account to start using WSO2 API Cloud, follow the instructions in the [Create a WSO2 Cloud Account](../create-a-wso2-cloud-account) page to quickly sign up for a trial account and try out the capabilities of WSO2 API Cloud. 
+
 
 ## Objectives
 
-1. Create and publish an API via the API Publisher portal.
+1. Design and publish an API via the API Publisher portal.
 2. Subscribe to the API via the API Store.
 3. Generate keys.
-3. Invoke the API with the generated keys.
+4. Invoke the API with the generated keys.
 
 
 Let's get started!
@@ -40,7 +47,7 @@ Follow the instructions below to create and publish an API via the API Publisher
 
 5. Provide the following as the API details:
 
-     1. On the **Design** tab specify the following and click **Next: Implement**:
+     1. In the **Design** tab specify the following and click **Next: Implement**:
 
          <table>
          <tr> 
@@ -65,7 +72,7 @@ Follow the instructions below to create and publish an API via the API Publisher
          </tr>
          </table>
 
-     2. On the **Implement** tab click **Managed API**, then specify the following and click **Next: Manage**:
+     2. In the **Implement** tab click **Managed API**, then specify the following and click **Next: Manage**:
    
          <table>
          <tr> 
@@ -86,7 +93,7 @@ Follow the instructions below to create and publish an API via the API Publisher
          </tr>
          </table>
 
-     3. On the **Manage** tab select `Gold` and `Bronze` as the **Subscription Tiers**.
+     3. In the **Manage** tab select `Gold` and `Bronze` as the **Subscription Tiers**.
 
         
 6. Click **Save & Publish**. 

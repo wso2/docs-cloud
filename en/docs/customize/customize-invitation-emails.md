@@ -22,10 +22,8 @@ An example of a customized email is given below:
 
 !!! tip
     
-    These invitation emails will have the subject **WSO2 Cloud
-    Services**. If you need to customize the email subject, please mention
-    this requirement in your request.
+    **Note:** These invitation emails will have the subject " WSO2 Cloud
+    Services ". If you need to customize the email subject, please mention
+    the requirement in your request.
     
-
-
 

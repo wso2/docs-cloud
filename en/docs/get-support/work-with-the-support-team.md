@@ -1,8 +1,6 @@
 # Work with the Support Team
 
-If you experience problems while working with WSO2 API Cloud, you have several options to get help so that you can understand the cause of the problem and find a feasible solution to it as soon as possible.
-
-Following are the methods in which you get in touch with the WSO2 Cloud support team:
+If you experience any issue while working with WSO2 API Cloud, you can easily contact the WSO2 API Cloud support team to get it rectified or to find a feasible solution to it as soon as possible.
 
 <html>
          <div class="admonition info">
@@ -12,14 +10,31 @@ Following are the methods in which you get in touch with the WSO2 Cloud support 
          </html>
 
 
-- Contact WSO2 Cloud Support via a support request. 
+### Get help via a support request 
 
-	You can sign in to WSO2 API Cloud using your credentials and then click **Support** on the top menu bar to create a support ticket. For more details see, [Open a Support Ticket](../open-a-support-ticket).
+As a WSO2 Cloud customer, you can go to the [support page](https://identity.cloud.wso2.com/samlsso) and create a support request to get help with any issue you come across. Any member who has access to a particular organization can sign in with credentials to create a support request for the specific organization.
 
-	![](../assets/img/get-support/contact-support.png)
+!!! tip
+    
+    In case the WSO2 Cloud support system is down due to maintenance or any other reason, you can email cloud@wso2.com to raise issues. However, at all other times we recommend that you raise support tickets via the [WSO2 API Cloud support page](https://identity.cloud.wso2.com/samlsso).
 
-- Get in touch with an API Cloud support expert via the embedded chat option. 
+![](../assets/img/get-support/contact-support.png)
 
-	You can sign in to WSO2 API Cloud using your credentials and then click **Chat with us** on the bottom right corner of the UI to start chatting with an expert.
+When you create a support request, you can specify the Issue Type as an Incident or a Query depending on the nature of your issue. The following table describes the purpose of each issue type in detail:
 
-	![](../assets/img/get-support/api-cloud-chat.png)
+<table>
+<colgroup> <col/> <col/> <col/> </colgroup><tbody><tr><th colspan="2">Ticket Type</th><th >Description</th></tr><tr><td colspan="2" class="confluenceTd"> Incident</td><td colspan="1" class="confluenceTd"> To get expert assistance on an issue that needs immediate attention because it affects a production system, a system being prepared for production, or a pre-production system used for shared development, testing, or staging.<div class="admonition note">
+         <p class="admonition-title">Note</p>
+         <p>You should not use the incident issue type to raise general API Cloud related questions that you need assistance with.</p>
+         </div></td></tr><tr><td colspan="2" class="confluenceTd"> Query</td><td colspan="1" class="confluenceTd">To get help on general questions about WSO2 API Cloud.
+<div class="admonition note">
+         <p class="admonition-title">Note</p>
+         <p>The SLA for responding to a query is one business day, but in most cases queries are responded to within hours.</p>
+         </div></td></tr></tbody></table>
+
+Once you send a support request via the API Cloud support page, it would simultaneously create an internal ticket in our support system so that our team can take a look at the issue and get in touch with you immediately depending on the severity of the issue.
+
+For more details on WSO2 API Cloud SLA terms, see [WSO2 API Cloud SLA and Support](https://wso2.com/api-management/cloud/#sla). 
+
+
+

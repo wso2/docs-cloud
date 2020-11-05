@@ -86,7 +86,7 @@ Follow the steps below:
         }
     ```
 
-3.  Follow the steps in the [Apply Customizations](/customize/apply-customizations/) page.
+3.  Follow the steps in the [Apply Customizations](../apply-customizations/) page.
 
 Now that you have applied the changes, you can take a look at the
 customized sign in page. It will look similar to the following depending

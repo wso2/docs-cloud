@@ -13,9 +13,9 @@ creates an organization is assigned admin rights to it.
 In WSO2 Public Cloud, users are authorized by their email addresses and
 are decoupled from organizations and tenant domains. This allows one
 user to be in multiple organizations (tenant domains) at the same time
-and log in to each organization using a single email address. If users
+and sign in to each organization using a single email address. If users
 are added to more than one organization, they are prompted to select the
-organization before logging in to its Cloud.  
+organization before signing in to its Cloud.  
 
 ![WSO2-Cloud-user-model](../assets/img/key-concepts/wso2-cloud-user-model.png)
   
@@ -30,9 +30,9 @@ Manager. Given below is a brief description of each component:
    Enables API providers to publish APIs, share documentation, provision API keys and gather feedback on API
     features, quality, and usage. The API Publisher is opened automatically when you sign in to the API Cloud.
 
--   ####**API Devportal** 
-   API Devportal is a state-of-the-art web interface that allows API publishers to host and advertise their APIs, while allowing API consumers to self register, discover, evaluate, subscribe to and consume APIs. Any user can view the API Devportal of any tenant registered in the Cloud.
-    If you know the name of the tenant, you can access its Devportal via
+-   ####**API Store** 
+   API Store is a state-of-the-art web interface that allows API publishers to host and advertise their APIs, while allowing API consumers to self register, discover, evaluate, subscribe to and consume APIs. Any user can view the API Store of any tenant registered in the Cloud.
+    If you know the name of the tenant, you can access its Store via
     the following URL:</br>
     **`https://api.cloud.wso2.com/store?tenant=>`**.
 
@@ -719,7 +719,7 @@ tasks as below.
 <p>ADVANCED THROTTLING - Allows you to create and update advanced throttling polices.
 <p>APPLICATION TIERS - Allows you to create and update application level throttling tiers. </p>
 <p>SUBSCRIPTION TIERS - Allows you to create and update API subscription level throttling tiers.</p>
-<p>DENYLIST - Allows you to block requests by APIs, Applications, Users, and IP Addresses.</p></td>
+<p>BLACK LIST - Blacklists requests by APIs, Applications, Users and IP Addresses.</p></td>
 </tr>
 <tr class="even">
 <td>LOG ANALYZER</td>

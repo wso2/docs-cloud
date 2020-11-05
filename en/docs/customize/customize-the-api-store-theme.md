@@ -45,7 +45,7 @@ customizations you want to apply**:
 <html>
 <div class="admonition info">
 <p class="admonition-title">Before you begin</p>
-<p>Download the default theme [fancy.zip](../assets/attachments/customize/schema_graphql.graphql), unzip it and then rename the folder to the name of your new theme (e.g., ancient). Let's call this folder `<THEME_HOME>` throughout this section.</p>
+<p>Download the default theme [fancy.zip](../assets/attachments/customize/fancy.zip), unzip it and then rename the folder to the name of your new theme (e.g., ancient). Let's call this folder `<THEME_HOME>` throughout this section.</p>
 </div>
 </html>
     
