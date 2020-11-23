@@ -103,7 +103,8 @@ To set up mutual SSL, you need to follow the instructions below and provide a tr
 
     We will add your certificate to WSO2 servers and send you our public
     certificate.
-5.  Add the public certificate to your backend servers.
+    
+4.  Add the public certificate to your backend servers.
 
 ### Add IPs as trusted sources
 
