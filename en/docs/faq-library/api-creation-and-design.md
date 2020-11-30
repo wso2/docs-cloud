@@ -142,7 +142,7 @@
     `/_system/config/apimgt/applicationdata/tenant-conf.json`
     file directly in the **Location** field.
 
-    - Click **Edit as text** , add the following properties to the file
+    - Click **Edit as text**, add the following properties to the file
     and click **Save Content**.
 
     ``` java
@@ -182,3 +182,5 @@
 
     - Token Endpoint - https://gateway.api.cloud.wso2.com/token-cors
     - Revoke Endpoint - https://gateway.api.cloud.wso2.com/revoke-cors 
+    
+    
