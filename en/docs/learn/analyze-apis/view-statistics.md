@@ -115,7 +115,7 @@ criteria. You can also see a comparison view of the latencies.
     hour with a sensitivity of one minute.  
     ![](../../assets/img/learn/analyze-apis/api-latency-breakdown-by-hour.png)
 -   If you select to view the daily breakdown of data, you will see data
-    up to the past 2 weeks with a sensitivity of one hour.  
+    up to the past 30 days with a sensitivity of one hour.  
     ![](../../assets/img/learn/analyze-apis/api-latency-breakdown-by-day.png)
 
 !!! note
