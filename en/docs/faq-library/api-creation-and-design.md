@@ -175,3 +175,10 @@
     returns a 404 error. This does not imply the backend is failing to
     serve other HTTP request methods as well. Therefore you get an
     invalid result when testing.
+    
+13. #### How can I enable CORS on the Token and Revoke APIs for a particular host?
+
+    WSO2 API Cloud provides separate CORS enabled endpoints for Token and Revoke APIs. You can replace your existing endpoints with the following CORS enabled endpoints:
+
+    - Token Endpoint - https://gateway.api.cloud.wso2.com/token-cors
+    - Revoke Endpoint - https://gateway.api.cloud.wso2.com/revoke-cors
