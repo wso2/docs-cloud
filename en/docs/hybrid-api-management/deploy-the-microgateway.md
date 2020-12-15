@@ -11,7 +11,7 @@ scenarios:
     
     If you want to run the Microgateway on Docker, see [Deploying the
     Microgateway as a Docker
-    Container](/hybrid-api-management/deploy-microgateway-as-docker-container/).
+    Container](../deploy-microgateway-as-docker-container).
     
 
 The following topics provide step-by-step instructions to get started
@@ -195,51 +195,51 @@ Follow the steps below if you want to configure a production level high availabi
         ```
 
     5.  Copy the key and certificate files that you generated above to
-        the `               /etc/nginx/ssl/              ` location.
+        the `/etc/nginx/ssl/` location.
 
 4.  Configure **NGINX** to direct HTTP and HTTPS requests based on your
     deployment.
 
     1.  Run the following command to identify the exact location of the
-        `               <NGINX_HOME>              ` directory.
+        `<NGINX_HOME>` directory.
 
         ``` java
-                 nginx -V
+        nginx -V
         ```
 
         Inspect the output to identify the
-        `               --prefix              ` tag that provides the
-        location of the `               <NGINX_HOME>              `
+        `--prefix` tag that provides the
+        location of the `<NGINX_HOME>`
         directory.
 
-    2.  Update the `               ngnix.conf              ` file with
+    2.  Update the `ngnix.conf` file with
         the required NGINX configuration given below. Alternatively, you
-        can create a file with the `               .conf              `
+        can create a file with the `.conf`
         suffix and copy it to the
-        `               <NGINX_HOME>/conf.d              ` directory.
+        `<NGINX_HOME>/conf.d` directory.
 
         !!! note
         
                 Note the following with regard to the sample configuration
                 below:
         
-                -   `                /etc/nginx/conf.d/hybrid_gateway_upstream.conf               `
+                -   `/etc/nginx/conf.d/hybrid_gateway_upstream.conf`
                     is the NGINX configuration file name.
-                -   Placeholders `                <IP1>               ` and
-                    `                <IP2>               ` represent the IP
+                -   Placeholders `<IP1>` and
+                    `<IP2>` represent the IP
                     addresses of Microgateway node 1 and node 2 respectively.
-                -   `                gateway.foo.com               ` is the
+                -   `gateway.foo.com` is the
                     domain of the certificate you created in step 2 above. Note
                     that the DNS should be mapped to the NGINX public IP. If you
                     do not do the mapping, the client will have to add an entry
-                    in `                /etc/hosts               ` to resolve
+                    in `/etc/hosts` to resolve
                     the domain name.
                 -   The key and the certificate for SSL is assumed to be in the
-                    `                <NGINX_HOME>/ssl/               ` location.
-                    The placeholders `                <cert.pem>               `
-                    and `                <key.pem>               ` represent the
+                    `<NGINX_HOME>/ssl/` location.
+                    The placeholders `<cert.pem>`
+                    and `<key.pem>` represent the
                     generated certificate file and key file.
-                -   `                /etc/nginx/log/wso2_hybrid_gateway/https/               `
+                -   `/etc/nginx/log/wso2_hybrid_gateway/https/`
                     is the directory used for access logs. You need create the
                     directory if it does not exist.
         
@@ -289,7 +289,7 @@ Follow the steps below if you want to configure a production level high availabi
                 sufficient in such cases.
         
                 ``` java
-                        sudo service nginx reload
+                sudo service nginx reload
                 ```
 
 
@@ -308,11 +308,10 @@ Follow the steps below to test your Microgateway deployment:
 
 2.  Create and publish an API via the API Publisher portal.
     
-3.  [Subscribe to the
-    API](learn/consume-apis/subscribe-to-an-api/)
-    .
+3.  Subscribe to the API. For detailed information on how to subscribe, see [Subscribe to an API](../../learn/consume-apis/subscribe-to-an-api).
+    
 4.  [Invoke the API using
-    curl](learn/consume-apis/invoke-an-api-using-curl/)
+    curl](../../learn/consume-apis/invoke-an-api-using-curl)
     .  
     The curl command to invoke the GET method of the API should be
     similar to the following:  

@@ -21,13 +21,13 @@
     A sample command is given below:
 
     ``` java
-        docker pull docker.cloud.wso2.com/wso2am-cloud-micro-gw:2.6.0
+    docker pull docker.cloud.wso2.com/wso2am-cloud-micro-gw:2.6.0
     ```
 
 3.  Run the docker container.
 
     ``` java
-        docker run -p127.0.0.1:8243:8243 -p127.0.0.1:8280:8280 -e "WSO2_CLOUD_ORG_KEY=your_organization_key" -e "WSO2_CLOUD_EMAIL=your_username@wso2.com" -e "WSO2_CLOUD_PASSWORD=your_cloud_password" docker.cloud.wso2.com/wso2am-cloud-micro-gw:2.6.0
+    docker run -p127.0.0.1:8243:8243 -p127.0.0.1:8280:8280 -e "WSO2_CLOUD_ORG_KEY=your_organization_key" -e "WSO2_CLOUD_EMAIL=your_username@wso2.com" -e "WSO2_CLOUD_PASSWORD=your_cloud_password" docker.cloud.wso2.com/wso2am-cloud-micro-gw:2.6.0
     ```
 
     You can enable gateway debug logs by
@@ -35,7 +35,7 @@
     container:
 
     ``` java
-     -e "LOG4J_PROPERTIES=log4j.logger.org.apache.synapse.transport.http.headers=DEBUG, log4j.logger.org.apache.synapse.transport.http.wire=DEBUG"
+    -e "LOG4J_PROPERTIES=log4j.logger.org.apache.synapse.transport.http.headers=DEBUG, log4j.logger.org.apache.synapse.transport.http.wire=DEBUG"
     ```
 
 4.  [Test your
@@ -48,5 +48,5 @@
     up to a maximum of 15 minutes before your changes become effective
     in the Microgateway.
 -   Statistics of API usage in your Microgateway are published to API
-    Cloud every 6 - 6.5 hours.
+    Cloud every 6 to 6.5 hours.
 

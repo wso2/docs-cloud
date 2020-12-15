@@ -71,10 +71,10 @@ management.
 
 Now that you understand the basics of hybrid API management and its
 benefits, let's try out the Microgateway of WSO2 API Cloud. Click
-[here](/hybrid-api-management/deploy-the-microgateway/) for instructions on how you can
+[here](../deploy-the-microgateway) for instructions on how you can
 quickly download, configure, and run the Microgateway.
 
 If you want to run the Microgateway on Docker, see [Deploying the
 Microgateway as a Docker
-Container](/hybrid-api-management/deploy-microgateway-as-docker-container/).
+Container](../deploy-microgateway-as-docker-container).
 

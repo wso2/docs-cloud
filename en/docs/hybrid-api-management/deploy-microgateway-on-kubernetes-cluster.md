@@ -89,7 +89,7 @@ configure, and deploy the Microgateway on a Kubernetes cluster.
     to deploy the Microgateway in your Kubernetes cluster:
 
     ``` java
-        helm install --name micro-gateways-deployment .
+    helm install --name micro-gateways-deployment .
     ```
 
     This will set up the following deployment in your Kubernetes
@@ -103,17 +103,17 @@ configure, and deploy the Microgateway on a Kubernetes cluster.
     load balancer:
 
     ``` java
-        kubectl get svc micro-gateways-deployment-private-jet-mode-nginx-controller -o yaml
+    kubectl get svc micro-gateways-deployment-private-jet-mode-nginx-controller -o yaml
     ```
 
     This provides an output similar to the following, which displays the
     hostname at the end:
 
     ``` java
-        ...
-        loadBalancer:
-            ingress:
-            - hostname: abc2adaa290d711e994d802f89b5426a-1544968781.us-west-2.elb.amazonaws.com
+    ...
+    loadBalancer:
+        ingress:
+        - hostname: abc2adaa290d711e994d802f89b5426a-1544968781.us-west-2.elb.amazonaws.com
     ```
 
 5.  Use the hostname obtained above as the DNS record of your custom URL
@@ -124,7 +124,7 @@ configure, and deploy the Microgateway on a Kubernetes cluster.
         If you use the sample hostname given in the `values.yaml` file (i.e., `wso2-microgateway.sample.com`), you need to add the following entry in the `/etc/hosts` file of your machine to access the Microgateway:</br>
 
         ``` java
-           <> sample.com
+        <> sample.com
         ```
 
 Now that you have set up the DNS of your Microgateway custom URL, you
