@@ -201,3 +201,58 @@ The <code>                       &lt;user name&gt;                      </code> 
 </tr>
 </tbody>
 </table>
+
+### getUsersOfTenant
+
+<table>
+<tbody>
+<tr class="odd">
+<td>Description</td>
+<td>Get all existing users of your tenant</td>
+</tr>
+<tr class="even">
+<td>URI</td>
+<td><p><code>                             https://cloudmgt.cloud.wso2.com/cloudmgt/site/blocks/tenant/users/get/ajax/get.jag                           </code></p></td>
+</tr>
+<tr class="odd">
+<td>URI Parameters</td>
+<td><ul>
+<li>action: getUsersofTenant</li>
+</ul></td>
+</tr>
+<tr class="even">
+<td>HTTP Methods</td>
+<td>POST</td>
+</tr>
+<tr class="odd">
+<td>Example</td>
+<td><div class="page">
+<section>
+<div class="layoutArea">
+<div class="column">
+<div class="page">
+<section>
+<div class="layoutArea">
+<div class="column">
+<div class="page">
+<section>
+<div class="layoutArea">
+<div class="column">
+<p><code>                          curl -­b cookies -­k -v -X POST https://cloudmgt.cloud.wso2.com/cloudmgt/site/blocks/tenant/users/get/ajax/get.jag -­H 'Content­Type:application/x­www­form­urlencoded' -H 'Accept­Language:en­US,en;q=0.5' -d 'action=getUsersofTenant'
+</code></p>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</section>
+</div></td>
+</tr>
+</tbody>
+</table>
+
