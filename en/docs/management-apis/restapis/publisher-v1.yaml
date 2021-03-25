@@ -49,7 +49,7 @@ host: gateway.api.cloud.wso2.com
 
 # The base path of the API.
 # Will be prefixed to all paths.
-basePath: /api/am/publisher/v1
+basePath: /api/am/publisher
 
 # The following media types can be passed as input in message bodies of the API.
 # The actual media type must be specified in the Content-Type header field of the request.
@@ -131,7 +131,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/apis"
+          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/apis"
       parameters:
         - $ref : '#/parameters/limit'
         - $ref : '#/parameters/offset'
@@ -208,7 +208,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -X POST -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -d @data.json "https://127.0.0.1:9443/api/am/publisher/v1/apis"
+          curl -k -X POST -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -d @data.json "https://127.0.0.1:9443/api/am/publisher/apis"
       parameters:
         - in: body
           name: body
@@ -270,7 +270,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/apis/7a2298c4-c905-403f-8fac-38c73301631f"
+          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/apis/7a2298c4-c905-403f-8fac-38c73301631f"
       summary: Get Details of an API
       description: |
         Using this operation, you can retrieve complete details of a single API. You need to provide the Id of the API to retrive it.
@@ -331,7 +331,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -X PUT -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -d @data.json "https://127.0.0.1:9443/api/am/publisher/v1/apis/7a2298c4-c905-403f-8fac-38c73301631f"
+          curl -k -X PUT -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -d @data.json "https://127.0.0.1:9443/api/am/publisher/apis/7a2298c4-c905-403f-8fac-38c73301631f"
       security:
         - OAuth2Security:
             - apim:api_create
@@ -412,7 +412,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -X DELETE -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/apis/7a2298c4-c905-403f-8fac-38c73301631f"
+          curl -k -X DELETE -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/apis/7a2298c4-c905-403f-8fac-38c73301631f"
       security:
         - OAuth2Security:
             - apim:api_delete
@@ -465,7 +465,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/apis/7a2298c4-c905-403f-8fac-38c73301631f/swagger"
+          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/apis/7a2298c4-c905-403f-8fac-38c73301631f/swagger"
       summary: Get API Swagger Definition
       description: |
         This operation can be used to retrieve the swagger definition of an API.
@@ -524,7 +524,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -X PUT -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -F apiDefinition=@swagger.json "https://127.0.0.1:9443/api/am/publisher/v1/apis/96077508-fd01-4fae-bc64-5de0e2baf43c/swagger"
+            curl -k -X PUT -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -F apiDefinition=@swagger.json "https://127.0.0.1:9443/api/am/publisher/apis/96077508-fd01-4fae-bc64-5de0e2baf43c/swagger"
       security:
         - OAuth2Security:
             - apim:api_create
@@ -612,7 +612,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -X POST -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/apis/7a2298c4-c905-403f-8fac-38c73301631f/generate-mock-scripts"
+          curl -k -X POST -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/apis/7a2298c4-c905-403f-8fac-38c73301631f/generate-mock-scripts"
       description: |
         This operation can be used to generate mock responses from examples of swagger definition of an API.
       security:
@@ -675,7 +675,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/apis/7a2298c4-c905-403f-8fac-38c73301631f/generated-mock-scripts"
+          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/apis/7a2298c4-c905-403f-8fac-38c73301631f/generated-mock-scripts"
       description: |
         This operation can be used to fetch generated mock responses from examples of swagger definition of an API.
       security:
@@ -735,7 +735,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/apis/2fd14eb8-b828-4013-b448-0739d2e76bf7/resource-policies?resourcePath=checkPhoneNumber&verb=post&sequenceType=in"
+          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/apis/2fd14eb8-b828-4013-b448-0739d2e76bf7/resource-policies?resourcePath=checkPhoneNumber&verb=post&sequenceType=in"
       summary: Get Conversion Policy Definitions of API
       description: |
         This operation can be used to retrieve conversion policy resource definitions of a Soap to Rest converted API.
@@ -812,7 +812,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/apis/2fd14eb8-b828-4013-b448-0739d2e76bf7/resource-policies/8efc32a4-c7f1-4bee-b860-b7566e2bc0d5"
+          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/apis/2fd14eb8-b828-4013-b448-0739d2e76bf7/resource-policies/8efc32a4-c7f1-4bee-b860-b7566e2bc0d5"
       description: |
         This operation can be used to retrieve conversion policy resource definitions of an API given the resource identifier.
       security:
@@ -878,7 +878,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -X PUT -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -d @data.json "https://127.0.0.1:9443/api/am/publisher/v1/apis/2fd14eb8-b828-4013-b448-0739d2e76bf7/resource-policies/8efc32a4-c7f1-4bee-b860-b7566e2bc0d5"
+          curl -k -X PUT -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -d @data.json "https://127.0.0.1:9443/api/am/publisher/apis/2fd14eb8-b828-4013-b448-0739d2e76bf7/resource-policies/8efc32a4-c7f1-4bee-b860-b7566e2bc0d5"
       summary: Update Resource Policy(inflow/outflow) Definition
       description: |
         This operation can be used to update the resource policy(inflow/outflow) definition for the given resource identifier of an existing API. resource policy definition to be updated is passed as a body parameter `content`.
@@ -954,7 +954,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/apis/2fd14eb8-b828-4013-b448-0739d2e76bf7/thumbnail"
+          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/apis/2fd14eb8-b828-4013-b448-0739d2e76bf7/thumbnail"
       summary: Get Thumbnail Image
       description: |
         This operation can be used to download a thumbnail image of an API.
@@ -1014,7 +1014,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -X PUT -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -F file=image.jpeg "https://127.0.0.1:9443/api/am/publisher/v1/apis/2fd14eb8-b828-4013-b448-0739d2e76bf7/thumbnail"
+          curl -k -X PUT -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -F file=image.jpeg "https://127.0.0.1:9443/api/am/publisher/apis/2fd14eb8-b828-4013-b448-0739d2e76bf7/thumbnail"
       summary: Upload a Thumbnail Image
       operationId: updateAPIThumbnail
       description: |
@@ -1087,7 +1087,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/apis/2fd14eb8-b828-4013-b448-0739d2e76bf7/subscription-policies"
+          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/apis/2fd14eb8-b828-4013-b448-0739d2e76bf7/subscription-policies"
       summary: |
         Get Details of Subscription Throttling Policies of an API
       description: |
@@ -1150,7 +1150,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -X POST -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/apis/copy-api?newVersion=2.0&defaultVersion=false&apiId=2fd14eb8-b828-4013-b448-0739d2e76bf7"
+          curl -k -X POST -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/apis/copy-api?newVersion=2.0&defaultVersion=false&apiId=2fd14eb8-b828-4013-b448-0739d2e76bf7"
       description: |
         This operation can be used to create a new version of an existing API. The new version is specified as `newVersion` query parameter. New API will be in `CREATED` state.
       parameters:
@@ -1208,7 +1208,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -X POST -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/apis/change-lifecycle?apiId=890a4f4d-09eb-4877-a323-57f6ce2ed79b&action=Publish"
+            curl -k -X POST -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/apis/change-lifecycle?apiId=890a4f4d-09eb-4877-a323-57f6ce2ed79b&action=Publish"
       summary: Change API Status
       description: |
         This operation is used to change the lifecycle of an API. Eg: Publish an API which is in `CREATED` state. In order to change the lifecycle, we need to provide the lifecycle `action` as a query parameter.
@@ -1245,7 +1245,7 @@ paths:
 
             Eg: "Deprecate old versions after publishing the API:true" will deprecate older versions of a particular API when it is promoted to Published state from Created state. Multiple checklist items can be given in "attribute1:true, attribute2:false" format.
 
-            **Sample CURL :**  curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -X POST "https://gateway.api.cloud.wso2.com/api/am/publisher/v1/apis/change-lifecycle?apiId=890a4f4d-09eb-4877-a323-57f6ce2ed79b&action=Publish&lifecycleChecklist=Deprecate%20old%20versions%20after%20publishing%20the%20API%3Atrue,Requires%20re-subscription%20when%20publishing%20the%20API%3Afalse"
+            **Sample CURL :**  curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -X POST "https://gateway.api.cloud.wso2.com/api/am/publisher/apis/change-lifecycle?apiId=890a4f4d-09eb-4877-a323-57f6ce2ed79b&action=Publish&lifecycleChecklist=Deprecate%20old%20versions%20after%20publishing%20the%20API%3Atrue,Requires%20re-subscription%20when%20publishing%20the%20API%3Afalse"
 
           type: string
           in: query
@@ -1311,7 +1311,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/apis/890a4f4d-09eb-4877-a323-57f6ce2ed79b/lifecycle-history"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/apis/890a4f4d-09eb-4877-a323-57f6ce2ed79b/lifecycle-history"
       summary: Get Lifecycle State Change History of the API
       description: |
         This operation can be used to retrieve Lifecycle state change history of the API.
@@ -1362,7 +1362,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/apis/890a4f4d-09eb-4877-a323-57f6ce2ed79b/lifecycle-state"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/apis/890a4f4d-09eb-4877-a323-57f6ce2ed79b/lifecycle-state"
       summary: Get Lifecycle State Data of the API
       description: |
         This operation can be used to retrieve lifecycle state data of the API.
@@ -1423,7 +1423,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -X DELETE -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/apis/890a4f4d-09eb-4877-a323-57f6ce2ed79b/lifecycle-state/pending-tasks"
+            curl -k -X DELETE -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/apis/890a4f4d-09eb-4877-a323-57f6ce2ed79b/lifecycle-state/pending-tasks"
       summary: Delete Pending Lifecycle State Change Tasks
       description: |
         This operation can be used to remove lifecycle state change requests that are in pending state
@@ -1467,7 +1467,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -F file=@openapi.json -F additionalProperties=@data.json "https://127.0.0.1:9443/api/am/publisher/v1/apis/import-openapi"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -F file=@openapi.json -F additionalProperties=@data.json "https://127.0.0.1:9443/api/am/publisher/apis/import-openapi"
       description: |
         This operation can be used to create an API from an OpenAPI definition. Provide either `url` or `file`
         to specify the definition.
@@ -1545,7 +1545,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -F file=@api.wsdl -F additionalProperties=@data.json "https://127.0.0.1:9443/api/am/publisher/v1/apis/import-wsdl"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -F file=@api.wsdl -F additionalProperties=@data.json "https://127.0.0.1:9443/api/am/publisher/apis/import-wsdl"
       operationId: importWSDLDefinition
       description: |
         This operation can be used to create an API using a WSDL definition. Provide either `url` or `file`
@@ -1638,7 +1638,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -F file=@schema.graphql -F additionalProperties=@data.json "https://127.0.0.1:9443/api/am/publisher/v1/apis/import-graphql-schema"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -F file=@schema.graphql -F additionalProperties=@data.json "https://127.0.0.1:9443/api/am/publisher/apis/import-graphql-schema"
       summary: Import GraphQL Schema Definition
       description: |
         This operation can be used to create an API using a GraphQL schema definition.
@@ -1707,7 +1707,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -F file=@openapi.json "https://127.0.0.1:9443/api/am/publisher/v1/apis/validate-openapi"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -F file=@openapi.json "https://127.0.0.1:9443/api/am/publisher/apis/validate-openapi"
       summary: Validate an OpenAPI Definition
       operationId: validateOpenAPIDefinition
       description: |
@@ -1771,7 +1771,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -X POST -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/apis/validate-endpoint?apiId=e0824883-3e86-403a-aec1-22bbc454eb7c&endpointUrl=https%3A%2F%2Flocalhost%3A9443%2Fam%2Fsample%2Fpizzashack%2Fv1%2Fapi%2F"
+            curl -k -X POST -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/apis/validate-endpoint?apiId=e0824883-3e86-403a-aec1-22bbc454eb7c&endpointUrl=https%3A%2F%2Flocalhost%3A9443%2Fam%2Fsample%2Fpizzashack%2Fv1%2Fapi%2F"
       summary: Check whether Given Endpoint URL is Valid
       operationId: validateEndpoint
       description: |
@@ -1824,7 +1824,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -X POST -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/apis/validate?query=name%3Awso2"
+            curl -k -X POST -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/apis/validate?query=name%3Awso2"
       security:
         - OAuth2Security:
             - apim:api_create
@@ -1887,7 +1887,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -F file=@api.wsdl "https://127.0.0.1:9443/api/am/publisher/v1/apis/validate-wsdl"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -F file=@api.wsdl "https://127.0.0.1:9443/api/am/publisher/apis/validate-wsdl"
       summary: Validate a WSDL Definition
       operationId: validateWSDLDefinition
       description: |
@@ -1945,7 +1945,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -F file=@schema.graphql "https://127.0.0.1:9443/api/am/publisher/v1/apis/validate-graphql-schema"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -F file=@schema.graphql "https://127.0.0.1:9443/api/am/publisher/apis/validate-graphql-schema"
       summary: Validate GraphQL Schema Definition
       description: |
         This operation can be used to validate a graphQL schema definition and retrieve a summary.
@@ -1995,7 +1995,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/apis/e0824883-3e86-403a-aec1-22bbc454eb7c/graphql-schema"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/apis/e0824883-3e86-403a-aec1-22bbc454eb7c/graphql-schema"
       summary: Get the Schema of a GraphQL API
       description: |
         This operation can be used to retrieve the schema definition of a GraphQL API.
@@ -2053,7 +2053,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -F schemaDefinition=@schema.graphql "https://127.0.0.1:9443/api/am/publisher/v1/apis/e0824883-3e86-403a-aec1-22bbc454eb7c/graphql-schema"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -F schemaDefinition=@schema.graphql "https://127.0.0.1:9443/api/am/publisher/apis/e0824883-3e86-403a-aec1-22bbc454eb7c/graphql-schema"
       description: |
         This operation can be used to add a GraphQL Schema definition to an existing GraphQL API.
       parameters:
@@ -2129,7 +2129,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/apis/e0824883-3e86-403a-aec1-22bbc454eb7c/amznResourceNames"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/apis/e0824883-3e86-403a-aec1-22bbc454eb7c/amznResourceNames"
       summary: Retrieve the ARNs of AWS Lambda Functions
       description: |
         This operation can be use to retrieve ARNs of AWS Lambda function for a given AWS credentials.
@@ -2170,7 +2170,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -X POST -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -d @data.json https://127.0.0.1:9443/api/am/publisher/v1/apis/96077508-fd01-4fae-bc64-5de0e2baf43c/monetize
+            curl -k -X POST -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -d @data.json https://127.0.0.1:9443/api/am/publisher/apis/96077508-fd01-4fae-bc64-5de0e2baf43c/monetize
       summary: Configure Monetization for a Given API
       description: |
         This operation can be used to configure monetization for a given API.
@@ -2220,7 +2220,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/apis/96077508-fd01-4fae-bc64-5de0e2baf43c/monetize"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/apis/96077508-fd01-4fae-bc64-5de0e2baf43c/monetize"
       summary: Get Monetization Status for Each Tier in a Given API
       description: |
         This operation can be used to get monetization status for each tier in a given API
@@ -2257,7 +2257,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/apis/96077508-fd01-4fae-bc64-5de0e2baf43c/revenue"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/apis/96077508-fd01-4fae-bc64-5de0e2baf43c/revenue"
       security:
         - OAuth2Security:
             - apim:api_publish
@@ -2310,7 +2310,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/apis/e0824883-3e86-403a-aec1-22bbc454eb7c/documents"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/apis/e0824883-3e86-403a-aec1-22bbc454eb7c/documents"
       summary: Get API Documents of an API
       description: |
         This operation can be used to retrieve a list of documents belonging to an API by providing the API Id.
@@ -2363,7 +2363,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -X POST -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -d @data.json "https://127.0.0.1:9443/api/am/publisher/v1/apis/96077508-fd01-4fae-bc64-5de0e2baf43c/documents"
+            curl -k -X POST -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -d @data.json "https://127.0.0.1:9443/api/am/publisher/apis/96077508-fd01-4fae-bc64-5de0e2baf43c/documents"
       summary: Add a New Document to an API
       description: |
         This operation can be used to add a new documentation to an API. This operation only adds the metadata of a document. To add the actual content we need to use **Upload the content of an API document ** API once we obtain a document Id by this operation.
@@ -2426,7 +2426,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/apis/96077508-fd01-4fae-bc64-5de0e2baf43c/documents/0bcb7f05-599d-4e1a-adce-5cb89bfe58d5"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/apis/96077508-fd01-4fae-bc64-5de0e2baf43c/documents/0bcb7f05-599d-4e1a-adce-5cb89bfe58d5"
       summary: Get a Document of an API
       description: |
         This operation can be used to retrieve metadata of a document associated with a particular API.
@@ -2484,7 +2484,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -X PUT -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -d @doc.json "https://127.0.0.1:9443/api/am/publisher/v1/apis/96077508-fd01-4fae-bc64-5de0e2baf43c/documents/0bcb7f05-599d-4e1a-adce-5cb89bfe58d5"
+            curl -k -X PUT -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -d @doc.json "https://127.0.0.1:9443/api/am/publisher/apis/96077508-fd01-4fae-bc64-5de0e2baf43c/documents/0bcb7f05-599d-4e1a-adce-5cb89bfe58d5"
       summary: Update a Document of an API
       description: |
         This operation can be used to update metadata of an API's document.
@@ -2554,7 +2554,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -X DELETE -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/apis/96077508-fd01-4fae-bc64-5de0e2baf43c/documents/0bcb7f05-599d-4e1a-adce-5cb89bfe58d5"
+            curl -k -X DELETE -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/apis/96077508-fd01-4fae-bc64-5de0e2baf43c/documents/0bcb7f05-599d-4e1a-adce-5cb89bfe58d5"
       summary: Delete a Document of an API
       description: |
         This operation can be used to delete a document associated with an API.
@@ -2598,7 +2598,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/apis/96077508-fd01-4fae-bc64-5de0e2baf43c/documents/0bcb7f05-599d-4e1a-adce-5cb89bfe58d5/content"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/apis/96077508-fd01-4fae-bc64-5de0e2baf43c/documents/0bcb7f05-599d-4e1a-adce-5cb89bfe58d5/content"
       summary: Get the Content of an API Document
       description: |
         This operation can be used to retrive the content of an API's document.
@@ -2608,7 +2608,7 @@ paths:
         1. **Inline type**:
            The content of the document will be retrieved in `text/plain` content type
 
-           _Sample cURL_ : `curl -k -H "Authorization:Bearer 579f0af4-37be-35c7-81a4-f1f1e9ee7c51" -F inlineContent=@"docs.txt" -X POST "https://gateway.api.cloud.wso2.com/api/am/publisher/v1/apis/995a4972-3178-4b17-a374-756e0e19127c/documents/43c2bcce-60e7-405f-bc36-e39c0c5e189e/content`
+           _Sample cURL_ : `curl -k -H "Authorization:Bearer 579f0af4-37be-35c7-81a4-f1f1e9ee7c51" -F inlineContent=@"docs.txt" -X POST "https://gateway.api.cloud.wso2.com/api/am/publisher/apis/995a4972-3178-4b17-a374-756e0e19127c/documents/43c2bcce-60e7-405f-bc36-e39c0c5e189e/content`
         2. **FILE type**:
            The file will be downloaded with the related content type (eg. `application/pdf`)
         3. **URL type**:
@@ -2676,7 +2676,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -F file=@sample.pdf "https://127.0.0.1:9443/api/am/publisher/v1/apis/96077508-fd01-4fae-bc64-5de0e2baf43c/documents/0bcb7f05-599d-4e1a-adce-5cb89bfe58d5/content"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -F file=@sample.pdf "https://127.0.0.1:9443/api/am/publisher/apis/96077508-fd01-4fae-bc64-5de0e2baf43c/documents/0bcb7f05-599d-4e1a-adce-5cb89bfe58d5/content"
       summary: Upload the Content of an API Document
       description: |
         This operation can be used to upload a file or add inline content to an API document.
@@ -2757,7 +2757,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -X POST -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/apis/96077508-fd01-4fae-bc64-5de0e2baf43c/documents/validate?name=CalculatorDoc"
+            curl -k -X POST -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/apis/96077508-fd01-4fae-bc64-5de0e2baf43c/documents/validate?name=CalculatorDoc"
       summary: Check whether a Document with the Provided Name Exist
       description: |
         This operation can be used to verify the document name exists or not.
@@ -2814,7 +2814,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/apis/96077508-fd01-4fae-bc64-5de0e2baf43c/mediation-policies"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/apis/96077508-fd01-4fae-bc64-5de0e2baf43c/mediation-policies"
       summary: |
         Get All Mediation Policies of an API
       operationId:  apisApiIdMediationPoliciesGet
@@ -2871,7 +2871,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: multipart/form-data" -F mediationPolicyFile=@TokenExchange.xml -F type=in "https://127.0.0.1:9443/api/am/publisher/v1/apis/96077508-fd01-4fae-bc64-5de0e2baf43c/mediation-policies"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: multipart/form-data" -F mediationPolicyFile=@TokenExchange.xml -F type=in "https://127.0.0.1:9443/api/am/publisher/apis/96077508-fd01-4fae-bc64-5de0e2baf43c/mediation-policies"
       summary: Add an API Specific Mediation Policy
       operationId: apisApiIdMediationPoliciesPost
       description: |
@@ -2956,7 +2956,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/apis/96077508-fd01-4fae-bc64-5de0e2baf43c/mediation-policies/f56eb8b4-128c-45aa-ad35-9c87a546261a"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/apis/96077508-fd01-4fae-bc64-5de0e2baf43c/mediation-policies/f56eb8b4-128c-45aa-ad35-9c87a546261a"
       summary: Get an API Specific Mediation Policy
       operationId:  apisApiIdMediationPoliciesMediationPolicyIdGet
       description: |
@@ -3017,7 +3017,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -X DELETE -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/apis/96077508-fd01-4fae-bc64-5de0e2baf43c/mediation-policies/f56eb8b4-128c-45aa-ad35-9c87a546261a"
+            curl -k -X DELETE -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/apis/96077508-fd01-4fae-bc64-5de0e2baf43c/mediation-policies/f56eb8b4-128c-45aa-ad35-9c87a546261a"
       summary: Delete an API Specific Mediation Policy
       operationId:  apisApiIdMediationPoliciesMediationPolicyIdDelete
       description: |
@@ -3067,7 +3067,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/apis/96077508-fd01-4fae-bc64-5de0e2baf43c/mediation-policies/f56eb8b4-128c-45aa-ad35-9c87a546261a/content"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/apis/96077508-fd01-4fae-bc64-5de0e2baf43c/mediation-policies/f56eb8b4-128c-45aa-ad35-9c87a546261a/content"
       summary: Download an API Specific Mediation Policy
       operationId:  apisApiIdMediationPoliciesMediationPolicyIdContentGet
       description: |
@@ -3122,7 +3122,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -F file=@TokenExchange.xml -F type=@type.txt "https://127.0.0.1:9443/api/am/publisher/v1/apis/96077508-fd01-4fae-bc64-5de0e2baf43c/mediation-policies/f56eb8b4-128c-45aa-ad35-9c87a546261a/content"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -F file=@TokenExchange.xml -F type=@type.txt "https://127.0.0.1:9443/api/am/publisher/apis/96077508-fd01-4fae-bc64-5de0e2baf43c/mediation-policies/f56eb8b4-128c-45aa-ad35-9c87a546261a/content"
       summary: Update an API Specific Mediation Policy
       operationId:  apisApiIdMediationPoliciesMediationPolicyIdContentPut
       description: |
@@ -3219,7 +3219,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/apis/96077508-fd01-4fae-bc64-5de0e2baf43c/wsdl-info"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/apis/96077508-fd01-4fae-bc64-5de0e2baf43c/wsdl-info"
       parameters:
         - $ref: '#/parameters/apiId'
       tags:
@@ -3269,7 +3269,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/apis/96077508-fd01-4fae-bc64-5de0e2baf43c/wsdl"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/apis/96077508-fd01-4fae-bc64-5de0e2baf43c/wsdl"
       parameters:
         - $ref: '#/parameters/apiId'
         - $ref: '#/parameters/If-None-Match'
@@ -3325,7 +3325,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -F file=@api.wsdl "https://127.0.0.1:9443/api/am/publisher/v1/apis/96077508-fd01-4fae-bc64-5de0e2baf43c/wsdl"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -F file=@api.wsdl "https://127.0.0.1:9443/api/am/publisher/apis/96077508-fd01-4fae-bc64-5de0e2baf43c/wsdl"
       parameters:
         - $ref: '#/parameters/apiId'
         - in: formData
@@ -3399,7 +3399,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/apis/96077508-fd01-4fae-bc64-5de0e2baf43c/graphql-policies/complexity"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/apis/96077508-fd01-4fae-bc64-5de0e2baf43c/graphql-policies/complexity"
       security:
         - OAuth2Security:
             - apim:api_create
@@ -3428,7 +3428,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -X PUT -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -d @data.json "https://127.0.0.1:9443/api/am/publisher/v1/apis/96077508-fd01-4fae-bc64-5de0e2baf43c/graphql-policies/complexity"
+            curl -k -X PUT -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -d @data.json "https://127.0.0.1:9443/api/am/publisher/apis/96077508-fd01-4fae-bc64-5de0e2baf43c/graphql-policies/complexity"
       security:
         - OAuth2Security:
             - apim:api_create
@@ -3468,7 +3468,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/apis/96077508-fd01-4fae-bc64-5de0e2baf43c/graphql-policies/complexity/types"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/apis/96077508-fd01-4fae-bc64-5de0e2baf43c/graphql-policies/complexity/types"
       security:
         - OAuth2Security:
             - apim:api_create
@@ -3513,7 +3513,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/apis/96077508-fd01-4fae-bc64-5de0e2baf43c/resource-paths"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/apis/96077508-fd01-4fae-bc64-5de0e2baf43c/resource-paths"
       summary: Get Resource Paths of an API
       description: |
         This operation can be used to retrieve resource paths defined for a specific API.
@@ -3577,7 +3577,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/apis/96077508-fd01-4fae-bc64-5de0e2baf43c/auditapi"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/apis/96077508-fd01-4fae-bc64-5de0e2baf43c/auditapi"
       summary: Retrieve the Security Audit Report of the Audit API
       description: |
         Retrieve the Security Audit Report of the Audit API
@@ -3624,7 +3624,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/apis/96077508-fd01-4fae-bc64-5de0e2baf43c/external-stores"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/apis/96077508-fd01-4fae-bc64-5de0e2baf43c/external-stores"
       summary: Get the List of External Stores to which the API is Published
       description: |
         This operation can be used to retrieve a list of external stores which an API is published to by providing the id of the API.
@@ -3676,7 +3676,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -X POST -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/apis/96077508-fd01-4fae-bc64-5de0e2baf43c/publish-to-external-stores?externalStoreId=Store123#"
+            curl -k -X POST -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/apis/96077508-fd01-4fae-bc64-5de0e2baf43c/publish-to-external-stores?externalStoreId=Store123#"
       summary: Publish an API to External Stores
       description: |
         This operation can be used to publish an API to a list of external stores.
@@ -3734,7 +3734,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -X POST -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/apis/export?apiId=96077508-fd01-4fae-bc64-5de0e2baf43c&name=PizzaShackAPI&version=1.0&provider=admin&format=YAML" > exportAPI.zip
+            curl -k -X POST -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/apis/export?apiId=96077508-fd01-4fae-bc64-5de0e2baf43c&name=PizzaShackAPI&version=1.0&provider=admin&format=YAML" > exportAPI.zip
       summary: Export an API
       description: |
         This operation can be used to export the details of a particular API as a zip file.
@@ -3817,16 +3817,16 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -X POST -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/subscriptions?apiId=96077508-fd01-4fae-bc64-5de0e2baf43c"
+            curl -k -X POST -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/subscriptions?apiId=96077508-fd01-4fae-bc64-5de0e2baf43c"
       summary: Get all Subscriptions
       description: |
         This operation can be used to retrieve a list of subscriptions of the user associated with the provided access token. This operation is capable of
 
         1. Retrieving all subscriptions for the user's APIs.
-        `GET https://127.0.0.1:9443/api/am/publisher/v1/subscriptions`
+        `GET https://127.0.0.1:9443/api/am/publisher/subscriptions`
 
         2. Retrieving subscriptions for a specific API.
-        `GET https://127.0.0.1:9443/api/am/publisher/v1/subscriptions?apiId=c43a325c-260b-4302-81cb-768eafaa3aed`
+        `GET https://127.0.0.1:9443/api/am/publisher/subscriptions?apiId=c43a325c-260b-4302-81cb-768eafaa3aed`
       parameters:
         - $ref: '#/parameters/apiId-Q-Opt'
         - $ref: '#/parameters/limit'
@@ -3873,7 +3873,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/subscriptions/64eca60b-2e55-4c38-8603-e9e6bad7d809/usage"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/subscriptions/64eca60b-2e55-4c38-8603-e9e6bad7d809/usage"
       security:
         - OAuth2Security:
             - apim:subscription_view
@@ -3922,7 +3922,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/subscriptions/64eca60b-2e55-4c38-8603-e9e6bad7d809/subscriber-info"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/subscriptions/64eca60b-2e55-4c38-8603-e9e6bad7d809/subscriber-info"
       summary: Get Details of a User who has Subscribed an API
       description: |
         This operation can be used to get details of a user who subscribed to the API.
@@ -3958,7 +3958,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -X POST -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/subscriptions/block-subscription?subscriptionId=64eca60b-2e55-4c38-8603-e9e6bad7d809&blockState=PROD_ONLY_BLOCKED"
+            curl -k -X POST -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/subscriptions/block-subscription?subscriptionId=64eca60b-2e55-4c38-8603-e9e6bad7d809&blockState=PROD_ONLY_BLOCKED"
       summary: Block a Subscription
       description: |
         This operation can be used to block a subscription. Along with the request, `blockState` must be specified as a query parameter.
@@ -4026,7 +4026,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -X POST -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/subscriptions/unblock-subscription?subscriptionId=64eca60b-2e55-4c38-8603-e9e6bad7d809"
+            curl -k -X POST -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/subscriptions/unblock-subscription?subscriptionId=64eca60b-2e55-4c38-8603-e9e6bad7d809"
       summary: Unblock a Subscription
       parameters:
         - $ref: '#/parameters/subscriptionId-Q'
@@ -4082,7 +4082,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/throttling-policies/api"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/throttling-policies/api"
       summary: Get All Throttling Policies for the Given Type
       operationId: getAllThrottlingPolicies
       description: |
@@ -4137,7 +4137,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/throttling-policies/api/Platinum"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/throttling-policies/api/Platinum"
       summary: Get Details of a Policy
       operationId: getThrottlingPolicyByName
       description: |
@@ -4203,7 +4203,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/mediation-policies"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/mediation-policies"
       summary: |
         Get All Global Level Mediation Policies
       operationId: getAllGlobalMediationPolicies
@@ -4260,7 +4260,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/mediation-policies/d48a3412-1b85-49be-99f4-b81a3722ae73/content" > mediation.xml
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/mediation-policies/d48a3412-1b85-49be-99f4-b81a3722ae73/content" > mediation.xml
       summary: Download a Global Mediation Policy
       operationId: getGlobalMediationPolicyContent
       description: |
@@ -4318,7 +4318,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/apis/d48a3412-1b85-49be-99f4-b81a3722ae73/client-certificates?alias=wso2carbon"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/apis/d48a3412-1b85-49be-99f4-b81a3722ae73/client-certificates?alias=wso2carbon"
       summary: Retrieve/Search Uploaded Client Certificates
       description: |
         This operation can be used to retrieve and search the uploaded client certificates.
@@ -4372,7 +4372,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -X POST -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: multipart/form-data" -F certificate=@test.crt -F alias=wso2carbon -F apiId=fea749dd-d548-4a8b-b308-34903b39a34b -F tier=Gold "https://127.0.0.1:9443/api/am/publisher/v1/apis/d48a3412-1b85-49be-99f4-b81a3722ae73/client-certificates"
+            curl -k -X POST -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: multipart/form-data" -F certificate=@test.crt -F alias=wso2carbon -F apiId=fea749dd-d548-4a8b-b308-34903b39a34b -F tier=Gold "https://127.0.0.1:9443/api/am/publisher/apis/d48a3412-1b85-49be-99f4-b81a3722ae73/client-certificates"
       summary: Upload a New Certificate
       description: |
         This operation can be used to upload a new certificate for an endpoint.
@@ -4440,7 +4440,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -X POST -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: multipart/form-data" -F certificate=@test.crt -F alias=wso2carbon -F apiId=fea749dd-d548-4a8b-b308-34903b39a34b -F tier=Gold "https://127.0.0.1:9443/api/am/publisher/v1/apis/d48a3412-1b85-49be-99f4-b81a3722ae73/client-certificates/wso2carbon"
+            curl -k -X POST -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: multipart/form-data" -F certificate=@test.crt -F alias=wso2carbon -F apiId=fea749dd-d548-4a8b-b308-34903b39a34b -F tier=Gold "https://127.0.0.1:9443/api/am/publisher/apis/d48a3412-1b85-49be-99f4-b81a3722ae73/client-certificates/wso2carbon"
       summary: Update a Certificate
       description: |
         This operation can be used to update an uploaded certificate.
@@ -4510,7 +4510,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -X DELETE -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/apis/d48a3412-1b85-49be-99f4-b81a3722ae73/client-certificates/wso2carbon"
+            curl -k -X DELETE -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/apis/d48a3412-1b85-49be-99f4-b81a3722ae73/client-certificates/wso2carbon"
       summary: Delete a Certificate
       description: |
         This operation can be used to delete an uploaded certificate.
@@ -4567,7 +4567,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/apis/d48a3412-1b85-49be-99f4-b81a3722ae73/client-certificates/wso2carbon"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/apis/d48a3412-1b85-49be-99f4-b81a3722ae73/client-certificates/wso2carbon"
       summary: Get the Certificate Information
       description: |
         This operation can be used to get the information about a certificate.
@@ -4621,7 +4621,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -X DELETE -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/apis/d48a3412-1b85-49be-99f4-b81a3722ae73/client-certificates/wso2carbon/content"
+            curl -k -X DELETE -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/apis/d48a3412-1b85-49be-99f4-b81a3722ae73/client-certificates/wso2carbon/content"
       summary: Download a Certificate
       description: |
         This operation can be used to download a certificate which matches the given alias.
@@ -4678,7 +4678,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/endpoint-certificates?alias=wso2carbon&endpoint=www.abc.com"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/endpoint-certificates?alias=wso2carbon&endpoint=www.abc.com"
       summary: Retrieve/Search Uploaded Certificates
       description: |
         This operation can be used to retrieve and search the uploaded certificates.
@@ -4736,7 +4736,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -X POST -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: multipart/form-data" -F certificate=@test.crt -F alias=alias -F "endpoint=endpoint=https://www.abc.com" "https://127.0.0.1:9443/api/am/publisher/v1/apis/d48a3412-1b85-49be-99f4-b81a3722ae73/endpoint-certificates"
+            curl -k -X POST -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: multipart/form-data" -F certificate=@test.crt -F alias=alias -F "endpoint=endpoint=https://www.abc.com" "https://127.0.0.1:9443/api/am/publisher/apis/d48a3412-1b85-49be-99f4-b81a3722ae73/endpoint-certificates"
       summary: Upload a New Certificate
       description: |
         This operation can be used to upload a new certificate for an endpoint.
@@ -4800,7 +4800,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -X PUT -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: multipart/form-data" -F certificate=@test.crt "https://127.0.0.1:9443/api/am/publisher/v1/apis/d48a3412-1b85-49be-99f4-b81a3722ae73/endpoint-certificates/wso2carbon"
+            curl -k -X PUT -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: multipart/form-data" -F certificate=@test.crt "https://127.0.0.1:9443/api/am/publisher/apis/d48a3412-1b85-49be-99f4-b81a3722ae73/endpoint-certificates/wso2carbon"
       summary: Update a Certificate
       description: |
         This operation can be used to update an uploaded certificate.
@@ -4859,7 +4859,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -X DELETE -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/endpoint-certificates/wso2carbon"
+            curl -k -X DELETE -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/endpoint-certificates/wso2carbon"
       summary: Delete a Certificate
       description: |
         This operation can be used to delete an uploaded certificate.
@@ -4912,7 +4912,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/endpoint-certificates/wso2carbon"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/endpoint-certificates/wso2carbon"
       summary: Get the Certificate Information
       description: |
         This operation can be used to get the information about a certificate.
@@ -4961,7 +4961,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/endpoint-certificates/wso2carbon/content"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/endpoint-certificates/wso2carbon/content"
       summary: Download a Certificate
       description: |
         This operation can be used to download a certificate which matches the given alias.
@@ -5017,7 +5017,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/search?query=calculator"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/search?query=calculator"
       summary: |
         Retrieve/Search APIs and API Documents by Content
       description: |
@@ -5080,7 +5080,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/api-products?query=CalculatorAPIProduct"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/api-products?query=CalculatorAPIProduct"
       summary: |
         Retrieve/Search API Products
       description: |
@@ -5133,7 +5133,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -X POST -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -d @data.json "https://127.0.0.1:9443/api/am/publisher/v1/api-products"
+            curl -k -X POST -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -d @data.json "https://127.0.0.1:9443/api/am/publisher/api-products"
       summary: Create a New API Product
       description: |
         This operation can be used to create a new API Product specifying the details of the API Product in the payload.
@@ -5188,7 +5188,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -X DELETE -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/api-products/5bca47e1-8233-46a5-9295-525dca337f33"
+            curl -k -X DELETE -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/api-products/5bca47e1-8233-46a5-9295-525dca337f33"
       summary: Delete an API Product
       description: |
         This operation can be used to delete an existing API Product proving the Id of the API Product.
@@ -5229,7 +5229,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/api-products/5bca47e1-8233-46a5-9295-525dca337f33"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/api-products/5bca47e1-8233-46a5-9295-525dca337f33"
       summary: Get Details of an API Product
       description: |
         Using this operation, you can retrieve complete details of a single API Product. You need to provide the Id of the API to retrive it.
@@ -5285,7 +5285,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -X PUT -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -d @data.json "https://127.0.0.1:9443/api/am/publisher/v1/api-products/5bca47e1-8233-46a5-9295-525dca337f33"
+            curl -k -X PUT -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -d @data.json "https://127.0.0.1:9443/api/am/publisher/api-products/5bca47e1-8233-46a5-9295-525dca337f33"
       summary: Update an API product
       description: |
         This operation can be used to update an existing API product.
@@ -5360,7 +5360,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/api-products/5bca47e1-8233-46a5-9295-525dca337f33/thumbnail" > image.jpeg
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/api-products/5bca47e1-8233-46a5-9295-525dca337f33/thumbnail" > image.jpeg
       summary: Get API Product Thumbnail Image
       description: |
         This operation can be used to download a thumbnail image of an API product.
@@ -5417,7 +5417,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -X PUT -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: multipart/form-data" -F file=@image.jpeg "https://127.0.0.1:9443/api/am/publisher/v1/api-products/d48a3412-1b85-49be-99f4-b81a3722ae73/thumbnail"
+            curl -k -X PUT -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: multipart/form-data" -F file=@image.jpeg "https://127.0.0.1:9443/api/am/publisher/api-products/d48a3412-1b85-49be-99f4-b81a3722ae73/thumbnail"
       summary: Upload a Thumbnail Image
       description: |
         This operation can be used to upload a thumbnail image of an API Product. The thumbnail to be uploaded should be given as a form data parameter `file`.
@@ -5487,7 +5487,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/api-products/5bca47e1-8233-46a5-9295-525dca337f33/swagger"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/api-products/5bca47e1-8233-46a5-9295-525dca337f33/swagger"
       summary: Get Swagger Definition of API Product
       description: |
         This operation can be used to retrieve the swagger definition of an API.
@@ -5546,7 +5546,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/api-products/5bca47e1-8233-46a5-9295-525dca337f33/is-outdated"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/api-products/5bca47e1-8233-46a5-9295-525dca337f33/is-outdated"
       summary: Check Whether API Product is Outdated
       description: |
         This operation can be used to retrieve the status indicating if an API Product is outdated due to updating of dependent APIs
@@ -5608,7 +5608,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/api-products/5bca47e1-8233-46a5-9295-525dca337f33/documents"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/api-products/5bca47e1-8233-46a5-9295-525dca337f33/documents"
       summary: Get a List of API Product Documents
       description: |
         This operation can be used to retrive a list of documents belonging to an API Product by providing the id of the API Product.
@@ -5661,7 +5661,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -X POST -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -d @data.json "https://127.0.0.1:9443/api/am/publisher/v1/api-products/5bca47e1-8233-46a5-9295-525dca337f33/documents"
+            curl -k -X POST -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -d @data.json "https://127.0.0.1:9443/api/am/publisher/api-products/5bca47e1-8233-46a5-9295-525dca337f33/documents"
       summary: Add a New Document to an API Product
       description: |
         This operation can be used to add a new documentation to an API Product. This operation only adds the metadata of a document. To add the actual content we need to use **Upload the content of an API Product document ** API once we obtain a document Id by this operation.
@@ -5723,7 +5723,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/api-products/5bca47e1-8233-46a5-9295-525dca337f33/documents/83312daf-0d8a-427b-8f72-12755b7901d3"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/api-products/5bca47e1-8233-46a5-9295-525dca337f33/documents/83312daf-0d8a-427b-8f72-12755b7901d3"
       summary: Get a Document of an API
       description: |
         This operation can be used to retrieve a particular document's metadata associated with an API.
@@ -5782,7 +5782,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -X PUT -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -d @data.json "https://127.0.0.1:9443/api/am/publisher/v1/api-products/5bca47e1-8233-46a5-9295-525dca337f33/documents/83312daf-0d8a-427b-8f72-12755b7901d3"
+            curl -k -X PUT -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -d @data.json "https://127.0.0.1:9443/api/am/publisher/api-products/5bca47e1-8233-46a5-9295-525dca337f33/documents/83312daf-0d8a-427b-8f72-12755b7901d3"
       summary: Update a Document of an API Product
       description: |
         This operation can be used to update metadata of an API's document.
@@ -5851,7 +5851,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -X DELETE -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/api-products/5bca47e1-8233-46a5-9295-525dca337f33/documents/83312daf-0d8a-427b-8f72-12755b7901d3"
+            curl -k -X DELETE -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/api-products/5bca47e1-8233-46a5-9295-525dca337f33/documents/83312daf-0d8a-427b-8f72-12755b7901d3"
       summary: Delete a Document of an API Product
       description: |
         This operation can be used to delete a document associated with an API Product.
@@ -5893,7 +5893,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/api-products/5bca47e1-8233-46a5-9295-525dca337f33/documents/83312daf-0d8a-427b-8f72-12755b7901d3/content"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/api-products/5bca47e1-8233-46a5-9295-525dca337f33/documents/83312daf-0d8a-427b-8f72-12755b7901d3/content"
       summary: Get the Content of an API Product Document
       description: |
         This operation can be used to retrive the content of an API's document.
@@ -5905,7 +5905,7 @@ paths:
         2. **FILE type**:
            The file will be downloaded with the related content type (eg. `application/pdf`)
 
-           _sample cURL_ : curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/api-products/5bca47e1-8233-46a5-9295-525dca337f33/documents/83312daf-0d8a-427b-8f72-12755b7901d3/content" > sample.pdf
+           _sample cURL_ : curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/api-products/5bca47e1-8233-46a5-9295-525dca337f33/documents/83312daf-0d8a-427b-8f72-12755b7901d3/content" > sample.pdf
         3. **URL type**:
             The client will recieve the URL of the document as the Location header with the response with - `303 See Other`
       parameters:
@@ -5971,7 +5971,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -X POST -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: multipart/form-data" -F file=@sample.pdf "https://127.0.0.1:9443/api/am/publisher/v1/api-products/5bca47e1-8233-46a5-9295-525dca337f33/documents/83312daf-0d8a-427b-8f72-12755b7901d3/content"
+            curl -k -X POST -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: multipart/form-data" -F file=@sample.pdf "https://127.0.0.1:9443/api/am/publisher/api-products/5bca47e1-8233-46a5-9295-525dca337f33/documents/83312daf-0d8a-427b-8f72-12755b7901d3/content"
       summary: Upload Content to an API Product Document
       description: |
         Thid operation can be used to upload a file or add inline content to an API Product document.
@@ -6053,7 +6053,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -I -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/roles/SW50ZXJuYWwvcHVibGlzaGVyCQ"
+            curl -k -I -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/roles/SW50ZXJuYWwvcHVibGlzaGVyCQ"
       operationId: validateSystemRole
       summary:
         Check Whether Given Role Name already Exists
@@ -6087,7 +6087,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -I -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/me/roles/SW50ZXJuYWwvcHVibGlzaGVyCQ"
+            curl -k -I -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/me/roles/SW50ZXJuYWwvcHVibGlzaGVyCQ"
       operationId: validateUserRole
       summary:
         Check Whether the Logged-in User has the Given Role
@@ -6124,7 +6124,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/external-stores"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/external-stores"
       summary: Retrieve List of External Stores
       tags:
         - External Stores
@@ -6153,7 +6153,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/settings"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/settings"
       security:
         - OAuth2Security:
             - apim:publisher_settings
@@ -6189,7 +6189,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/settings/gateway-environments"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/settings/gateway-environments"
       summary: Get All Gateway Environments
       description: |
         This operation can be used to retrieve the list of gateway environments available.
@@ -6240,7 +6240,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/tenants?state=active"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/tenants?state=active"
       summary: |
         Get Tenants by State
       description: |
@@ -6303,7 +6303,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/alert-types"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/alert-types"
       summary: |
         Get the List of API Publisher Alert Types
       description: |
@@ -6341,7 +6341,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/alert-subscriptions"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/alert-subscriptions"
       summary: |
         Get the List of API Publisher Alert Types Subscribed by the User
       operationId: getSubscribedAlertTypes
@@ -6379,7 +6379,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -X PUT -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -d @data.json "https://127.0.0.1:9443/api/am/publisher/v1/alert-subscriptions"
+            curl -k -X PUT -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -d @data.json "https://127.0.0.1:9443/api/am/publisher/alert-subscriptions"
       summary: |
         Subscribe to the Selected Alert Types
       operationId: subscribeToAlerts
@@ -6428,7 +6428,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -X DELETE -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/alert-subscriptions"
+            curl -k -X DELETE -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/alert-subscriptions"
       summary: |
         Unsubscribe User from All the Alert Types
       operationId: unsubscribeAllAlerts
@@ -6467,7 +6467,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -X DELETE -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/alerts/{alertType}/configurations"
+            curl -k -X DELETE -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/alerts/{alertType}/configurations"
       summary: |
         Get All AbnormalRequestsPerMin Alert Configurations
       operationId: getAllAlertConfigs
@@ -6604,7 +6604,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -I -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/tenants/wso2.com"
+            curl -k -I -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/tenants/wso2.com"
       description: |
         Using this operation, user can check whether a given tenant exists or not.
       operationId: getTenantExistence
@@ -6637,7 +6637,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/labels"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/labels"
       summary: Get All Registered Labels
       description: |
         Get all registered Labels
@@ -6666,7 +6666,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/api-categories"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/api-categories"
       summary: Get all API categories
       description: |
         Get All API Categories
@@ -6697,7 +6697,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/scopes"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/scopes"
       summary: Get All Available Shared Scopes
       operationId: getSharedScopes
       parameters:
@@ -6732,7 +6732,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -X POST -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -d @data.json "https://127.0.0.1:9443/api/am/publisher/v1/scopes"
+            curl -k -X POST -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -d @data.json "https://127.0.0.1:9443/api/am/publisher/scopes"
       description: |
         This operation can be used to add a new Shared Scope.
       operationId: addSharedScope
@@ -6784,7 +6784,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/scopes/01234567-0123-0123-0123-012345678901"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/scopes/01234567-0123-0123-0123-012345678901"
       description: |
         This operation can be used to retrieve details of a Shared Scope by a given scope Id.
       operationId: getSharedScope
@@ -6821,7 +6821,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -X PUT -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -d @data.json "https://127.0.0.1:9443/api/am/publisher/v1/scopes/01234567-0123-0123-0123-012345678901"
+            curl -k -X PUT -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -d @data.json "https://127.0.0.1:9443/api/am/publisher/scopes/01234567-0123-0123-0123-012345678901"
       description: |
         This operation can be used to update a Shared Scope by a given scope Id.
       operationId: updateSharedScope
@@ -6870,7 +6870,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -X DELETE -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/scopes/01234567-0123-0123-0123-012345678901"
+            curl -k -X DELETE -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/scopes/01234567-0123-0123-0123-012345678901"
       description: |
         This operation can be used to delete a Shared Scope proving the Id of the scope.
       operationId: deleteSharedScope
@@ -6903,7 +6903,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -I -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/scopes/YXBpbTphcGlfdmlldw"
+            curl -k -I -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/scopes/YXBpbTphcGlfdmlldw"
       description: |
         Using this operation, user can check a given scope name exists or not.
       parameters:
@@ -6935,7 +6935,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/scopes/01234567-0123-0123-0123-012345678901/usage"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/scopes/01234567-0123-0123-0123-012345678901/usage"
       operationId: getSharedScopeUsages
       tags:
         - Scopes
@@ -6973,7 +6973,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/key-managers"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/key-managers"
       summary: Get All Key Managers
       description: |
         Get all Key managers
@@ -7004,7 +7004,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/deployments"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/deployments"
       summary: Retrieve Deployment Environments Details
       operationId: deploymentsGet
       description: |
@@ -7055,7 +7055,7 @@ paths:
       x-code-samples:
         - lang: Curl
           source: |-
-            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/v1/apis/92bc1330-1848-4fe8-b992-c792186c212e/deployments/"
+            curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://127.0.0.1:9443/api/am/publisher/apis/92bc1330-1848-4fe8-b992-c792186c212e/deployments/"
       summary: Retrieve Deployment Status Details
       operationId: deploymentsGetStatus
       description: |
@@ -7885,10 +7885,10 @@ definitions:
             {
               "endpoint_type": "http",
               "sandbox_endpoints":       {
-                 "url": "https://gateway.api.cloud.wso2.com/am/sample/pizzashack/v1/api/"
+                 "url": "https://gateway.api.cloud.wso2.com/am/sample/pizzashack/api/"
               },
               "production_endpoints":       {
-                 "url": "https://gateway.api.cloud.wso2.com/am/sample/pizzashack/v1/api/"
+                 "url": "https://gateway.api.cloud.wso2.com/am/sample/pizzashack/api/"
               }
             }
 
@@ -7900,22 +7900,22 @@ definitions:
               "sessionManagement": "",
               "sandbox_endpoints":       [
                           {
-                    "url": "https://gateway.api.cloud.wso2.com/am/sample/pizzashack/v1/api/1"
+                    "url": "https://gateway.api.cloud.wso2.com/am/sample/pizzashack/api/1"
                  },
                           {
                     "endpoint_type": "http",
                     "template_not_supported": false,
-                    "url": "https://gateway.api.cloud.wso2.com/am/sample/pizzashack/v1/api/2"
+                    "url": "https://gateway.api.cloud.wso2.com/am/sample/pizzashack/api/2"
                  }
               ],
               "production_endpoints":       [
                           {
-                    "url": "https://gateway.api.cloud.wso2.com/am/sample/pizzashack/v1/api/3"
+                    "url": "https://gateway.api.cloud.wso2.com/am/sample/pizzashack/api/3"
                  },
                           {
                     "endpoint_type": "http",
                     "template_not_supported": false,
-                    "url": "https://gateway.api.cloud.wso2.com/am/sample/pizzashack/v1/api/4"
+                    "url": "https://gateway.api.cloud.wso2.com/am/sample/pizzashack/api/4"
                  }
               ],
               "sessionTimeOut": "",
@@ -7929,21 +7929,21 @@ definitions:
                  {
                     "endpoint_type":"http",
                     "template_not_supported":false,
-                    "url":"https://gateway.api.cloud.wso2.com/am/sample/pizzashack/v1/api/1"
+                    "url":"https://gateway.api.cloud.wso2.com/am/sample/pizzashack/api/1"
                  }
               ],
               "endpoint_type":"failover",
               "sandbox_endpoints":{
-                 "url":"https://gateway.api.cloud.wso2.com/am/sample/pizzashack/v1/api/2"
+                 "url":"https://gateway.api.cloud.wso2.com/am/sample/pizzashack/api/2"
               },
               "production_endpoints":{
-                 "url":"https://gateway.api.cloud.wso2.com/am/sample/pizzashack/v1/api/3"
+                 "url":"https://gateway.api.cloud.wso2.com/am/sample/pizzashack/api/3"
               },
               "sandbox_failovers":[
                  {
                     "endpoint_type":"http",
                     "template_not_supported":false,
-                    "url":"https://gateway.api.cloud.wso2.com/am/sample/pizzashack/v1/api/4"
+                    "url":"https://gateway.api.cloud.wso2.com/am/sample/pizzashack/api/4"
                  }
               ]
             }
@@ -7970,10 +7970,10 @@ definitions:
           {
             "endpoint_type": "http",
             "sandbox_endpoints":       {
-              "url": "https://gateway.api.cloud.wso2.com/am/sample/pizzashack/v1/api/"
+              "url": "https://gateway.api.cloud.wso2.com/am/sample/pizzashack/api/"
             },
             "production_endpoints":       {
-              "url": "https://gateway.api.cloud.wso2.com/am/sample/pizzashack/v1/api/"
+              "url": "https://gateway.api.cloud.wso2.com/am/sample/pizzashack/api/"
             }
           }
       endpointImplementationType:
@@ -9766,7 +9766,7 @@ definitions:
               contains host/servers specified in the OpenAPI file/URL
             items:
               type: string
-              example: "https://gateway.api.cloud.wso2.com/am/sample/pizzashack/v1/api/"
+              example: "https://gateway.api.cloud.wso2.com/am/sample/pizzashack/api/"
       errors:
         type: array
         description: |

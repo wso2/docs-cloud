@@ -47,7 +47,7 @@ host: gateway.api.cloud.wso2.com
 
 # The base path of the API.
 # Will be prefixed to all paths.
-basePath: /api/am/store/v1
+basePath: /api/am/store
 
 # The following media types can be passed as input in message bodies of the API.
 # The actual media type must be specified in the Content-Type header field of the request.
@@ -98,7 +98,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k "https://gateway.api.cloud.wso2.com/api/am/store/v1/apis"
+          curl -k "https://gateway.api.cloud.wso2.com/api/am/store/apis"
       summary: |
         Retrieve/Search APIs
       description: |
@@ -163,7 +163,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k "https://gateway.api.cloud.wso2.com/api/am/store/v1/apis/c43a325c-260b-4302-81cb-768eafaa3aed"
+          curl -k "https://gateway.api.cloud.wso2.com/api/am/store/apis/c43a325c-260b-4302-81cb-768eafaa3aed"
       summary: |
         Get Details of an API
       description: |
@@ -215,7 +215,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k "https://gateway.api.cloud.wso2.com/api/am/store/v1/apis/c43a325c-260b-4302-81cb-768eafaa3aed/swagger"
+          curl -k "https://gateway.api.cloud.wso2.com/api/am/store/apis/c43a325c-260b-4302-81cb-768eafaa3aed/swagger"
       summary: |
         Get Swagger Definition
       description: |
@@ -271,7 +271,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k "https://gateway.api.cloud.wso2.com/api/am/store/v1/apis/c43a325c-260b-4302-81cb-768eafaa3aed/graphql-schema"
+          curl -k "https://gateway.api.cloud.wso2.com/api/am/store/apis/c43a325c-260b-4302-81cb-768eafaa3aed/graphql-schema"
       summary: |
         Get GraphQL Definition
       description: |
@@ -324,7 +324,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -H "Authorization:Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://gateway.api.cloud.wso2.com/api/am/store/v1/apis/890a4f4d-09eb-4877-a323-57f6ce2ed79b/sdks/java" > Swagger Petstore_java_1.0.0.zip
+          curl -k -H "Authorization:Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://gateway.api.cloud.wso2.com/api/am/store/apis/890a4f4d-09eb-4877-a323-57f6ce2ed79b/sdks/java" > Swagger Petstore_java_1.0.0.zip
       summary: |
         Generate a SDK for an API
       description: |
@@ -381,7 +381,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k "https://gateway.api.cloud.wso2.com/api/am/store/v1/apis/c43a325c-260b-4302-81cb-768eafaa3aed/wsdl"
+          curl -k "https://gateway.api.cloud.wso2.com/api/am/store/apis/c43a325c-260b-4302-81cb-768eafaa3aed/wsdl"
       summary: Get API WSDL definition
       description: |
         This operation can be used to retrieve the swagger definition of an API.
@@ -431,7 +431,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k "https://gateway.api.cloud.wso2.com/api/am/store/v1/apis/c43a325c-260b-4302-81cb-768eafaa3aed/documents"
+          curl -k "https://gateway.api.cloud.wso2.com/api/am/store/apis/c43a325c-260b-4302-81cb-768eafaa3aed/documents"
       summary: |
         Get a List of Documents of an API
       description: |
@@ -484,7 +484,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k "https://gateway.api.cloud.wso2.com/api/am/store/v1/apis/c43a325c-260b-4302-81cb-768eafaa3aed/documents/850a4f34-db2c-4d23-9d85-3f95fbfb082c"
+          curl -k "https://gateway.api.cloud.wso2.com/api/am/store/apis/c43a325c-260b-4302-81cb-768eafaa3aed/documents/850a4f34-db2c-4d23-9d85-3f95fbfb082c"
       summary: |
         Get a Document of an API
       description: |
@@ -539,7 +539,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k "https://gateway.api.cloud.wso2.com/api/am/store/v1/apis/890a4f4d-09eb-4877-a323-57f6ce2ed79b/documents/0bcb7f05-599d-4e1a-adce-5cb89bfe58d5/content"
+          curl -k "https://gateway.api.cloud.wso2.com/api/am/store/apis/890a4f4d-09eb-4877-a323-57f6ce2ed79b/documents/0bcb7f05-599d-4e1a-adce-5cb89bfe58d5/content"
       summary: |
         Get the Content of an API Document
       description: |
@@ -613,7 +613,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k "https://gateway.api.cloud.wso2.com/api/am/store/v1/apis/e93fb282-b456-48fc-8981-003fb89086ae/thumbnail"
+          curl -k "https://gateway.api.cloud.wso2.com/api/am/store/apis/e93fb282-b456-48fc-8981-003fb89086ae/thumbnail"
       summary: Get Thumbnail Image
       description: |
         This operation can be used to download a thumbnail image of an API.
@@ -670,7 +670,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k "https://gateway.api.cloud.wso2.com/api/am/store/v1/apis/e93fb282-b456-48fc-8981-003fb89086ae/ratings"
+          curl -k "https://gateway.api.cloud.wso2.com/api/am/store/apis/e93fb282-b456-48fc-8981-003fb89086ae/ratings"
       summary: Retrieve API Ratings
       description: |
         This operation can be used to retrieve the list of ratings of an API.
@@ -709,7 +709,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -H "Authorization:Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://gateway.api.cloud.wso2.com/api/am/store/v1/apis/e93fb282-b456-48fc-8981-003fb89086ae/user-rating"
+          curl -k -H "Authorization:Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://gateway.api.cloud.wso2.com/api/am/store/apis/e93fb282-b456-48fc-8981-003fb89086ae/user-rating"
       summary: Retrieve API Rating of User
       description: |
         This operation can be used to get the user rating of an API.
@@ -760,7 +760,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -X PUT -H "Authorization:Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -d @data.json "https://gateway.api.cloud.wso2.com/api/am/store/v1/apis/e93fb282-b456-48fc-8981-003fb89086ae/user-rating"
+          curl -k -X PUT -H "Authorization:Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -d @data.json "https://gateway.api.cloud.wso2.com/api/am/store/apis/e93fb282-b456-48fc-8981-003fb89086ae/user-rating"
       summary: Add or Update Logged in User's Rating for an API
       description: |
         This operation can be used to add or update an API rating.
@@ -808,7 +808,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -X DELETE -H "Authorization:Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://gateway.api.cloud.wso2.com/api/am/store/v1/apis/e93fb282-b456-48fc-8981-003fb89086ae/user-rating"
+          curl -k -X DELETE -H "Authorization:Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://gateway.api.cloud.wso2.com/api/am/store/apis/e93fb282-b456-48fc-8981-003fb89086ae/user-rating"
       summary: Delete User API Rating
       description: |
         This operation can be used to delete logged in user API rating.
@@ -842,7 +842,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k "https://gateway.api.cloud.wso2.com/api/am/store/v1/apis/e93fb282-b456-48fc-8981-003fb89086ae/comments"
+          curl -k "https://gateway.api.cloud.wso2.com/api/am/store/apis/e93fb282-b456-48fc-8981-003fb89086ae/comments"
       description: |
         Get a list of Comments that are already added to APIs
       operationId: getAllCommentsOfAPI
@@ -878,7 +878,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -X POST -H "Authorization:Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -d @data.json "https://gateway.api.cloud.wso2.com/api/am/store/v1/apis/e93fb282-b456-48fc-8981-003fb89086ae/comments"
+          curl -k -X POST -H "Authorization:Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -d @data.json "https://gateway.api.cloud.wso2.com/api/am/store/apis/e93fb282-b456-48fc-8981-003fb89086ae/comments"
       operationId: addCommentToAPI
       parameters:
         - $ref: '#/parameters/apiId'
@@ -932,7 +932,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k "https://gateway.api.cloud.wso2.com/api/am/store/v1/apis/e93fb282-b456-48fc-8981-003fb89086ae/comments/d4cf1704-5d09-491c-bc48-4d19ce6ea9b4"
+          curl -k "https://gateway.api.cloud.wso2.com/api/am/store/apis/e93fb282-b456-48fc-8981-003fb89086ae/comments/d4cf1704-5d09-491c-bc48-4d19ce6ea9b4"
       description: |
         Get the individual comment given by a username for a certain API.
       operationId: getCommentOfAPI
@@ -985,7 +985,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -X DELETE -H "Authorization:Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://gateway.api.cloud.wso2.com/api/am/store/v1/apis/e93fb282-b456-48fc-8981-003fb89086ae/comments/d4cf1704-5d09-491c-bc48-4d19ce6ea9b4"
+          curl -k -X DELETE -H "Authorization:Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://gateway.api.cloud.wso2.com/api/am/store/apis/e93fb282-b456-48fc-8981-003fb89086ae/comments/d4cf1704-5d09-491c-bc48-4d19ce6ea9b4"
       description: |
         Remove a Comment
       operationId: deleteComment
@@ -1021,7 +1021,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k "https://gateway.api.cloud.wso2.com/api/am/store/v1/apis/268c9e55-3dc1-4f47-82e7-977e5343d077/subscription-policies"
+          curl -k "https://gateway.api.cloud.wso2.com/api/am/store/apis/268c9e55-3dc1-4f47-82e7-977e5343d077/subscription-policies"
       summary: |
         Get Details of the Subscription Throttling Policies of an API
       description: |
@@ -1078,7 +1078,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://gateway.api.cloud.wso2.com/api/am/store/v1/applications"
+          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://gateway.api.cloud.wso2.com/api/am/store/applications"
       summary: |
         Retrieve/Search Applications
       description: |
@@ -1148,7 +1148,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -X POST -d @data.json "https://gateway.api.cloud.wso2.com/api/am/store/v1/applications"
+          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -X POST -d @data.json "https://gateway.api.cloud.wso2.com/api/am/store/applications"
       summary: |
         Create a New Application
       description: |
@@ -1214,7 +1214,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://gateway.api.cloud.wso2.com/api/am/store/v1/applications/896658a0-b4ee-4535-bbfa-806c894a4015"
+          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://gateway.api.cloud.wso2.com/api/am/store/applications/896658a0-b4ee-4535-bbfa-806c894a4015"
       summary: |
         Get Details of an Application
       description: |
@@ -1261,7 +1261,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -X PUT -d @data.json "https://gateway.api.cloud.wso2.com/api/am/store/v1/applications/896658a0-b4ee-4535-bbfa-806c894a4015"
+          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -X PUT -d @data.json "https://gateway.api.cloud.wso2.com/api/am/store/applications/896658a0-b4ee-4535-bbfa-806c894a4015"
       summary: |
         Update an Application
       description: |
@@ -1318,7 +1318,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -X DELETE "https://gateway.api.cloud.wso2.com/api/am/store/v1/applications/896658a0-b4ee-4535-bbfa-806c894a4015"
+          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -X DELETE "https://gateway.api.cloud.wso2.com/api/am/store/applications/896658a0-b4ee-4535-bbfa-806c894a4015"
       summary: |
         Remove an Application
       description: |
@@ -1366,7 +1366,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -X POST -d @data.json "https://gateway.api.cloud.wso2.com/api/am/store/v1/applications/896658a0-b4ee-4535-bbfa-806c894a4015/generate-keys"
+          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -X POST -d @data.json "https://gateway.api.cloud.wso2.com/api/am/store/applications/896658a0-b4ee-4535-bbfa-806c894a4015/generate-keys"
       description: |
         Generate keys (Consumer key/secret) for application
       parameters:
@@ -1411,7 +1411,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -X POST -d @data.json "https://gateway.api.cloud.wso2.com/api/am/store/v1/applications/896658a0-b4ee-4535-bbfa-806c894a4015/map-keys"
+          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -X POST -d @data.json "https://gateway.api.cloud.wso2.com/api/am/store/applications/896658a0-b4ee-4535-bbfa-806c894a4015/map-keys"
       description: |
         Map keys (Consumer key/secret) to an application
       parameters:
@@ -1457,7 +1457,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://gateway.api.cloud.wso2.com/api/am/store/v1/applications/896658a0-b4ee-4535-bbfa-806c894a4015/keys"
+          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://gateway.api.cloud.wso2.com/api/am/store/applications/896658a0-b4ee-4535-bbfa-806c894a4015/keys"
       description: |
         Retrieve keys (Consumer key/secret) of application
       parameters:
@@ -1495,7 +1495,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://gateway.api.cloud.wso2.com/api/am/store/v1/applications/896658a0-b4ee-4535-bbfa-806c894a4015/keys/PRODUCTION"
+          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://gateway.api.cloud.wso2.com/api/am/store/applications/896658a0-b4ee-4535-bbfa-806c894a4015/keys/PRODUCTION"
       summary: |
         Get Key Details of a Given Type
       description: |
@@ -1532,7 +1532,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -X PUT -d @data.json "https://gateway.api.cloud.wso2.com/api/am/store/v1/applications/896658a0-b4ee-4535-bbfa-806c894a4015/keys/PRODUCTION"
+          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -X PUT -d @data.json "https://gateway.api.cloud.wso2.com/api/am/store/applications/896658a0-b4ee-4535-bbfa-806c894a4015/keys/PRODUCTION"
       summary: |
         Update Grant Types and Callback URL of an Application
       description: |
@@ -1580,7 +1580,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -X POST "https://gateway.api.cloud.wso2.com/api/am/store/v1/applications/896658a0-b4ee-4535-bbfa-806c894a4015/keys/PRODUCTION/regenerate-secret"
+          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -X POST "https://gateway.api.cloud.wso2.com/api/am/store/applications/896658a0-b4ee-4535-bbfa-806c894a4015/keys/PRODUCTION/regenerate-secret"
       summary: |
         Re-Generate Consumer Secret
       description: |
@@ -1636,7 +1636,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -X POST "https://gateway.api.cloud.wso2.com/api/am/store/v1/applications/896658a0-b4ee-4535-bbfa-806c894a4015/keys/PRODUCTION/clean-up"
+          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -X POST "https://gateway.api.cloud.wso2.com/api/am/store/applications/896658a0-b4ee-4535-bbfa-806c894a4015/keys/PRODUCTION/clean-up"
       summary: Clean-Up Application Keys
       description: |
         Clean up keys after failed key generation of an application
@@ -1675,7 +1675,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -X POST -d @data.json "https://gateway.api.cloud.wso2.com/api/am/store/v1/applications/16cd2684-9657-4a01-a956-4efd89e96077/keys/PRODUCTION/generate-token"
+          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -X POST -d @data.json "https://gateway.api.cloud.wso2.com/api/am/store/applications/16cd2684-9657-4a01-a956-4efd89e96077/keys/PRODUCTION/generate-token"
       summary: Generate Application Token
       description: |
         Generate an access token for application by client_credentials grant type
@@ -1723,7 +1723,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://gateway.api.cloud.wso2.com/api/am/store/v1/applications/16cd2684-9657-4a01-a956-4efd89e96077/oauth-keys"
+          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://gateway.api.cloud.wso2.com/api/am/store/applications/16cd2684-9657-4a01-a956-4efd89e96077/oauth-keys"
       description: |
         Retrieve keys (Consumer key/secret) of application
       parameters:
@@ -1760,7 +1760,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://gateway.api.cloud.wso2.com/api/am/store/v1/applications/16cd2684-9657-4a01-a956-4efd89e96077/oauth-keys/df972173-c957-46d4-96ac-99be8e303584"
+          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://gateway.api.cloud.wso2.com/api/am/store/applications/16cd2684-9657-4a01-a956-4efd89e96077/oauth-keys/df972173-c957-46d4-96ac-99be8e303584"
       summary: |
         Get Key Details of a Given Type
       description: |
@@ -1796,7 +1796,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -X POST -d @data.json "https://gateway.api.cloud.wso2.com/api/am/store/v1/applications/16cd2684-9657-4a01-a956-4efd89e96077/oauth-keys/df972173-c957-46d4-96ac-99be8e303584"
+          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -X POST -d @data.json "https://gateway.api.cloud.wso2.com/api/am/store/applications/16cd2684-9657-4a01-a956-4efd89e96077/oauth-keys/df972173-c957-46d4-96ac-99be8e303584"
       summary: |
         Update Grant Types and Callback URL of an Application
       description: |
@@ -1843,7 +1843,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -X POST "https://gateway.api.cloud.wso2.com/api/am/store/v1//applications/16cd2684-9657-4a01-a956-4efd89e96077/oauth-keys/df972173-c957-46d4-96ac-99be8e303584/regenerate-secret"
+          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -X POST "https://gateway.api.cloud.wso2.com/api/am/store//applications/16cd2684-9657-4a01-a956-4efd89e96077/oauth-keys/df972173-c957-46d4-96ac-99be8e303584/regenerate-secret"
       summary: |
         Re-Generate Consumer Secret
       description: |
@@ -1898,7 +1898,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -X POST "https://gateway.api.cloud.wso2.com/api/am/store/v1/applications/16cd2684-9657-4a01-a956-4efd89e96077/oauth-keys/df972173-c957-46d4-96ac-99be8e303584/clean-up"
+          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -X POST "https://gateway.api.cloud.wso2.com/api/am/store/applications/16cd2684-9657-4a01-a956-4efd89e96077/oauth-keys/df972173-c957-46d4-96ac-99be8e303584/clean-up"
       summary: Clean-Up Application Keys
       description: |
         Clean up keys after failed key generation of an application
@@ -1936,7 +1936,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -X POST -d @data.json "https://gateway.api.cloud.wso2.com/api/am/store/v1/applications/16cd2684-9657-4a01-a956-4efd89e96077/oauth-keys/{keyMappingId}/generate-token"
+          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -X POST -d @data.json "https://gateway.api.cloud.wso2.com/api/am/store/applications/16cd2684-9657-4a01-a956-4efd89e96077/oauth-keys/{keyMappingId}/generate-token"
       summary: Generate Application Token
       description: |
         Generate an access token for application by client_credentials grant type
@@ -1984,7 +1984,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -X POST -d @data.json "https://gateway.api.cloud.wso2.com/api/am/store/v1/applications/16cd2684-9657-4a01-a956-4efd89e96077/api-keys/PRODUCTION/generate"
+          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -X POST -d @data.json "https://gateway.api.cloud.wso2.com/api/am/store/applications/16cd2684-9657-4a01-a956-4efd89e96077/api-keys/PRODUCTION/generate"
       summary: Generate API Key
       description: |
         Generate a self contained API Key for the application
@@ -2031,7 +2031,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -X POST -d @data.json "https://gateway.api.cloud.wso2.com/api/am/store/v1/applications/16cd2684-9657-4a01-a956-4efd89e96077/api-keys/PRODUCTION/revoke"
+          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -X POST -d @data.json "https://gateway.api.cloud.wso2.com/api/am/store/applications/16cd2684-9657-4a01-a956-4efd89e96077/api-keys/PRODUCTION/revoke"
       summary: Revoke API Key
       description: |
         Revoke a self contained API Key for the application
@@ -2073,17 +2073,17 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://gateway.api.cloud.wso2.com/api/am/store/v1/subscriptions?apiId=02e658e7-71c7-4b1d-a623-be145b789340"
+          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://gateway.api.cloud.wso2.com/api/am/store/subscriptions?apiId=02e658e7-71c7-4b1d-a623-be145b789340"
       summary: |
         Get All Subscriptions
       description: |
         This operation can be used to retrieve a list of subscriptions of the user associated with the provided access token. This operation is capable of
 
         1. Retrieving applications which are subscibed to a specific API.
-        `GET https://gateway.api.cloud.wso2.com/api/am/store/v1/subscriptions?apiId=c43a325c-260b-4302-81cb-768eafaa3aed`
+        `GET https://gateway.api.cloud.wso2.com/api/am/store/subscriptions?apiId=c43a325c-260b-4302-81cb-768eafaa3aed`
 
         2. Retrieving APIs which are subscribed by a specific application.
-        `GET https://gateway.api.cloud.wso2.com/api/am/store/v1/subscriptions?applicationId=c43a325c-260b-4302-81cb-768eafaa3aed`
+        `GET https://gateway.api.cloud.wso2.com/api/am/store/subscriptions?applicationId=c43a325c-260b-4302-81cb-768eafaa3aed`
 
         **IMPORTANT:**
         * It is mandatory to provide either **apiId** or **applicationId**.
@@ -2128,7 +2128,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -X POST -d @data.json "https://gateway.api.cloud.wso2.com/api/am/store/v1/subscriptions"
+          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -X POST -d @data.json "https://gateway.api.cloud.wso2.com/api/am/store/subscriptions"
       summary: |
         Add a New Subscription
       description: |
@@ -2194,7 +2194,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -X POST -d @data.json "https://gateway.api.cloud.wso2.com/api/am/store/v1/subscriptions/multiple"
+          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -X POST -d @data.json "https://gateway.api.cloud.wso2.com/api/am/store/subscriptions/multiple"
       summary: |
         Add New Subscriptions
       description: |
@@ -2253,7 +2253,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://gateway.api.cloud.wso2.com/api/am/store/v1/subscriptions/5b65808c-cdf2-43e1-a695-de63e3ad0ae9"
+          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://gateway.api.cloud.wso2.com/api/am/store/subscriptions/5b65808c-cdf2-43e1-a695-de63e3ad0ae9"
       summary: |
         Get Details of a Subscription
       description: |
@@ -2295,7 +2295,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -X PUT -d @data.json "https://gateway.api.cloud.wso2.com/api/am/store/v1/subscriptions/80369180-7d90-4ee8-99a1-19fa68512aa5"
+          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -X PUT -d @data.json "https://gateway.api.cloud.wso2.com/api/am/store/subscriptions/80369180-7d90-4ee8-99a1-19fa68512aa5"
       summary: |
         Update Existing Subscription
       description: |
@@ -2366,7 +2366,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -X DELETE "https://gateway.api.cloud.wso2.com/api/am/store/v1/subscriptions/80369180-7d90-4ee8-99a1-19fa68512aa5"
+          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -X DELETE "https://gateway.api.cloud.wso2.com/api/am/store/subscriptions/80369180-7d90-4ee8-99a1-19fa68512aa5"
       summary: |
         Remove a Subscription
       description: |
@@ -2409,7 +2409,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://gateway.api.cloud.wso2.com/api/am/store/v1/subscriptions/5b65808c-cdf2-43e1-a695-de63e3ad0ae9/usage"
+          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://gateway.api.cloud.wso2.com/api/am/store/subscriptions/5b65808c-cdf2-43e1-a695-de63e3ad0ae9/usage"
       summary: Get Details of a Pending Invoice for a Monetized Subscription with Metered Billing.
       description: |
         This operation can be used to get details of a pending invoice for a monetized subscription with metered billing.
@@ -2456,7 +2456,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k "https://gateway.api.cloud.wso2.com/api/am/store/v1/throttling-policies/application"
+          curl -k "https://gateway.api.cloud.wso2.com/api/am/store/throttling-policies/application"
       description: |
         Get available Throttling Policies
       parameters:
@@ -2503,7 +2503,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k "https://gateway.api.cloud.wso2.com/api/am/store/v1/throttling-policies/application/10PerMin"
+          curl -k "https://gateway.api.cloud.wso2.com/api/am/store/throttling-policies/application/10PerMin"
       summary: |
         Get Details of a Throttling Policy
       description: |
@@ -2558,7 +2558,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k "https://gateway.api.cloud.wso2.com/api/am/store/v1/tags"
+          curl -k "https://gateway.api.cloud.wso2.com/api/am/store/tags"
       summary: |
         Get All Tags
       description: |
@@ -2613,7 +2613,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k "https://gateway.api.cloud.wso2.com/api/am/store/v1/search?query=PizzaShackAPI"
+          curl -k "https://gateway.api.cloud.wso2.com/api/am/store/search?query=PizzaShackAPI"
       summary: |
         Retrieve/Search APIs and API Documents by Content
       description: |
@@ -2671,7 +2671,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -H "Authorization:Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://gateway.api.cloud.wso2.com/api/am/store/v1/sdk-gen/languages"
+          curl -k -H "Authorization:Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://gateway.api.cloud.wso2.com/api/am/store/sdk-gen/languages"
       summary:  |
         Get a List of Supported SDK Languages
       description:  |
@@ -2699,7 +2699,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://gateway.api.cloud.wso2.com/api/am/store/v1/settings"
+          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://gateway.api.cloud.wso2.com/api/am/store/settings"
       summary: Retrieve Store Settings
       security:
         - OAuth2Security:
@@ -2735,7 +2735,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://gateway.api.cloud.wso2.com/api/am/store/v1/settings/application-attributes"
+          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://gateway.api.cloud.wso2.com/api/am/store/settings/application-attributes"
       summary: |
         Get All Application Attributes from Configuration
       description: |
@@ -2776,7 +2776,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k "https://gateway.api.cloud.wso2.com/api/am/store/v1/tenants"
+          curl -k "https://gateway.api.cloud.wso2.com/api/am/store/tenants"
       summary: |
         Get Tenants by State
       description: |
@@ -2830,7 +2830,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://gateway.api.cloud.wso2.com/api/am/store/v1/recommendations"
+          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://gateway.api.cloud.wso2.com/api/am/store/recommendations"
       summary:
         Give API Recommendations for a User
       description:
@@ -2868,7 +2868,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://gateway.api.cloud.wso2.com/api/am/store/v1/alert-types"
+          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://gateway.api.cloud.wso2.com/api/am/store/alert-types"
       operationId: getStoreAlertTypes
       summary: |
         Get the List of API Developer Portal Alert Types
@@ -2904,7 +2904,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://gateway.api.cloud.wso2.com/api/am/store/v1/alert-subscriptions"
+          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://gateway.api.cloud.wso2.com/api/am/store/alert-subscriptions"
       summary: |
         Get the List of API Developer Portal Alert Types Subscribed by the User
       operationId: getSubscribedAlertTypes
@@ -2939,7 +2939,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -X PUT -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -d @data.json "https://gateway.api.cloud.wso2.com/api/am/store/v1/alert-subscriptions"
+          curl -k -X PUT -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -d @data.json "https://gateway.api.cloud.wso2.com/api/am/store/alert-subscriptions"
       summary: |
         Subscribe to the Selected Alert Types by the User
       operationId: subscribeToAlerts
@@ -2986,7 +2986,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -X DELETE -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://gateway.api.cloud.wso2.com/api/am/store/v1/alert-subscriptions"
+          curl -k -X DELETE -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://gateway.api.cloud.wso2.com/api/am/store/alert-subscriptions"
       summary: |
         Unsubscribe User from All the Alert Types
       operationId: unsubscribeAllAlerts
@@ -3023,7 +3023,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://gateway.api.cloud.wso2.com/api/am/store/v1/alerts/AbnormalRequestsPerMin/configurations"
+          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://gateway.api.cloud.wso2.com/api/am/store/alerts/AbnormalRequestsPerMin/configurations"
       summary: |
         Get All AbnormalRequestsPerMin Alert Configurations
       operationId: getAllAlertConfigs
@@ -3061,7 +3061,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -X PUT -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -d @data.json "https://gateway.api.cloud.wso2.com/api/am/store/v1/alerts/AbnormalRequestsPerMin/configurations/UGV0c3RvcmUjMS4wI0FwcDE"
+          curl -k -X PUT -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -d @data.json "https://gateway.api.cloud.wso2.com/api/am/store/alerts/AbnormalRequestsPerMin/configurations/UGV0c3RvcmUjMS4wI0FwcDE"
       summary: |
         Add AbnormalRequestsPerMin Alert Configurations
       operationId: addAlertConfig
@@ -3109,7 +3109,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -X DELETE -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://gateway.api.cloud.wso2.com/api/am/store/v1/alerts/AbnormalRequestsPerMin/configurations/UGV0c3RvcmUjMS4wI0FwcDE"
+          curl -k -X DELETE -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://gateway.api.cloud.wso2.com/api/am/store/alerts/AbnormalRequestsPerMin/configurations/UGV0c3RvcmUjMS4wI0FwcDE"
       summary: |
         Delete the Selected Configuration from AbnormalRequestsPerMin Alert Type
       operationId: deleteAlertConfig
@@ -3146,7 +3146,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k "https://gateway.api.cloud.wso2.com/api/am/store/v1/api-categories"
+          curl -k "https://gateway.api.cloud.wso2.com/api/am/store/api-categories"
       summary: Get All API Categories
       description: |
         Get all API categories
@@ -3177,7 +3177,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://gateway.api.cloud.wso2.com/api/am/store/v1/key-managers"
+          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" "https://gateway.api.cloud.wso2.com/api/am/store/key-managers"
       summary: Get All Key Managers
       description: |
         Get all Key managers
@@ -3208,7 +3208,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k "https://gateway.api.cloud.wso2.com/api/am/store/v1/apis/e93fb282-b456-48fc-8981-003fb89086ae/graphql-policies/complexity"
+          curl -k "https://gateway.api.cloud.wso2.com/api/am/store/apis/e93fb282-b456-48fc-8981-003fb89086ae/graphql-policies/complexity"
       description: |
         This operation can be used to retrieve complexity related details belonging to an API by providing the API id.
       parameters:
@@ -3240,7 +3240,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k "https://gateway.api.cloud.wso2.com/api/am/store/v1/apis/e93fb282-b456-48fc-8981-003fb89086ae/graphql-policies/complexity/types"
+          curl -k "https://gateway.api.cloud.wso2.com/api/am/store/apis/e93fb282-b456-48fc-8981-003fb89086ae/graphql-policies/complexity/types"
       description: |
         This operation can be used to retrieve all types and fields of the GraphQL Schema by providing the API id.
       parameters:
@@ -3281,7 +3281,7 @@ paths:
       x-code-samples:
       - lang: Curl
         source: |-
-          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -X POST -d @data.json "https://gateway.api.cloud.wso2.com/api/am/store/v1/me/change-password"
+          curl -k -H "Authorization: Bearer ae4eae22-3f65-387b-a171-d37eaa366fa8" -H "Content-Type: application/json" -X POST -d @data.json "https://gateway.api.cloud.wso2.com/api/am/store/me/change-password"
       summary:
         Change the Password of the user
       description: |
