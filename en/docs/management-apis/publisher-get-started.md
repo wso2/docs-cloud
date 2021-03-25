@@ -8,7 +8,7 @@ The API comes with a pluggable security mechanism. Since API security is impleme
 Before invoking the API with the access token, you need to obtain the consumer key/secret key pair by calling the dynamic client registration endpoint. You can request an access token with the preferred grant type. An example is shown below,
 
 ```
-curl -k -X POST -H "Authorization: Basic YWRtaW46YWRtaW4=" -H "Content-Type: application/json" -d @payload.json https://localhost:9443/client-registration/v0.16/register
+curl -X POST -H "Authorization: Basic base64encode(email_username@Org_key:password)" -H "Content-Type: application/json" -d @payload.json https://gateway.api.cloud.wso2.com/client-registration/register
 ```
 
 ####Sample request:
