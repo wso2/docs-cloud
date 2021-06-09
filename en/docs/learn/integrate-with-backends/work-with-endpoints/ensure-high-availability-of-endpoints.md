@@ -41,7 +41,7 @@ Follow the steps below to configure load balancing endpoints via the API Publish
     <td><div class="content-wrapper">
     <p>The load balancing algorithm is specified here.</p>
     <p>Click on the cogwheel icon to define the algorithm.</p>
-    <p>The default value is the <strong>Round-Robin</strong> Algorithm, which has the <a href="https://synapse.apache.org/apidocs/org/apache/synapse/endpoints/algorithms/RoundRobin.html">org.apache.synapse.endpoints.algorithms.RoundRobin</a> className. If you select another algorithm, you need to specify the class name of the algorithm. Class names of other algorithms can be found <a href="https://synapse.apache.org/apidocs/org/apache/synapse/endpoints/algorithms/package-summary.html">here</a>.</p>
+    <p>The default value is the <strong>Round-Robin</strong> Algorithm, which has the <a href="https://synapse.apache.org/apidocs/org/apache/synapse/endpoints/algorithms/RoundRobin.html">org.apache.synapse.endpoints.algorithms.RoundRobin</a> className. WSO2 API Cloud supports only the Round-Robin algorithm. </p>
     <p></p>
     </div></td>
     </tr>
@@ -91,4 +91,3 @@ Follow the steps below to configure failover group endpoints via the API Publish
          
 
 6. Click **SAVE**.
-
