@@ -130,10 +130,6 @@
           | EU (Ireland)   | customdns-ire.api.cloud.wso2.com |
           | EU (Frankfurt) | customdns-frk.api.cloud.wso2.com |
 
-        !!! tip
-        
-            If you want to access your APIs from any other AWS region, contact the Cloud team via <cloud@wso2.com>.
-        
 
 <html>
          <div class="admonition info">
