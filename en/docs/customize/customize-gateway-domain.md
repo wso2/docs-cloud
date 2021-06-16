@@ -21,13 +21,8 @@ Gateway domain depending on your requirement:
 ### Create a new Gateway custom domain
 
 WSO2 API Cloud currently has regional gateways in US East, US West,
-Brazil (São Paulo), EU (Ireland), EU (Frankfurt), Singapore, and Sydney.
+Brazil (São Paulo), EU (Ireland), EU (Frankfurt), and Sydney.
 
-!!! tip
-    
-    You can contact us at <cloud@wso2.com> to request for additional
-    regions.
-    
 
 Follow the steps below to create a new API Gateway domain in a preferred
 region.
