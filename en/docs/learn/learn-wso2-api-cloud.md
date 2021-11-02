@@ -18,8 +18,6 @@ The topics in this section walk you through some of the key API management capab
 
 - [Analyze APIs](../analyze-apis/analytics-overview)
 
-- [Integrate with Heroku](../ntegrate-with-heroku/overview-of-integrating-with-heroku)
-
 - [Cloud Administration](../cloud-administration/overview-of-cloud-administration)
 
 
