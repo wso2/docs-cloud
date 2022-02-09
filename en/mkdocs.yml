@@ -49,7 +49,6 @@ nav:
   - 'Get Started':
      - 'Overview': get-started/overview.md
      - 'Key Concepts': get-started/key-concepts.md
-     - 'Create a WSO2 Cloud Account': get-started/create-a-wso2-cloud-account.md 
      - 'Quick Start Guide': get-started/quick-start-guide.md
   - 'Learn':
      - 'Learn WSO2 API Cloud': learn/learn-wso2-api-cloud.md
