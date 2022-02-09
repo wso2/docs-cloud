@@ -6,7 +6,7 @@ This quick start guide provides step-by-step instructions so that you can quickl
 
 ## Prerequisites
 
-If you have not yet created an account to start using WSO2 API Cloud, follow the instructions in the [Create a WSO2 Cloud Account](../create-a-wso2-cloud-account) page to quickly sign up for a trial account and try out the capabilities of WSO2 API Cloud. 
+If you have not created an account to start using WSO2 API Cloud, be sure to sign up for a trial account. 
 
 
 ## Objectives
