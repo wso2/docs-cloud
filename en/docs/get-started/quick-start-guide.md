@@ -4,11 +4,6 @@ WSO2 API Cloud provides an intuitive UI guided experience to design and publish 
 
 This quick start guide provides step-by-step instructions so that you can quickly design, publish, and invoke an API via WSO2 API Cloud's Publisher Portal and API Store.
 
-## Prerequisites
-
-If you have not created an account to start using WSO2 API Cloud, be sure to sign up for a trial account. 
-
-
 ## Objectives
 
 1. Design and publish an API via the API Publisher portal.
