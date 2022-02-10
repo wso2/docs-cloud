@@ -4,8 +4,7 @@ template: templates/single-column.html
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <div>
     <div class="md-main md-content" style="float:left; width: 45%;  text-align:justify; max-height:100%; ">
-        <p>WSO2 API Cloud delivers an enterprise-ready solution for creating, publishing, and managing all aspects of an API and its lifecycle.
-To register and get started with WSO2 API Cloud, go to [http://wso2.com/cloud/api-cloud/](http://wso2.com/cloud/api-cloud/).</p> 
+        <p>WSO2 API Cloud delivers an enterprise-ready solution for creating, publishing, and managing all aspects of an API and its lifecycle.</p> 
         <p>You can take a look at the quick start guide to quickly try out creating your first API, subscribing to it through an OAuth2.0 application, obtaining an access token for testing, and invoking the API with the access token. If you want explore other key capabilities of WSO2 API Cloud, click on a required area of interest and dive in.</p>
     </div>
     <div class="md-main md-content " style="float:right; width: 55%; align:right;  flex-shrink: 0;min-width: 40%; max-height: 100%; max-width:50%; margin-left:10px; margin-top:20px">
