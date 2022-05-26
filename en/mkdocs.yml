@@ -187,6 +187,8 @@ nav:
      - 'Microgateway': faq-library/microgateway.md
      - 'API Cloud Gateway': faq-library/api-cloud-gateway.md   
   - 'Get Support':
+     - 'API Cloud Pricing': get-support/api-cloud-pricing.md
+     - 'API Cloud Uptime Status': get-support/uptime-status.md
      - 'Work with the Support Team': get-support/work-with-the-support-team.md
   - '': page-not-found.md 
   
