@@ -150,7 +150,7 @@ nav:
      - 'Deploy the Microgateway as a Docker Container': hybrid-api-management/deploy-microgateway-as-docker-container.md
      - 'Deploy the Microgateway on a Kubernetes Cluster': hybrid-api-management/deploy-microgateway-on-kubernetes-cluster.md
      - 'Deploy Grouped APIs Using a Microgateway': hybrid-api-management/deploy-grouped-apis-using-a-microgateway.md
-  - 'API Cloud Management APIs':
+  - 'Management APIs':
      - 'Overview of API Cloud Management APIs': management-apis/overview.md
      - 'Common Cloud APIs': management-apis/common-cloud-apis.md
      - 'API Cloud Portal APIs':
@@ -176,7 +176,7 @@ nav:
         - 'SAML Extension Grant': management-apis/grant-types/saml-extension-grant.md
   - 'Continuous Integration and Deployment': 
      - 'Continuous Integration and Deployment': continuous-integration-and-deployment/continuous-integration-and-deployment-for-wso2-api-cloud.md
-  - 'FAQ Library':
+  - 'FAQ':
      - 'API Creation and Design': faq-library/api-creation-and-design.md
      - 'API Subscription Tiers': faq-library/api-subscription-tiers.md
      - 'API Search': faq-library/api-search.md
@@ -186,10 +186,15 @@ nav:
      - 'Request/Response Transformation': faq-library/request-response-transformation.md
      - 'Microgateway': faq-library/microgateway.md
      - 'API Cloud Gateway': faq-library/api-cloud-gateway.md   
-  - 'Get Support':
+  - 'Support':
      - 'API Cloud Pricing': get-support/api-cloud-pricing.md
      - 'API Cloud Uptime Status': get-support/uptime-status.md
      - 'Work with the Support Team': get-support/work-with-the-support-team.md
+  - 'Migrate to Choreo':
+     - 'Why Migrate From API Cloud to Choreo?': migrate-to-choreo/why-migrate-from-api-cloud-to-choreo.md
+     - 'How to Migrate to Choreo?': migrate-to-choreo/how-to-migrate-to-choreo.md
+     - 'Migration Cost and Choreo Subscription': migrate-to-choreo/migration-cost-and-choreo-subscription.md
+     - 'API Cloud vs Choreo Feature Comparison': migrate-to-choreo/api-cloud-vs-choreo-feature-comparison.md
   - '': page-not-found.md 
   
 
