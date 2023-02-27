@@ -2,7 +2,7 @@
 
 ## Migration process
 
--  It is not possible to automate the migration process due to several reasons. WSO2 API Cloud and Choreo are two distinct platforms with different architectures, making an automated process too complicated. Additionally, some API Cloud customers have customizations (such as custom domains and user stores) that require manual migration.
+-  It is not possible to automate the migration process due to several reasons. WSO2 API Cloud and Choreo are two distinct platforms with different architectures. Therefore, automating the migration process is too complicated. Additionally, some API Cloud customers have customizations (such as custom domains and user stores) that require manual migration.
 -  Depending on the customer's need, WSO2 can arrange a demo to showcase the API Management capabilities of Choreo.
 -  As the first step of the migration, WSO2 will assign an engineer to migrate some APIs and mediation logic to Choreo as a proof of concept(PoC) for the customer use case.
 <html>
