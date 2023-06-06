@@ -1,38 +1,6 @@
 ---
-template: templates/swagger.html
+template: templates/redoc.html
 ---
 
-
-Do the following to try out WSO2 API Cloud's Analytics REST APIs using sample input parameters:     
-
-1.  Expand the relevant API operation and click the **Try It Out** button.  
-2.  Fill in relevant sample values for the input parameters and click **Execute**. You will receive a sample curl command with the sample values you filled in.
-3.  Add  a  header to the curl command and run the curl command on the terminal.
-
-
-
-
-  
-<div id="swagger-ui"></div>
-<script>
-window.onload = function() {
-  // Begin Swagger UI call region
-  const ui = SwaggerUIBundle({
-    url: "../../management-apis/restapis/analytics.yaml",
-    dom_id: '#swagger-ui',
-    deepLinking: true,
-    validatorUrl: null,
-    presets: [
-      SwaggerUIBundle.presets.apis,
-      SwaggerUIStandalonePreset
-    ],
-    plugins: [
-      SwaggerUIBundle.plugins.DownloadUrl
-    ],
-    layout: "StandaloneLayout"
-  })
-  // End Swagger UI call region
-
-  window.ui = ui
-}
-</script>
+<redoc spec-url=../../management-apis/restapis/analytics.yaml></redoc>
+<script src="https://cdn.jsdelivr.net/npm/redoc@next/bundles/redoc.standalone.js"> </script>
