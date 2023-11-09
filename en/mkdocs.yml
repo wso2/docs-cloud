@@ -190,6 +190,7 @@ nav:
      - 'API Cloud Pricing': get-support/api-cloud-pricing.md
      - 'API Cloud Uptime Status': get-support/uptime-status.md
      - 'Work with the Support Team': get-support/work-with-the-support-team.md
+     - 'Cancel Your API Cloud Subscription': get-support/cancel-your-api-cloud-subscription.md
   - 'Migrate to Choreo':
      - 'Why Migrate From API Cloud to Choreo?': migrate-to-choreo/why-migrate-from-api-cloud-to-choreo.md
      - 'How to Migrate to Choreo?': migrate-to-choreo/how-to-migrate-to-choreo.md
