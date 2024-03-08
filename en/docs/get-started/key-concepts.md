@@ -93,7 +93,7 @@ most enterprises:
 
 ------------------------------------------------------------------------
 
-### API Lifecycle
+### API lifecycle
 
 An API is the published interface, while the Service is the
 implementation running in the backend. APIs have their own lifecycles
