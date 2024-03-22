@@ -665,7 +665,7 @@ store the sequence in the Gateway's registry.
 
 ### Response caching
 
-Response caching stores the response messages per each API in a cache .
+Response caching stores the response messages per API in a cache.
 It improves performance because the backend server does not have to
 process the same data for a request multiple times. To offset the risk
 of stale data in the cache, you can set a time period after which the
@@ -732,5 +732,3 @@ tasks as below.
 </tr>
 </tbody>
 </table>
-
-
